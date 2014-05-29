@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Nobile:400,400italic|Playball&subset=latin,latin-ext'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+    <link rel="stylesheet/less" type="text/css" href="css/storytelling.less"/>
+    <script src="./js/jquery-2.1.0.min.js"></script>
+    <script src="./js/less-1.7.0.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <title>Redesign: Digital Management System</title>
+</head>
+<body>
+<header>
+    <div class="row">
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+            <a id="back-home" href="index.html"><strong>home</strong></a>
+            <a id="graphic-design" href="graphic-designs.html">graphic design</a>
+            <a class="active" id="interaction-design" href="interaction-designs.html">interaction design</a>
+            <a id="photograph" href="camellia-photos.html">photograph</a>
+            <a id="drawing" href="camellia-drawings.html">drawings</a>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 align-right">
+            <a id="previous-design">previous article</a>
+            <a id="next-design">next article</a>
+        </div>
+
+    </div>
+</header>
+<div class="row headline">
+    <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-1">
+        <h1>
+            <span class="title-prefix">Redesign</span>
+            <span class="title">Digital Management System</span>
+        </h1>
+    </div>
+</div>
+
+
+<div class="row introduction-section">
+    <div class="col-lg-7 col-lg-offset-1 col-md-8 col-sm-8 col-xs-12" id="task-description">
+    <p><strong>Task Description:</strong></p>
+
+        <p> Digital Management System is a part of Amadeus Social Media Suite where user could manage images, PDF
+            files, and youtube videos. Within the system user can either edit the files or simply share them to the
+            social sites
+            which are connected with the system.
+        </p>
+
+        <p>
+            Same as all old components in Amadeus Social Media Suite, design was not optimised for users, some
+            functionalities are hidden, working processes are not smooth. There are died points, unclear steps
+            and miss leading instructions etc. A brand new, simplified modern design is needed.
+        </p>
+    </div>
+    <div class="col-lg-2 col-lg-offset-1 col-md-3 col-md-offset-1 col-sm-3 col-xs-6" id="quick-link">
+    <p><strong>Quick Links:</strong></p>
+        <ul>
+            <li><a href="#functional-list"> Functional bits</a></li>
+            <li><a href="#wireframe">Wireframes </a></li>
+            <li><a href="#html-prototype">HTML prototype</a></li>
+            <li><a href="#polishing-with-testing">Polishing/Refining works </a></li>
+        </ul>
+    </div>
+
+    <div class="col-lg-7 col-lg-offset-1 col-md-8 col-sm-8 col-xs-12" id="challenge">
+    <p><strong>Challenge:</strong></p>
+
+        <p>
+            There are a lot functionalities in this component, and image itself is colorful. So providing a balance between a
+            clean view and a full functionalities access becomes the biggest challenge for me.
+
+        </p>
+
+        <p>
+            A 3-weeks-design-time is given to produce an interactive HTML click dummy. It is expected to be ready to
+            deliver to
+            development team. And also HTML, CSS, and javascript(partially) are expected to be production code.
+        </p>
+    </div>
+    <div class="col-lg-2 col-lg-offset-1 col-md-3 col-md-offset-1 col-sm-3 col-xs-6" id="method-skill">
+    <p><strong>Method/Skill Used:</strong></p>
+
+        <p>
+            Sketching Wireframe
+            HTML, CSS, Javascript
+        </p>
+
+        <p><strong>Time Spent:</strong></p>
+
+        <p>
+            3 weeks: around 150 hours
+        </p>
+    </div>
+</div>
+<div class="row detail-section">
+    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 col-lg-offset-2 col-md-offset-2 detail-wrapper"
+         id="functional-list">
+        <h2>
+            <span class="title-prefix">Before Design:</span>
+            <span class="title">Functional Bits</span>
+        </h2>
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <p><strong>Explanation</strong></p>
+            <img src="./img/dam/functional-bits.jpg" class="wrap-text" alt="functional bits image">
+
+            <p>
+                The functional list I got from Product Manager was really long, and it took me quite a while to find them
+                out one by one in old system.
+                <strong> But it worth spending time to dig up all those functions and then
+                    target main design problems there.</strong>
+            </p>
+
+            <p>
+                The biggest problem I found out in the old design is that all the media types (photo, docs, PDFs,
+                youtube videos) are mixed in one list view without having any signifier which tells user who they are.
+                And it became worse, because different type has different functionalities. For exmaple, due to technical limitations, the system doesn't
+                support direct video uploading from users' computer, users can only Synchronize their Youtube Channels in
+                order to have videos in system. And in the old design, there is
+                no way users would find out this information. What they could do is repeatedly trying to upload videos and then
+                got some error messages which they don't understand, finally became angry. Those hidden-functionalities
+                problems are quite common in the old design. <strong> So the first thing I did before designing is to
+                restructure the functions, and group them in a more
+                user friendly way. Depends on file types, and depends on function types, separate them into different
+                groups/UI-groups. </strong>
+            </p>
+
+            <p>
+                <strong> I imagined myself as user, give me several task I want to do. For example, upload a photo, edit
+                    a photo, synchronize a youtube video, create a collection. </strong> In this way, I broke functionalities into
+                several  groups. Each group has a different UI for users to accomplish some similar tasks.
+            </p>
+
+            <p>
+                Last but not least, <strong> I used a red pen to market out what were the problems in old design for each
+                functionality, to remind myself to avoid them in the new design.</strong>
+            </p>
+
+        </div>
+    </div>
+    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 col-lg-offset-2 col-md-offset-2 detail-wrapper" id="wireframe">
+        <h2>
+            <span class="title-prefix">During Design - phase 1:</span>
+            <span class="title">wireframe Sketching</span>
+        </h2>
+
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <p><strong>Explanation</strong></p>
+
+            <p>
+                Sketching is my favorite part during design process. <strong> Any flash idea can be
+                captured by
+                just drawing lines on a paper.</strong> Usually, I draw fast, only-readable by myself wireframes at the beginning stage. I draw at
+                least 5 different ideas, no matter they are good or not. And then analyse them,
+                select one or two which I like most, redo the wireframe again. After that I would spend hours looking at
+                them:
+            </p>
+
+            <p>
+                <strong> Imagine what I would do if I was a user, how could I do it. Is there any places that I will
+                    get stuck? Is there buttons/links/icons I need to think before I click? </strong>
+            </p>
+
+            <p>
+                After this step. I will finalize my wireframes. If there are still
+                more than one options, for example, the overview of Digital Management System (See the image
+                below),<strong> I
+                will write down advantages and disadvantages of each single design to help me making the finally
+                decision.</strong>
+            </p>
+        </div>
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <img src="./img/dam/wireframe.jpg" alt="functional bits image">
+        </div>
+    </div>
+    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 col-lg-offset-2 col-md-offset-2 detail-wrapper"
+         id="html-prototype">
+        <h2>
+            <span class="title-prefix">During Design - phase 2:</span>
+            <span class="title">HTML Click dummy</span>
+        </h2>
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <p><strong>Explanation</strong></p>
+            <p>
+                <strong> From my opinion, after having an idea or an image how the design should look like, creating
+                    HTML click-dummy usually goes quite smoothly. </strong> Of course you will find out that something
+                in the wireframe
+                which do not fit with real data and you need to do some adjustments, but the main direction won't change
+                much in most of cases.
+            </p>
+
+            <p>
+                The biggest issue I had in this design task is that there were too many things you could do with photos
+                and too much info of photos you should show to users, plus photos themselves are colorful objects
+                If I put everything on the surface like my original idea in the
+                wirefames, it looks overwhelmed. That is also the main reason why I abandoned the card view before. But
+                even for the list view, which has much more space, it looked crowded when I made most functionalities visible
+                together with photos. <strong>I really want to give users an impression that, they can have a
+                rest here, enjoy looking at beautiful images, take a pause from boring daily works. </strong>
+                So finally, I decided to use a hover effect to hide most functions, and give user a clean view when
+                they land on this page.
+            </p>
+        </div>
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <br><br>
+
+            <p><strong>Comparison between the old designs and new ones:</strong></p>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <h4>Old Design :
+                <small>List view of all media</small>
+            </h4>
+            <img src="./img/dam/old-dam-list.png" alt="functional bits image">
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <h4>New Design :
+                <small> List view of photos and pdf</small>
+            </h4>
+            <img src="./img/dam/new-photo-list.png" alt="functional bits image">
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 comparison-sum">
+            <p><strong>Note:</strong> In the functional bits, all problems which are toggled in the old design are fixed in the new
+                one. It has bigger images, no hidden info, more white spaces etc. All things you can do with the photos/files are
+                more  straight forward now. Just one click, no need to explore</p>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <h4>Old Design :
+                <small>Collection view</small>
+            </h4>
+            <img src="./img/dam/old-collection.png" alt="functional bits image">
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <h4>New Design :
+                <small>Collection view</small>
+            </h4>
+            <img src="./img/dam/new-collection.png" alt="functional bits image">
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 comparison-sum">
+            <p><strong>Note:</strong> The old collection view has almost no design, it was probably a rush work to make
+                it on production as soon as possible. The new design intend to give user a hint what this collection is
+                without looking at the title, and it uses same design methodology with the design of photo list: more straight
+                forward functionalities, relatively bigger images, and more
+                text information.</p>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <h4>Old Design:
+                <small>Upload process</small>
+            </h4>
+            <img src="./img/dam/old-upload-2.png" alt="functional bits image">
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <h4>New Design:
+                <small>Upload process</small>
+            </h4>
+            <img src="./img/dam/new-upload.png" alt="functional bits image">
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 comparison-sum">
+            <p><strong>Note:</strong> The biggest problem of the old upload process design is "too many clicks" and
+                "too many misleading error messages".
+                Both problems are solved in the new design. The number of clicks is reduced from
+                4 to 2, and error messages also get more clear.</p>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <h4>Old Design:
+                <small>Tags</small>
+            </h4>
+            <img src="./img/dam/old-tags.png" alt="functional bits image">
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <h4>New Design:
+                <small>All media</small>
+            </h4>
+            <img src="./img/dam/new-all-media.png" alt="functional bits image">
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 comparison-sum">
+            <p><strong>Note:</strong> Tags was a highlighted functionality in the old design, but it was not wisely used by
+                users. So in the new design, I didn't try to encourage user to use it heavily. The all media page here
+                is just an condensed look of everything, at the same time providing an easy way to manage all media files at one time.</p>
+        </div>
+    </div>
+    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 col-lg-offset-2 col-md-offset-2 detail-wrapper"
+         id="polishing-with-testing">
+        <h2>
+            <span class="title-prefix">After Design:</span>
+            <span class="title">Polishing/refining after testing</span>
+        </h2>
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <p><strong>Explanation</strong></p>
+
+            <p>
+                After finished the design, I gave the click-dummy to a small group of people who use the old digital
+                system daily, and let them play with it freely. The feedback was good. Not many changes during this
+                phase were needed, only some small things were pointed out, for example,
+                the color of the heart icon and the check icon were not bright enough. When a image had too many
+                red/green colors, they were not obvious enough to identify. So I increased the contrast between the
+                background grey and icons colors.
+            </p>
+
+            <p>
+                Some bigger changes came after the development.<strong> With real data, performance were not as good as
+                it showed in click-dummy. Sometimes, it is easier to improve it with better design than spending weeks
+                kicking off the technical bottle nick</strong> For example, "marking as favorite" button, in
+                click-dummy, users see feedback immediately, but in real world it usually takes 2 to 4 seconds to
+                get response from server. So during these 2 to 4 seconds, users doesn't know what
+                is happening. And they might click again and again on the icon, which of course causes troubles. To
+                avoid the confusion, I add an small animation to the icon. After clicking, the icon will spin slowly
+                until we get the response from server. <strong> Animation clearly tells users that the icon is already
+                being clicked. At the same time, it brings fun.</strong> I found out that some users did enjoy clicking
+                on it again and again just to see the animation.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+<div class="row gallery-section">
+    <div class="col-lg-12">
+
+    </div>
+</div>
+<footer>
+
+    <div class="bio">
+        <img src="img/bio-abstract.png" class="bio-photo" alt="bio photo of camellia">
+
+        <p class="bio-name"><strong>CAMELLIA XUEYI</strong></p>
+
+        <p class="bio-quote">
+            <small><strong>She is a "Designer + Half-developer", she believes that design makes life easier :)</strong>
+            </small>
+        </p>
+        <p class="bio-contact">
+            <small>
+                <span>cv : <a>download pdf, </a> <a> view online</a> </span>
+                <span>email : <a>xueyi.camellia@gmail.com</a></span>
+            </small>
+        </p>
+    </div>
+
+</footer>
+</body>
+</html>

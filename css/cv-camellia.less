@@ -1,0 +1,106 @@
+@import "base";
+
+.bio-wrapper {
+  position: relative;
+  p {
+    text-align: center;
+  }
+  .bio-img {
+    display: block;
+    margin: 40px auto 20px;
+    width: 80px;
+    border-radius: 50%;
+  }
+  .bio-name {
+    font-size: 1.2em;
+    margin-bottom: 0;
+  }
+  .bio-portofolio {
+    margin: 0 4px;
+    color: @lightGrey;
+    margin-bottom: 8px;
+  }
+  .bio-contact {
+    span {
+      margin-right: 20px;
+    }
+  }
+}
+
+.work-experience-wrapper, .education-wrapper{
+  margin-top: 20px;
+}
+
+.wrapper-title {
+  width: 50%;
+  text-align: center;
+  display: block;
+  margin: auto;
+  font-size: 1.2em;
+  border-bottom: 4px solid @nav-yellow;
+  color: @label-yellow-dark;
+}
+.education-wrapper{
+  .wrapper-title{
+
+    border-bottom: 4px solid @nav-blue;
+    color: @label-blue-dark;
+  }
+}
+.language-wrapper{
+  .wrapper-title{
+    border-bottom: 4px solid @nav-grey;
+    color: @label-grey-dark;
+  }
+
+}
+.hobby-wrapper{
+  .wrapper-title{
+    border-bottom: 4px solid @label-red;
+    color: @nav-darkRed;
+  }
+
+}
+.language-wrapper,.hobby-wrapper
+{
+  margin-bottom: 80px;
+  .wrapper-title{
+    width: 80%;
+  }
+  margin-top:20px;
+  .wrapper-title{
+    margin-bottom:20px;
+  }
+  text-align: center;
+  .lang-title{
+    width: 48%;
+    float: left;
+    color:@lightGrey;
+    strong{
+      color:@darkerGray;
+    }
+  }
+}
+
+.item-wrapper {
+  margin-top: 20px;
+  margin-bottom: 60px;
+  .job-title, .dip-title {
+    font-size: 1.2em;
+    margin-bottom: 0;
+    color: @gray;
+    text-align: center;
+  }
+  .company-title, .uni-title {
+    font-style: italic;
+    color: @lightGrey;
+    text-align: center;
+    margin-bottom: 2px;
+  }
+
+  .edu-description{
+    margin: 8px auto;
+    text-align: center;
+
+  }
+}

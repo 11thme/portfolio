@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Nobile:400,400italic|Playball&subset=latin,latin-ext'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+    <link rel="stylesheet/less" type="text/css" href="css/storytelling.less"/>
+    <script src="./js/jquery-2.1.0.min.js"></script>
+    <script src="./js/less-1.7.0.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <title>Redesign: User Management System</title>
+</head>
+<body>
+<header>
+    <div class="row">
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+            <a id="back-home" href="index.html"><strong>home</strong></a>
+            <a id="graphic-design" href="graphic-designs.html">graphic design</a>
+            <a class="active" id="interaction-design" href="interaction-designs.html">interaction design</a>
+            <a id="photograph" href="camellia-photos.html">photograph</a>
+            <a id="drawing" href="camellia-drawings.html">drawings</a>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 align-right">
+            <a id="previous-design">previous article</a>
+            <a id="next-design">next article</a>
+        </div>
+    </div>
+</header>
+<div class="row headline">
+    <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-1">
+        <h1>
+            <span class="title-prefix">Redesign</span>
+            <span class="title">User Management System</span>
+        </h1>
+    </div>
+</div>
+
+
+<div class="row introduction-section">
+    <div class="col-lg-6 col-lg-offset-1 col-md-8 col-sm-8 col-xs-12" id="task-description">
+        <p><strong>Task Description:</strong></p>
+
+        <p> I got a task to redesign the “Admin” Area of Amadeus Social Media Tool.
+            This “Admin” Area is where all register users displayed in a 5-layers structured way (Market -> Chain ->
+            Travel Agency -> Account -> Travel Agent ). As an user (Administrator), you could be able to
+            create/edit/delete/search/monitor those stuff.
+        </p>
+
+        <p>
+            The old design was done 4 years ago, the structure was not clear, and some functionality were hidden, a lot
+            of usability issues, and it was simply ugly. A brand new design is highly required.
+        </p>
+    </div>
+    <div class="col-lg-3 col-lg-offset-1 col-md-3 col-md-offset-1 col-sm-3 col-xs-6" id="method-skill">
+        <p><strong>Method/Skill Used:</strong></p>
+
+        <ul>
+            <li> Problem Solving Pattern</li>
+            <li>Mind Map</li>
+            <li>Sketching Wireframe</li>
+            <li>HTML, CSS, Javascript</li>
+        </ul>
+
+        <p><strong>Time Spent:</strong></p>
+
+        <p>
+            4 weeks: around 200 hours
+        </p>
+    </div>
+
+    <div class="col-lg-6 col-lg-offset-1 col-md-8 col-sm-8 col-xs-12" id="challenge">
+        <p><strong>Challenge:</strong></p>
+
+        <p>
+            Navigate users easily between the 5 layers structure, and provide search functionality. No matter what user
+            want to do (search/ create/ edit), they cannot be stucked. .
+        </p>
+
+    </div>
+    <div class="col-lg-3 col-lg-offset-1 col-md-3 col-md-offset-1 col-sm-3 col-xs-6" id="quick-link">
+        <p><strong>Quick Links:</strong></p>
+        <ul>
+            <li><a href="#functional-list"> Reduce problems</a></li>
+            <li><a href="#wireframe"> Low-fi design </a></li>
+            <li><a href="#html-prototype">HTML prototype</a></li>
+            <li><a href="#polishing-with-testing">Polishing/Refining works </a></li>
+        </ul>
+    </div>
+
+</div>
+<div class="row detail-section">
+<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 col-lg-offset-2 col-md-offset-2 detail-wrapper"
+     id="reduce-problems">
+    <h2>
+        <span class="title-prefix">Before Design - Phase 1:</span>
+        <span class="title">Reduce Problem</span>
+    </h2>
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <p><strong>Explanation</strong></p>
+
+        <p>
+            After a long meeting with product manager, the first thing I did was to ask to reduce the structure
+            complexity. I gave product manager two suggestions:
+        </p>
+
+        <p>
+            <strong> Suggestion 1：</strong> Merge Market and Chain. The reason is: Market and Chain are 90% similar and
+            for most markets there is only 1 chain for all users.
+        </p>
+
+        <p>
+            <strong> Suggestion 2: </strong> Hide Accounts from UI. Because Travel Agent and Account are same from user
+            (Administrator) point of view. The concept behind it is: You can login with “One Account”, and then you can
+            switch between different “Travel Agents” which belongs to Different “Travel Agencies”, and all those Travel
+            Agents has one Account (credentials)
+        </p>
+
+        <p>
+            So when create a new “Agent”
+            <br>= 1. create a new “Account” +assign it to a “Travel Agency”
+            <br>= 2. select existing “Account” + assign it to a “Travel Agency”
+            Why not just Delete this “Account” layer from surface (it is still in database, just not visible for
+            end-user anymore). In this case user (Administrator) don’t need to think anymore: Should I create an Account
+            or an Agent? what’s the difference again?
+        </p>
+
+        <p>
+            Finally, suggestion 2 was taken. Suggestion 1 was refused, because market and chains are two marketing
+            concept, both are needed for sales team. And we decide to make one more small change, use general names
+            instead of travel industry terminology, ex “Travel Agencies”, “Chains” etc. To sum up, the finally structure
+            look like this:
+        </p>
+
+        <p>
+            <strong>Market -> Group -> Company -> User</strong>
+        </p>
+
+        <p>
+            Later, I took a step forward, I make a structure map, combined the required functions and the 4-layer
+            structure into one map, which became the base that I worked on.
+        </p>
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <img src="./img/user-admin/functional-map.jpg" alt="functional bits image">
+        </div>
+    </div>
+</div>
+<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 col-lg-offset-2 col-md-offset-2 detail-wrapper"
+     id="identify-problems">
+    <h2>
+        <span class="title-prefix">Before Design - Phase 2:</span>
+        <span class="title">Identify Problem</span>
+    </h2>
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <p><strong>Explanation</strong></p>
+
+        <p>
+            For me, design always equals to solving problems, users’ needs are the problems, providing what they want is
+            to solve the problems. So here comes to my 2nd-base graph:
+            Who are my target users, what are their problems.
+        </p>
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <img src="./img/user-admin/who-want-what.jpg" alt="functional bits image">
+        </div>
+    </div>
+</div>
+<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 col-lg-offset-2 col-md-offset-2 detail-wrapper"
+     id="expected-solutions">
+    <h2>
+        <span class="title-prefix">Before Design - Phase 3:</span>
+        <span class="title">Expectations of the solution</span>
+    </h2>
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <p><strong>Explanation</strong></p>
+
+        <p>
+            Naturally, after you got the problems, you want solutions. And before you find out the best solutions,
+            usually, you have some expectations how the solution might look like. Draw them down fast, just to keep a
+            record. So that afterwards, you can use it to verify your final solution. And it is my 3rd-base graph:
+        </p>
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <img src="./img/user-admin/solution-expectation.jpg" alt="functional bits image">
+        </div>
+    </div>
+</div>
+<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 col-lg-offset-2 col-md-offset-2 detail-wrapper" id="wireframe">
+    <h2>
+        <span class="title-prefix">During Design - phase 1:</span>
+        <span class="title">Low-fi design</span>
+    </h2>
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <p><strong>Explanation</strong></p>
+
+        <p>
+            Landing Page:
+            Based on the “who-wants-what”, problem identifying graph, I knew that, System Admin wants 3 things: create
+            market/group/company/user, search any of them and edit any of them.
+
+            So for the landing page, I decided to give System Admin all functions in a straightforward way. By one look,
+            System Admin understand that, they can create any roles they want, or search for anything they want to edit.
+
+            (note: for monitoring users, because it was not a major function, it has been postponed. )
+        </p>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <img src="./img/user-admin/landing-page-sketch.jpg" alt="landing page">
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <p>
+            Search Functionality:
+            Search functionality is a tricky one. From the landing page, it is simple, you know what you want to search
+            and go to the desired search field. But for the search result, how can I show the search result in a
+            structured way. And also, how could it be easy for user to start a new search in the search result page.
+            Search with the 4 layer structure is not as easy as Google search, displaying everything in a list as Google
+            does, wont have System Admin filter out what they want, and give them a overview the huge and complex user
+            system they are managing.
+
+            There are two ways to do show search result in a structured way:
+            1. Structure search results
+            2. Structure search queries
+        </p>
+
+        <p>
+            I made two sketch based on those two proposals. And then I imaged some work scenarios which System Admin
+            might encounter with, applied them with the two solutions. I found out that, structure search queries are
+            easier for making a new search and have a cleaner design.
+        </p>
+    </div>
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <img src="./img/user-admin/search1.jpg" alt="Structure search results">
+    </div>
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <img src="./img/user-admin/search2.jpg" alt="Structure search queries">
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <p>
+            Verify the low-fi design:
+            According to the 3rd-base graph which was created during preparation phase, there are some expectations of
+            the final solution. To avoid redesign during the HTML click dummy creating stage, I did a mapping between
+            the expectations and the low-fi to ensure that all problems are solved.
+        </p>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <img src="./img/user-admin/mapping1.jpg" alt="Structure search queries">
+    </div>
+</div>
+<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 col-lg-offset-2 col-md-offset-2 detail-wrapper"
+     id="html-prototype">
+    <h2>
+        <span class="title-prefix">During Design - phase 2:</span>
+        <span class="title">HTML click dummy</span>
+    </h2>
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <p><strong>Explanation</strong></p>
+
+        <p>
+            <strong> From my opinion, after having an idea or an image how the design should look like, creating
+                HTML click-dummy usually goes quite smoothly. </strong> Of course you will find out that something
+            in the wireframe
+            which do not fit with real data and you need to do some adjustments, but the main direction won't change
+            much in most of cases.
+        </p>
+
+        <p>
+            The biggest issue I had in this design task is that there were too many things you could do with photos
+            and too much info of photos you should show to users, plus photos themselves are colorful objects
+            If I put everything on the surface like my original idea in the
+            wirefames, it looks overwhelmed. That is also the main reason why I abandoned the card view before. But
+            even for the list view, which has much more space, it looked crowded when I made most functionalities
+            visible
+            together with photos. <strong>I really want to give users an impression that, they can have a
+            rest here, enjoy looking at beautiful images, take a pause from boring daily works. </strong>
+            So finally, I decided to use a hover effect to hide most functions, and give user a clean view when
+            they land on this page.
+        </p>
+    </div>
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <br><br>
+
+        <p><strong>Comparison between the old designs and new ones:</strong></p>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <h4>Old Design :
+            <small>List view of all media</small>
+        </h4>
+        <img src="./img/user-admin/old-admin-0.png" alt="functional bits image">
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <h4>New Design :
+            <small> List view of photos and pdf</small>
+        </h4>
+        <img src="./img/user-admin/admin-landing.png" alt="functional bits image">
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 comparison-sum">
+        <p><strong>Note:</strong> In the functional bits, all problems which are toggled in the old design are fixed in
+            the new
+            one. It has bigger images, no hidden info, more white spaces etc. All things you can do with the
+            photos/files are
+            more straight forward now. Just one click, no need to explore</p>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <h4>Old Design :
+            <small>Collection view</small>
+        </h4>
+        <img src="./img/user-admin/old-admin.png" alt="functional bits image">
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <h4>New Design :
+            <small>Collection view</small>
+        </h4>
+        <img src="./img/user-admin/admin-search.png" alt="functional bits image">
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 comparison-sum">
+        <p><strong>Note:</strong> The old collection view has almost no design, it was probably a rush work to make
+            it on production as soon as possible. The new design intend to give user a hint what this collection is
+            without looking at the title, and it uses same design methodology with the design of photo list: more
+            straight
+            forward functionalities, relatively bigger images, and more
+            text information.</p>
+    </div>
+
+
+</div>
+<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 col-lg-offset-2 col-md-offset-2 detail-wrapper"
+     id="polishing-with-testing">
+    <h2>
+        <span class="title-prefix">After Design:</span>
+        <span class="title">Polishing/refining after testing</span>
+    </h2>
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <p><strong>Explanation</strong></p>
+
+        <p>
+            After finished the design, I gave the click-dummy to a small group of people who use the old digital
+            system daily, and let them play with it freely. The feedback was good. Not many changes during this
+            phase were needed, only some small things were pointed out, for example,
+            the color of the heart icon and the check icon were not bright enough. When a image had too many
+            red/green colors, they were not obvious enough to identify. So I increased the contrast between the
+            background grey and icons colors.
+        </p>
+
+        <p>
+            Some bigger changes came after the development.<strong> With real data, performance were not as good as
+            it showed in click-dummy. Sometimes, it is easier to improve it with better design than spending weeks
+            kicking off the technical bottle nick</strong> For example, "marking as favorite" button, in
+            click-dummy, users see feedback immediately, but in real world it usually takes 2 to 4 seconds to
+            get response from server. So during these 2 to 4 seconds, users doesn't know what
+            is happening. And they might click again and again on the icon, which of course causes troubles. To
+            avoid the confusion, I add an small animation to the icon. After clicking, the icon will spin slowly
+            until we get the response from server. <strong> Animation clearly tells users that the icon is already
+            being clicked. At the same time, it brings fun.</strong> I found out that some users did enjoy clicking
+            on it again and again just to see the animation.
+        </p>
+    </div>
+
+</div>
+
+</div>
+<div class="row gallery-section">
+    <div class="col-lg-12">
+
+    </div>
+</div>
+<footer>
+
+    <div class="bio">
+        <img src="img/bio-abstract.png" class="bio-photo" alt="bio photo of camellia">
+
+        <p class="bio-name"><strong>CAMELLIA XUEYI</strong></p>
+
+        <p class="bio-quote">
+            <small><strong>She is a "Designer + Half-developer", she believes that design makes life easier :)</strong>
+            </small>
+        </p>
+        <p class="bio-contact">
+            <small>
+                <span>cv : <a>download pdf, </a> <a> view online</a> </span>
+                <span>email : <a>xueyi.camellia@gmail.com</a></span>
+            </small>
+        </p>
+    </div>
+
+</footer>
+</body>
+</html>

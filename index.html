@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>The 11th Design</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="The design works of camellia xueyi yang, who is a UI/UX design plus a half frontend developer ">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta property="og:image" content="http://the11thme.com/img/bio-abstract.png"/>
+
+    <link rel="shortcut icon" href="/img/bio-abstract.png">
+    <link rel="apple-touch-icon-precomposed" href="/img/bio-abstract.png">
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <script src="./js/jquery-2.1.0.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <!-- HTML5 shim, for IE6-8 support of HTML elements--><!--[if lt IE 9]>
+    <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  </head>
+
+<body>
+<div class="main-wrapper">
+<div class="row top-half">
+    <div class="bio col-lg-10 col-md-10 col-sm-10 col-xs-12 col-sm-offset-1 col-xs-offset-0">
+
+        <div class="flip-container bio-photo-container">
+            <div class="flipper">
+                <div class="front">
+                    <img src="img/bio-photo.jpg" class="bio-photo" alt="bio photo of camellia">
+                </div>
+                <div class="back">
+                    <img src="img/bio-abstract.png" class="bio-photo" alt="abstract bio photo of camellia">
+                </div>
+            </div>
+        </div>
+
+        <p class="bio-name">
+           CAMELLIA XUEYI
+        </p>
+
+        <p class="bio-quote">
+            She is a Designer + a Half-developer, she believes that design makes life easier :)
+        </p>
+        <p class="bio-contact">
+            <small>
+                <span>cv : <a href="./file/cv-camellia.pdf" download="cv-camellia-xueyi-yang">download pdf, </a> <a href="cv-camellia.html"> view online</a> </span>
+                <span>email : <a href="mailto:xueyi.camellia@gmail.com">xueyi.camellia@gmail.com</a></span>
+            </small>
+        </p>
+    </div>
+</div>
+<div class="row bottom-half">
+    <div class="main-nav-wrapper">
+    <div class="col-lg-2 col-md-3 col-sm-5 col-lg-offset-2 col-md-offset-0 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+        <a href="graphic-designs.html">
+            <div class="art-wrapper" id="art-graphic">
+                Graphic Designs
+            </div>
+        </a>
+    </div>
+    <div class="col-lg-2 col-md-3 col-sm-5 col-xs-12 col-xs-offset-0">
+        <a href="interaction-designs.html">
+            <div class="art-wrapper" id="art-ui"> Interaction Designs
+            </div>
+        </a>
+    </div>
+    <div class="col-lg-2 col-md-3 col-md-offset-0 col-sm-5 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+        <a href="camellia-photos.html">
+            <div class="art-wrapper" id="art-photo">
+                Photograph
+            </div>
+        </a>
+    </div>
+    <div class="col-lg-2 col-md-3 col-sm-5 col-xs-12 col-xs-offset-0">
+        <a href="camellia-drawings.html">
+            <div class="art-wrapper" id="art-drawing">
+                Drawings
+            </div>
+        </a>
+    </div>
+    </div>
+</div>
+
+</div>
+<script>
+    $(document).ready(function(){
+        window.setTimeout(function(){
+            $(".flipper").addClass("animate");
+            window.setTimeout(function(){
+                $(".flipper").removeClass("animate");
+            }, 2000);
+        }, 1500);
+    });
+</script>
+</body>
+</html>
