@@ -1,21 +1,19 @@
-@import "base";
-
 header{
-  padding: 1.4em;
   width: 100%;
+  padding: 1.4em;
+  position: fixed;
   opacity: 1;
+  z-index: 99;
   font-family: @header-font;
   font-weight: 400;
   text-transform: uppercase;
-  position: fixed;
   background-color: rgba(222,222,222,0.9);
-  z-index: 99;
   a{
     margin-right:1em;
     opacity: 0.4;
     &:hover{
-      color:@gray;
       opacity: 1;
+      color:@gray;
       -webkit-animation-name: fadeInColor;
       -moz-animation-name: fadeInColor;
       -o-animation-name: fadeInColor;
@@ -58,23 +56,23 @@ header{
 }
 
 footer {
-  font-family: @header-font;
   margin-top: 2em;
   padding: 1em 4em 2em;
-  border-top: 8px solid @lighterGrey;
+  font-family: @header-font;
   color:@lightGrey;
+  border-top: 8px solid @lighterGrey;
   .bio {
     margin: 1em 0;
     position: relative;
-    text-align: center;
     font-size: 1.1em;
+    text-align: center;
     small{
       font-size: 1em;
     }
     .bio-photo {
       width: 50px;
-      border-radius: 50%;
       margin: 0 auto 0.85em;
+      border-radius: 50%;
 
     }
     .bio-quote{
@@ -85,8 +83,8 @@ footer {
     }
 
     .bio-contact{
-      font-size: 0.9em;
       margin-top: 1em;
+      font-size: 0.9em;
       span{
         margin-right: 1em;
       }
@@ -100,7 +98,7 @@ and (max-width : 480px) {
  header{
   a{
    margin-bottom: 0.4em;
-    display: inline-block;
+   display: inline-block;
   &:first-child{
     width: 100%;
   }

@@ -1,0 +1,162 @@
+// Somea Global Overrides
+// ****************************************
+body{
+  font-family: @baseFontFamily;
+}
+html body {
+  font-family: @baseFontFamily;
+  background: @amadeusBlue url(../img/bg-noise.png);
+  overflow-y: scroll; // Prevent centered layout from bouncing when content higher thant screen height
+
+}
+
+a:focus {
+  outline: none;
+}
+
+a {
+  cursor: pointer
+}
+
+// Show pointer also for links without href
+
+.nowrap {
+  white-space: nowrap;
+}
+
+// Suite Header
+// ****************************************
+#suite-header {
+  position: relative;
+  z-index: @zindexSomeaHeader;
+  background: @amadeusBlue url(../img/bg-noise-shadow.png) repeat-x 0 100%;
+  #nav-top {
+    height: 76px;
+  }
+  ul#secondary-nav {
+    text-align: right;
+    list-style-type: none;
+    li {
+      float: left;
+      font-size: 12px;
+      border-right: 1px solid desaturate(lighten(@amadeusBlue, 20%), 20%);
+      a.current-user {
+        padding-right: 50px !important;
+        span.avatar {
+          display: inline-block;
+          height: 30px;
+          width: 30px;
+          .border-radius(3px);
+          .box-shadow(0 0 3px darken(@someaDarkBlue, 10%));
+          background-position: 50% 50%;
+          background-size: cover;
+          position: absolute;
+          top: 8px;
+          margin-left: 10px;
+        }
+        span, strong {
+          margin-left: 5px; //Separate the user´s name from Travel Agency
+          white-space: nowrap; // Show name of Travel Agency always in one separate 2nd line if it not fits in the 1st
+        }
+      }
+      a:link, a:visited, a:active {
+        display: block;
+        padding: 16px 10px 4px;
+        color: @someaLightestBlue;
+        &:hover {
+          text-decoration: none;
+          color: @white;
+        }
+        &.active {
+          background-color: rgba(152, 192, 232, .15); // @someaLightBlue 15% Opacity; //desaturate(lighten(@amadeusBlue,5%),5%)
+          color: white;
+        }
+      }
+      &:last-child {
+        border: 0;
+      }
+    }
+  }
+}
+
+.static-main-nav {
+  height: 44px;
+  width: 100%;
+  background: @amadeusBlue url(../img/bg-noise-shadow.png) repeat-x 0 100%;
+}
+
+#scroll-transition {
+  // Transition from background color to transparent beneath main navigation
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  top: 120px;
+  background: transparent url(../img/bg-scroll-transition.png) repeat-x;
+  z-index: @zindexSomeaHeader;
+}
+
+span#logo {
+  background: url(../img/somea-logo/amadeus-logo-header.png) no-repeat 0 60%;
+  padding: 15px 10px 15px 30px;
+  color: darken(saturate(@someaLightestBlue, 5%), 8%); // desaturate(darken(@someaLightBlue, 20%),10%)
+  font-size: 13px;
+  text-shadow: 0 0 4px darken(@someaDarkBlue, 20%);
+  display: inline-block;
+
+}
+
+// Suite Body
+// ****************************************
+.content-wrapper {
+  min-height:400px;
+  background: @grayLighter;
+  padding: 60px 0;
+}
+
+// Suite Footer
+// ****************************************
+#suite-footer {
+  border-top: 2px solid white;
+  padding: 20px 0;
+
+  #amadeus-logo {
+    height: 63px;
+    width: 200px;
+    background-image: url("../img/amadeus_logo_transBG.png");
+    background-repeat: no-repeat ;
+
+  }
+
+  ul {
+    li {
+      display: inline-block;
+      font-size: 12px;
+      a:link, a:visited, a:active {
+        display: block;
+        padding: 10px 8px;
+        color: @someaLightestBlue;
+        &:hover, &:hover i {
+          text-decoration: none;
+          color: @white;
+          opacity: 1; // white Social Web Icons on rollover
+        }
+      }
+      a.condense {
+        padding: 10px 2px;
+      }
+      &.localtime {
+        float: left;
+        padding: 10px 0;
+        color: @someaLightBlue;
+      }
+
+      // Footer Logo was deprecated 2013-02-15 SR
+      //			a.logo{ // Amadeus Logo
+      //				background: url(../img/somea-logo/amadeus-type-small.png) no-repeat 8px -49px;
+      //				min-height: 3px; // TODO: Fix… not beautifully solved :(
+      //				width: 60px;
+      //				&:hover{background-position: 8px 11px}
+      //			}
+    }
+  }
+}

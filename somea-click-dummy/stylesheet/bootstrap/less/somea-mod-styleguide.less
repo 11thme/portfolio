@@ -1,0 +1,178 @@
+// SOMEA Styleguide
+// ****************************************
+
+.color-chip{
+	border: 1px solid #ccc;
+    float: left;
+    height: 80px;
+    margin: 15px;
+    padding: 5px;
+    width: 154px;
+}
+
+.color-chip span{
+	background-color: rgba(255, 255, 255, 0.8);
+	display: block;
+	padding: 4px;
+}
+
+.styleguide-black{ background-color: @black }
+.styleguide-grayDarker{ background-color: @grayDarker }
+.styleguide-grayDark{ background-color: @grayDark }
+.styleguide-gray{ background-color: @gray }
+.styleguide-grayLight{ background-color: @grayLight }
+.styleguide-grayLighter{ background-color: @grayLighter }
+.styleguide-white{ background-color: @white }
+
+// Somea Form Fields
+// -------------------------
+.styleguide-grayLightest{ background-color: @grayLightest }
+.styleguide-form-grDark{ background-color: @grayLighter }
+.styleguide-form-border{ background-color: @formBorder }
+
+// Accent colors
+// -------------------------
+.styleguide-blue{ background-color: @someaBlue }
+.styleguide-green{ background-color: @green }
+.styleguide-red{ background-color: @red }
+.styleguide-yellow{ background-color: @yellow }
+.styleguide-orange{ background-color: @orange }
+
+// SOMEA blue
+// -------------------------
+.styleguide-someaLightestBlue{ background-color: @someaLightestBlue }
+.styleguide-someaLightBlue{ background-color: @someaLightBlue }
+.styleguide-someaBlue{ background-color: @someaBlue }
+.styleguide-someaDarkBlue{ background-color: @someaDarkBlue }
+
+.styleguide-redDark{ background-color: @redDark }
+
+.bs-docs-example a.styleguide-blue:hover{background-color: darken(@someaDarkBlue, 10%)}
+
+.inner-padding{padding:35px;}
+
+.styleguide-h2{
+    border-top: 4px solid #CCC;
+    margin-top: 40px;
+    padding-top: 20px;
+    position: relative;
+    a{
+        position: absolute;
+        left: -23px;
+        top: 10px;
+        display: none;
+        padding: 0 25px 10px 0;
+    }
+    &:hover a{
+        display: inline;
+    }
+}
+
+.styleguide-icons{
+    h4{margin: 1em 0;}
+    p{
+        float: left;
+        width: 205px;
+        height: 25px;
+        i{
+            margin-right: 10px;
+        }
+    }
+}
+
+.bs-docs-example {
+	background-color: #FCFCFC;
+	border: 1px solid #f2f2f2;
+	.border-radius(@borderRadiusLarge);
+	margin: 15px 0;
+	padding: 39px 19px 0;
+	position: relative;
+    h5{
+        background-color: #F5F5F5;
+        border: 1px solid #DDDDDD;
+        .border-radius(0 0 @borderRadiusLarge 0);
+        color: #333;
+        font-size: 12px;
+        font-weight: bold;
+        left: -1px;
+        padding: 2px 8px;
+        position: absolute;
+        top: -1px;
+        a{
+            padding-left: 20px;
+            font-weight: normal;
+            color: #333;
+        }
+    }
+}
+
+.prettyprint {
+	//margin-top: -@gridGutterWidth;
+    padding: 15px !important;
+    border: 1px solid #e3e3e3 !important;
+}
+
+.show-grid{
+    margin-bottom: 13px;
+    [class*="span"] {
+        background-color: #EEE;
+        text-align: center;
+        min-height: 40px;
+        line-height: 40px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+}
+
+.white-grid [class*="span"]{background: #fafafa}
+
+
+// Dim down parts of the page for demo purposes
+.bq-demo{opacity: .3}
+
+.show-grid-on-hover:hover [class*="span"]{
+	outline: 2px solid rgba(226,10,0,.2);
+}
+
+
+// Contents / Directory
+ul.styleguide-contents{
+    li{
+        border-bottom: 2px solid white;
+        float: left;
+        width: 33%;
+        a{
+            display: block;
+            padding: 5px;
+        }
+    }
+}
+
+// Show clickable links and buttons in static HTML Mockup files
+body.demo-show-clickables{
+    a[href]:not([href="#"]),
+    .dropdown-toggle,
+    [data-toggle],
+    [data-target],
+    [data-dismiss="modal"]{
+        outline: 3px solid rgba(255,0,0,.5);
+    }
+}
+
+// Show a badge on demo pages in order to distinguish from actual Suite pages
+div#demo-badge{
+    background-color: rgba(0,0,0,.5);
+    color: white;
+    width: 200px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 5000;
+    padding: 10px;
+    font: status-bar;
+    a{
+        outline: none;
+    }
+}
+
+

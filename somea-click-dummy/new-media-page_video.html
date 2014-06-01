@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js ie ie6 lt-ie10 lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js ie ie7 lt-ie10 lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js ie ie8 lt-ie10 lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9]>
+<html class="no-js ie ie9 lt-ie10" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+<title>Media-Page-Single-Photo-Example</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link href="./bootstrap-v3/css/bootstrap.css" rel="stylesheet" media="screen"/>
+<link href="./stylesheet/css/blueimp-gallery.min.css" rel="stylesheet"/>
+<link href="./stylesheet/css/media-page.css" rel="stylesheet" type="text/css"/>
+<link href="./bootstrap-v3/font-awesome-4.0.1/css/font-awesome.css" rel="stylesheet" media="screen"/>
+<script src="js/vendor/jquery/jquery-1.9.1.min.js"></script>
+<script src="./bootstrap-v3/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="js/vendor/Respond-master/respond.min.js"></script>
+<style type="text/css">
+
+
+/******************end of general css for media page***********************/
+/*******************start of color code for theme editor******************************/
+
+body.desinger-recommand {
+    background: #cdbfe3 no-repeat center center fixed; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, #cdbfe3 0%, #bfaae2 26%, #563d7c 100%) no-repeat center center fixed; /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #cdbfe3), color-stop(26%, #bfaae2), dcolor-stop(100%, #563d7c)) no-repeat center center fixed; /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, #cdbfe3 0%, #bfaae2 26%, #563d7c 100%) no-repeat center center fixed; /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, #cdbfe3 0%, #bfaae2 26%, #563d7c 100%) no-repeat center center fixed; /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, #cdbfe3 0%, #bfaae2 26%, #563d7c 100%) no-repeat center center fixed; /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cdbfe3', endColorstr='#563d7c', GradientType=1) no-repeat center center fixed; /* IE6-8 fallback on horizontal gradient */
+}
+
+/*Please use this as example for css style for changing background: it covers background shade for all kinds of browers,  just for the 0% use the left bottom one, 100% for right top one*/
+/**One change for blue schema, change the to right color in database from 49606d to 194A6D***/
+body.blue-new {
+    background: #49606d no-repeat center center fixed; /* Old browsers:use the one for 100% */
+    background: -moz-radial-gradient(center, ellipse cover, #3DC4D6 0%, #194A8C 100%) no-repeat center center fixed; /* FF3.,6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #3DC4D6), dcolor-stop(100%, #194A8C)) no-repeat center center fixed; /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, #3DC4D6 0%, #194A8C 100%) no-repeat center center fixed; /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, #3DC4D6 0%, #49606d 100%) no-repeat center center fixed; /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, #3DC4D6 0%, #49606d 100%) no-repeat center center fixed; /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cdbfe3', endColorstr='#563d7c', GradientType=1) no-repeat center center fixed; /* IE6-8 fallback on horizontal gradient */
+}
+
+body.purple-new {
+    background: -moz-radial-gradient(center, ellipse cover, #f2f0e9 0%, #9a0f4a 100%) no-repeat center center fixed; /* FF3.6+ */
+}
+
+body.blueberry-new {
+    background: -moz-radial-gradient(center, ellipse cover, #d5d8dd 0%, #681055 100%) no-repeat center center fixed; /* FF3.6+ */
+    background: -webkit-radial-gradient(center, ellipse cover, #cdbfe3 0%, #9FF1E3 100%) no-repeat center center fixed; /* Chrome10+,Safari5.1+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cdbfe3', endColorstr='#563d7c', GradientType=1) no-repeat center center fixed; /* IE6-8 fallback on horizontal gradient */
+}
+
+body.liac-new {
+    background: -moz-radial-gradient(center, ellipse cover, #f5e8a2 0%, #4e2648 100%) no-repeat center center fixed; /* FF3.6+ */
+    background: -webkit-radial-gradient(center, ellipse cover, #CFFCDB 0%, #F5E8A2 100%) no-repeat center center fixed; /* Chrome10+,Safari5.1+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#CFFCDB', endColorstr='#F5E8A2', GradientType=1) no-repeat center center fixed; /* IE6-8 fallback on horizontal gradient */
+}
+
+body.coffee-new {
+    background: -moz-radial-gradient(center, ellipse cover, #eed4bb 0%, #883612 100%) no-repeat center center fixed; /* FF3.6+ */
+    background: -webkit-radial-gradient(center, ellipse cover, #eed4bb 0%, #883612 100%) no-repeat center center fixed; /* Chrome10+,Safari5.1+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#CFFCDB', endColorstr='#F5E8A2', GradientType=1) no-repeat center center fixed; /* IE6-8 fallback on horizontal gradient */
+}
+
+body.forest-new {
+    background: -moz-radial-gradient(center, ellipse cover, #c9df8a 0%, #36802d 100%) no-repeat center center fixed; /* FF3.6+ */
+    background: -webkit-radial-gradient(center, ellipse cover, #74BB7C 0%, #326E39 100%) no-repeat center center fixed; /* Chrome10+,Safari5.1+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#CFFCDB', endColorstr='#F5E8A2', GradientType=1) no-repeat center center fixed; /* IE6-8 fallback on horizontal gradient */
+}
+
+body.green-new {
+    background: -moz-radial-gradient(center, ellipse cover, #e9efe0 0%, #75993e 100%) no-repeat center center fixed; /* FF3.6+ */
+    background: -webkit-radial-gradient(center, ellipse cover, #3DC4D6 0%, #63ECBD 100%) no-repeat center center fixed; /* Chrome10+,Safari5.1+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#CFFCDB', endColorstr='#F5E8A2', GradientType=1) no-repeat center center fixed; /* IE6-8 fallback on horizontal gradient */
+}
+
+body.ice-new {
+    background: -moz-radial-gradient(center, ellipse cover, #d0e0eb 0%, #88abc2 100%) no-repeat center center fixed; /* FF3.6+ */
+    background: -webkit-radial-gradient(center, ellipse cover, #D0E0EB 0%, #78E3FF 100%) no-repeat center center fixed; /* Chrome10+,Safari5.1+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#CFFCDB', endColorstr='#F5E8A2', GradientType=1) no-repeat center center fixed; /* IE6-8 fallback on horizontal gradient */
+}
+
+body.orange-new {
+    background: -moz-radial-gradient(center, ellipse cover, #e1e1e1 0%, #f26200 100%) no-repeat center center fixed; /* FF3.6+ */
+    background: -webkit-radial-gradient(center, ellipse cover, #C7A619 0%, #FFA67B 100%) no-repeat center center fixed; /* Chrome10+,Safari5.1+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#C15E97', endColorstr='#F5E8A2', GradientType=1) no-repeat center center fixed; /* IE6-8 fallback on horizontal gradient */
+}
+
+body.rainbow-new {
+    background: -moz-radial-gradient(center, ellipse cover, #edb92e 0%, #f85931 100%) no-repeat center center fixed; /* FF3.6+ */
+    background: -webkit-radial-gradient(center, ellipse cover, #473C8B 0%, #D02090 100%) no-repeat center center fixed; /* Chrome10+,Safari5.1+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#C15E97', endColorstr='#F5E8A2', GradientType=1) no-repeat center center fixed; /* IE6-8 fallback on horizontal gradient */
+}
+
+body.red-new {
+    background: -moz-radial-gradient(center, ellipse cover, #e4e0e0 0%, #e41b23 100%) no-repeat center center fixed; /* FF3.6+ */
+    background: -webkit-radial-gradient(center, ellipse cover, #F2F2F2 0%, #CD3333 100%) no-repeat center center fixed; /* Chrome10+,Safari5.1+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#C15E97', endColorstr='#F5E8A2', GradientType=1) no-repeat center center fixed; /* IE6-8 fallback on horizontal gradient */
+}
+
+body.rainbow-old {
+    background: -moz-linear-gradient(center bottom, #EDB92E 0%, #F3CF70 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+body.orange-old {
+    background: -moz-linear-gradient(center bottom, #E1E1E1 0%, #FFFFFF 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+body.ice-old {
+    background: -moz-linear-gradient(center bottom, #D0E0EB 0%, #FFFFFF 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+body.green-old {
+    background: -moz-linear-gradient(center bottom, #E9EFE0 0%, #FFFFFF 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+body.forest-old {
+    background: -moz-linear-gradient(center bottom, #C9DF8A 0%, #E3EEC2 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+body.coffee-old {
+    background: -moz-linear-gradient(center bottom, #EED4BB 0%, #FCF8F4 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+body.blue-old {
+    background: -moz-linear-gradient(center bottom, #C3D7D1 0%, #EEF4F2 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+body.blueberry-old {
+    background: -moz-linear-gradient(center bottom, #C3D7D1 0%, #EEF4F2 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+body.liac-old {
+    background: -moz-linear-gradient(center bottom, #F5E8A2 0%, #FCF8E2 100%) repeat scroll 0 0 rgba(0, 0, 0, 0)
+}
+
+/*************end of color code*************/
+
+/**********************************layout for theme editor********************************/
+.imgs-container img.half-round-edge {
+    border-radius: 0 18px 0 0;
+
+}
+
+/*border color should be the one on bottom */
+.imgs-container img.borders {
+    border-color: #C3D7D1;
+    border-style: solid;
+    border-width: 12px;
+    width: 100%;
+}
+
+.img-info.round-edge {
+    border-radius: 0 0 18px 18px;
+    border-color: #fff;
+}
+
+.imgs-container img.round-edge {
+    border-radius: 18px 18px 0 0;
+    border-top: 5px;
+    border-left: 5px;
+    border-right: 5px;
+    border-color: #fff;
+}
+
+.img-info.half-round-edge {
+    border-radius: 0 0 0 18px;
+}
+</style>
+</head>
+<body class="desinger-recommand light-box-bg">
+<div class="main-section row">
+    <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+        <div class="agnecy-info-container row">
+            <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
+                <div class="agency-info">
+                    <img class="agency-logo" src="./img/media-page/agency-logo.png" alt="logo">
+
+                    <p class="agency-name"><strong>Reiseburo Sonnechein</strong></p>
+
+                    <p class="agency-description">Welcome to Reiseburo Sonnechein, Germany's best site for travel
+                        deals.</p>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-6 col-sm-12 col-xs-12">
+                <div class="agency-info agency-additional-info ">
+                    <p class="agency-open condensed"><strong>Opening hours: </strong>9am - 18pm (Mon-Fri) 9am - 15pm
+                        (Sams) </p>
+
+                    <p class="agency-tel condensed"><strong>Tel:</strong> 0186 999 999 <strong>Fax:</strong> 123 456 789
+                    </p>
+
+                    <p class="agency-email condensed"><strong>E-mail: </strong>travelagency@sunshine.com</p>
+
+                    <p class="agency-web-site condensed"><strong>Web: </strong><a href="www.travelagencysunshine.com">www.travelagencysunshine.com </a>
+                    </p>
+
+                    <p class="agency-impressum condensed"><strong>Impressum: </strong> <a id="impressum-button">click to
+                        open our legal notes </a></p>
+
+                    <p id="impressum-content" hidden>
+                        WICHTIGER HINWEIS: Reisebüro Sonnenschein ist KEIN reales Reisebüro!!!
+                        Aufgabe
+                        Derzeit beschäftigt sich das Reisebüro Sonnenschein intensiv mit der Social Media Welt und deren
+                        tollen Möglichkeiten.
+                        Das Reisebüro Sonnenschein ist eine Amadeus Germany Bad Homburg Test-Plattform. Hier werden neue
+                        technische Innovationen für Reisebüros entwickelt und getestet.
+                        Impressum von Amadeus Germany GmbH:
+                        http://www.amadeus.com/de/Impressum-DE.html
+                    </p>
+                    <hr>
+                    <p class="agency-social">
+                        <i class="fa fa-facebook-square share-passive"></i>
+                        <i class="fa fa-twitter-square share-passive"></i>
+                        <i class="fa fa-google-plus-square share-passive"></i>
+                        <strong> Like this Page ? click to share</strong>
+                    </p>
+                    <!--this part is only for the passive mode social plugin-->
+                    <p id="passive-plugin-hint" hidden>
+                                <span class="label label-success">
+                                    <strong><i class="fa fa-smile-o"></i>Almost there, please click again to
+                                        share!</strong><br>
+                                    <small>why two clicks? your privacy are protected in this way <a
+                                            id="learn-more-passive"> learn more </a></small>
+                                </span>
+                    </p>
+                    <p id="passive-plugin-hint-extra" hidden>
+                                <span class="label label-success">
+                                    <i class="fa fa-lock"></i>
+                                    <small>In order to protect your privacy, we disabled all tracking on this web page,
+                                        so
+                                        <strong>so your first click on share button will active it and then second click
+                                            is to share</strong> Thank you
+                                    </small>
+                                </span>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-6 col-sm-12 col-xs-12">
+                <div class="agency-info">
+                    <h4>this part is just for demo</h4>
+                    <h5> Background:</h5>
+                    <ul>
+                        <li><a id="blue-old">blue old</a> <a id="blue-new">blue new</a></li>
+                        <li><a id="blueberry-old">blueberry old</a> <a id="blueberry-new">blueberry new</a></li>
+                        <li><a id="coffee-old">coffee old</a> <a id="coffee-new">coffee new</a></li>
+                        <li><a id="forest-old">forest old</a> <a id="forest-new">forest new</a></li>
+                        <li><a id="green-old">green old</a> <a id="green-new">green new</a></li>
+                        <li><a id="ice-old">ice old </a> <a id="ice-new">ice new</a></li>
+                        <li><a id="liac-old">liac old</a> <a id="liac-new">liac new</a></li>
+                        <li><a id="purple-old">purple old</a> <a id="purple-new">purple new</a></li>
+                        <li><a id="rainbow-old">rainbow old</a> <a id="rainbow-new">rainbow new</a></li>
+                        <li><a id="red-old">red </a> <a id="red-new">red new</a></li>
+                        <li><a id="round">round </a></li>
+                        <li><a id="half-round">half round</a></li>
+                        <li><a id="borders">borders</a></li>
+                        <li><a id="titled">Titled</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+        <div class="row">
+            <div class="col-lg-12 col-md-11 col-sm-12 col-xs-12">
+                <div class="collection-info">
+                    <p class="collection-title"><strong>Collection Title</strong></p>
+
+                    <p class="collection-description">
+                        <!--it is better that we can detect the URL from RTE of backend. and give a <a> tag :)-->
+                        See the offer here: <a href="http://www.google.com">www.sonnechein.com/abc1</a>
+                        The click event is sent to an element when the mouse pointer is over the element, and the mouse
+                        button is pressed and released. Any HTML element can
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row  imgs-container">
+            <div class="col-lg-4 col-md-6  col-sm-12 col-xs-12 grid-sizer">
+                <a href="./img/media-page/ex4.jpg" title="Banana" data-gallery=""><img src="./img/media-page/ex4.jpg"
+                                                                                       alt="Banana"> </a>
+
+                <div class="img-info">
+                    <a class="openGallery"><p class="img-title"><strong>  Image Title    </strong>
+                    <i class="fa fa-expand"></i></p></a>
+                    <p class="img-description">The click event is sent to an element when the mouse pointer is over the
+                        element, and the mouse button is pressed and released. Any HTML element can</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6  col-sm-12 col-xs-12 grid-sizer youtube-container">
+                <div class="youtube-icon-container"></div>
+                <i class="fa fa-youtube-square"></i>
+                <a href="http://www.youtube.com/watch?v=wyz_2DEah4o" title="Banana" type="text/html"
+                   data-youtube="wyz_2DEah4o" data-poster="https://img.youtube.com/vi/NeVM3UGcNWw/0.jpg" id="play-youtube-video">
+                    <img src="https://img.youtube.com/vi/NeVM3UGcNWw/0.jpg" alt="Banana">
+                    <div class="img-info">
+                        <p class="img-title"><strong> Video Title</strong><i
+                                class="fa fa-youtube-play"></i></p>
+
+                        <p class="img-description">The click event is sent to an element when the mouse pointer is over
+                            the
+                            element, and the mouse button is pressed and released. Any HTML element can</p>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Necessary for each media page: The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+
+    <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+        <div class="slides"></div>
+        <h3 class="title"></h3>
+        <a class="prev">‹</a>
+        <a class="next">›</a>
+        <a class="close">×</a>
+        <a class="play-pause"></a>
+        <ol class="indicator"></ol>
+    </div>
+</div>
+
+
+<script src="js/vendor/Masonry/masonry.min.js" type="text/javascript"></script>
+<script src="js/vendor/blueimp-gallery/blueimp-gallery.min.js"></script>
+<script src="js/vendor/bootstrap-v2/bootstrap-image-gallery.min.js"></script>
+<script src="js/vendor/jquery/jquery.blueimp-gallery.js"></script>
+<script src="js/vendor/blueimp-gallery/blueimp-gallery-indicator.js"></script>
+<script src="js/vendor/blueimp-gallery/blueimp-gallery-video.js"></script>
+<script src="js/vendor/blueimp-gallery/blueimp-gallery-youtube.js"></script>
+
+
+<script type="text/javascript">
+    //this is for pintrest view css
+    $(document).ready(function () {
+        //automatic ajust layout for different numbers of images in the page
+        $(document).ready(function () {
+            //automatic ajust layout for different numbers of images in the page
+            if ($('.grid-sizer').length === 1) {
+                $('.main-section').children().first().addClass('col-offset-2')
+                $('.imgs-container').removeClass('col-lg-9 col-md-12').addClass('col-lg-5 col-md-6');
+                $('.grid-sizer').removeClass('col-lg-4 col-md-6').addClass('col-lg-12 col-md-12');
+            } else if ($('.grid-sizer').length === 2) {
+
+                $('.grid-sizer').removeClass('col-lg-4').addClass('col-lg-6');
+            }
+            $('.imgs-container').masonry({
+                itemSelector: '.grid-sizer'
+            });
+        });
+    });
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        //init:gallery
+        $('#blueimp-gallery').data('useBootstrapModal', false);
+        $('#blueimp-gallery').toggleClass('blueimp-gallery-controls', true);
+
+        //open gallery
+        $('.openGallery').click(function () {
+            $(this).parent().siblings().click();
+        });
+        $('.share-passive').click(function () {
+            if (!$(this).hasClass('active')) {
+                $(this).addClass('active');
+                $('#passive-plugin-hint').slideDown("slow");
+            }
+
+        });
+
+        //gallery setting for videos
+        $('#play-youtube-video').click(function (event) {
+                    event.preventDefault();
+                    event = event || window.event;
+
+                    blueimp.Gallery(
+                            [
+                                {
+                                    title: 'A YouYube video',
+                                    href: 'http://www.youtube.com/watch?v=NeVM3UGcNWw',
+                                    type: 'text/html',
+                                    youtube: 'NeVM3UGcNWw',
+                                    poster: 'https://img.youtube.com/vi/NeVM3UGcNWw/0.jpg'
+                                }
+                            ],
+                            {
+                                youTubeOptions: {
+                                    // The list object property (or data attribute) with the YouTube video id:
+                                    youTubeVideoIdProperty: 'youtube',
+                                    // Optional object with parameters passed to the YouTube video player:
+                                    // https://developers.google.com/youtube/player_parameters
+                                    youTubePlayerVars: {
+                                        wmode: 'transparent'
+                                    },
+                                    // Require a click on the native YouTube player for the initial playback:
+                                    youTubeClickToPlay: true
+                                },
+                                onslidecomplete: function (index, slide) {
+                                    // Callback function executed on slide content load.
+                                    $('.video-content > a').append('<i class="fa fa-youtube-play slides-show-icon"></i>');
+                                }
+                            },
+                            $('#blueimp-gallery').data()
+                    );
+                }
+        );
+
+
+        //passive mode social plugins
+        $('#learn-more-passive').click(function () {
+            $('#passive-plugin-hint-extra').slideToggle("slow");
+        });
+        $('#impressum-button').click(function () {
+            $('#impressum-content').slideToggle("slow");
+        });
+
+        //just for demo to change coller
+        $('#blue-old').click(function () {
+            $('body').removeClass().addClass('blue-old dark-box-bg');
+
+        });
+        $('#blue-new').click(function () {
+            $('body').removeClass().addClass('blue-new dark-box-bg');
+        });
+        $('#liac-new').click(function () {
+            $('body').removeClass().addClass('liac-new dark-box-bg');
+        });
+        $('#liac-old').click(function () {
+            $('body').removeClass().addClass('liac-old dark-box-bg');
+        });
+        $('#coffee-new').click(function () {
+            $('body').removeClass().addClass('coffee-new dark-box-bg');
+        });
+        $('#coffee-old').click(function () {
+            $('body').removeClass().addClass('coffee-old dark-box-bg');
+        });
+        $('#forest-new').click(function () {
+            $('body').removeClass().addClass('forest-new dark-box-bg');
+        });
+        $('#forest-old').click(function () {
+            $('body').removeClass().addClass('forest-old dark-box-bg');
+        });
+        $('#green-new').click(function () {
+            $('body').removeClass().addClass('green-new dark-box-bg');
+        });
+        $('#green-old').click(function () {
+            $('body').removeClass().addClass('green-old dark-box-bg');
+        });
+        $('#ice-new').click(function () {
+            $('body').removeClass().addClass('ice-new dark-box-bg');
+        });
+        $('#ice-old').click(function () {
+            $('body').removeClass().addClass('ice-old dark-box-bg');
+        });
+        $('#blueberry-new').click(function () {
+            $('body').removeClass().addClass('blueberry-new dark-box-bg');
+        });
+        $('#blueberry-old').click(function () {
+            $('body').removeClass().addClass('blueberry-old dark-box-bg');
+        });
+        $('#purple-new').click(function () {
+            $('body').removeClass().addClass('purple-new light-box-bg');
+        });
+        $('#purple-old').click(function () {
+            $('body').removeClass().addClass('purple-old dark-box-bg');
+        });
+        $('#rainbow-new').click(function () {
+            $('body').removeClass().addClass('rainbow-new light-box-bg');
+        });
+        $('#rainbow-old').click(function () {
+            $('body').removeClass().addClass('rainbow-old dark-box-bg');
+        });
+        $('#vintage-new').click(function () {
+            $('body').removeClass().addClass('vintage-new light-box-bg');
+        });
+        $('#vintage-old').click(function () {
+            $('body').removeClass().addClass('vintage-old dark-box-bg');
+        });
+        $('#red-new').click(function () {
+            $('body').removeClass().addClass('red-new light-box-bg');
+        });
+        $('#red-old').click(function () {
+            $('body').removeClass().addClass('red-old dark-box-bg');
+        });
+        $('#round').click(function () {
+            $('.imgs-container').find('img').removeClass().addClass('round-edge');
+            $('.imgs-container').find('.img-info').removeClass().addClass('img-info round-edge');
+        });
+        $('#half-round').click(function () {
+            $('.imgs-container').find('img').removeClass().addClass('half-round-edge');
+            $('.imgs-container').find('.img-info').removeClass().addClass('img-info half-round-edge');
+        });
+        $('#borders').click(function () {
+            $('.imgs-container').find('img').removeClass().addClass('borders');
+        });
+    });
+</script>
+
+</body>
+
+</html>

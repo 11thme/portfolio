@@ -1,0 +1,295 @@
+// Somea Overrides navs.less
+// ****************************************
+
+// Tab Navigation in Message history
+
+
+.nav .pull-right {
+  float: right;
+}
+
+header nav{
+	text-align: right;
+	.dropdown-menu{
+		text-align: left; // Reset for Dropdown menues
+	}
+}
+
+
+.nav-tabs.nav-stacked > li > a {
+    .border-radius(0);
+    border: 0; // Reset Bootstrap
+    border-top: 1px solid @grayLighter;
+    color: @grayLightest;
+
+	background: @grayLight; // Old browsers
+	background: -moz-linear-gradient(left,  @grayLight 95%, darken(@grayLight, 20%) 100%); // FF3.6+
+	background: -webkit-gradient(linear, left top, right top, color-stop(95%,@grayLight), color-stop(100%,darken(@grayLight, 20%))); // Chrome,Safari4+
+	background: -webkit-linear-gradient(left,  @grayLight 95%,darken(@grayLight, 20%) 100%); // Chrome10+,Safari5.1+
+	background: -o-linear-gradient(left,  @grayLight 95%,darken(@grayLight, 20%) 100%); // Opera 11.10+
+	background: -ms-linear-gradient(left,  @grayLight 95%,darken(@grayLight, 20%) 100%); // IE10+
+	background: linear-gradient(to right,  @grayLight 95%,darken(@grayLight, 20%) 100%); // W3C
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=@grayLight, endColorstr=darken(@grayLight, 20%),GradientType=1 ); // IE6-9
+	&:hover {
+		.border-radius(0);
+		border: 0; // Reset Bootstrap
+		border-top: 1px solid @grayLighter;
+		color: @white;
+
+		background: @gray; // Old browsers
+		background: -moz-linear-gradient(left,  @gray 95%, darken(@gray, 20%) 100%); // FF3.6+
+		background: -webkit-gradient(linear, left top, right top, color-stop(95%,@gray), color-stop(100%,darken(@gray, 20%))); // Chrome,Safari4+
+		background: -webkit-linear-gradient(left,  @gray 95%,darken(@gray, 20%) 100%); // Chrome10+,Safari5.1+
+		background: -o-linear-gradient(left,  @gray 95%,darken(@gray, 20%) 100%); // Opera 11.10+
+		background: -ms-linear-gradient(left,  @gray 95%,darken(@gray, 20%) 100%); // IE10+
+		background: linear-gradient(to right,  @gray 95%,darken(@gray, 20%) 100%); // W3C
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=@gray, endColorstr=darken(@gray, 20%),GradientType=1 ); // IE6-9
+	}
+	&.active, &.active:hover{
+		color: @black;
+		font-weight: bold;
+		background: #f2f2f2; // Old browsers
+		background: -moz-linear-gradient(left,  #f2f2f2 0%, #d9d9d9 100%); // FF3.6+
+		background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f2f2f2), color-stop(100%,#d9d9d9)); // Chrome,Safari4+
+		background: -webkit-linear-gradient(left,  #f2f2f2 0%,#d9d9d9 100%); // Chrome10+,Safari5.1+
+		background: -o-linear-gradient(left,  #f2f2f2 0%,#d9d9d9 100%); // Opera 11.10+
+		background: -ms-linear-gradient(left,  #f2f2f2 0%,#d9d9d9 100%); // IE10+
+		background: linear-gradient(to right,  #f2f2f2 0%,#d9d9d9 100%); // W3C
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#d9d9d9',GradientType=1 ); // IE6-9
+	}
+}
+
+// Border radius for first and last list entry
+.nav-tabs.nav-stacked > li:first-child > a {
+	.border-radius(4px 0 0 0);
+	border-top:0;
+}
+.nav-tabs.nav-stacked > li:last-child > a {.border-radius(0 0 0 4px);}
+
+ul.nav-stacked li a{
+	padding-right: @gridGutterWidth/2; // visual fix for badge in subnav
+}
+
+ul.nav-stacked .badge {
+	.border-radius(5px);
+	margin-right: 5px;
+	display: inline-block;
+	float: right;
+	line-height: 1.65em;
+	padding: 0 7px;
+	text-align: center;
+	min-width: 1.1em;
+}
+
+.nav{
+    margin-bottom: @baseLineHeight/2;
+}
+
+// SOMEA Main Navigation
+// ****************************************
+
+ul#primary-nav{
+	padding-top: 10px;
+	li{
+		list-style-type:none;
+		float:left;
+		margin-right: 1px;
+		background: @someaDarkBlue url(../img/bg-noise-shadow.png) repeat-x 0 100%;
+		&:first-child{.border-radius(3px 0 0 0)}
+		&:last-child{.border-radius(0 3px 0 0)}
+		&:hover{
+			background-color:darken(@someaDarkBlue, 5%);
+		}
+		a{
+			display:inline-block;
+			padding: 8px 13px;
+			color: @someaLightBlue;
+			&:hover{
+				text-decoration: none;
+			}
+		}
+	}
+	li.active{
+		background: @white; /* Old browsers */
+		background: -moz-linear-gradient(top,  @white 40%, @grayLighter 95%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(40%,@white), color-stop(95%,@grayLighter)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  @white 40%,@grayLighter 95%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  @white 40%,@grayLighter 95%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  @white 40%,@grayLighter 95%); /* IE10+ */
+		background: linear-gradient(to bottom,  @white 40%,@grayLighter 95%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=@white, endColorstr=@grayLighter,GradientType=0 ); /* IE6-9 */
+		margin-top: -5px;
+		.border-radius(3px 3px 0 0);
+		a{
+			padding: 13px 13px 8px;
+			font-weight: bold;
+			color: black;
+		}
+	}
+}
+
+
+// Subnav
+// ****************************************
+.subnav-bg-top{
+	background: url(../img/bg-subnav-shadow.png) no-repeat right top;
+	padding-top: 40px;
+	margin-top: -20px;
+	width: 220px;
+	.back-link{
+		display: block;
+		padding: 50px 0 @gridGutterWidth;
+	}
+	ul:last-child{ // allow function links beneath the subnav menu
+		padding-top: 10px; // before 64px;
+		padding-bottom: 50px;
+		background: @grayLighter url(../img/bg-subnav-shadow.png) no-repeat right bottom;
+		margin:0; // Reset
+
+		// Subnav Level 2 (not actively used right now... )
+		// ****************************************
+		// ul{
+		// 	background-image: none;
+		// 	background: @grayLight;
+		// 	background: @grayLightest; // Old browsers
+		// 	background: -moz-linear-gradient(left,  @grayLightest 0%, darken(@grayLightest,10%) 100%); // FF3.6+
+		// 	background: -webkit-gradient(linear, left top, right top, color-stop(0%,@grayLightest), color-stop(100%,darken(@grayLightest,10%))); // Chrome,Safari4+
+		// 	background: -webkit-linear-gradient(left,  @grayLightest 0%,darken(@grayLightest,10%) 100%); // Chrome10+,Safari5.1+
+		// 	background: -o-linear-gradient(left,  @grayLightest 0%,darken(@grayLightest,10%) 100%); // Opera 11.10+
+		// 	background: -ms-linear-gradient(left,  @grayLightest 0%,darken(@grayLightest,10%) 100%); // IE10+
+		// 	background: linear-gradient(to right,  @grayLightest 0%,darken(@grayLightest,10%) 100%); // W3C
+		// 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@grayLightest', endColorstr='darken(@grayLightest,10%)',GradientType=1 ); // IE6-9
+		// 	padding-bottom: @gridGutterWidth;
+		// 	li{
+		// 		a{
+		// 			display:block;
+		// 			padding: @gridGutterWidth*.2 @gridGutterWidth*.6;
+		// 		}
+		// 	}
+		// }
+	}
+	
+	// bug in IE8 prevents from grouping selectors
+	ul.last-child{
+	  padding-top: 10px; // before 64px;
+		padding-bottom: 50px;
+		background: @grayLighter url(../img/bg-subnav-shadow.png) no-repeat right bottom;
+		margin:0; // Reset
+	}
+
+	// Functionalities/Links beneath sub navigation
+	ul.nav-tabs.nav-functions{
+        border: 0;
+        li{
+            float: none;
+
+            // background: #e3e3e3; /* Old browsers */
+            /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+            // background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSI5NSUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjY2NjY2NjIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+            // background: -moz-linear-gradient(left,  #e3e3e3 95%, #ccc 100%); /* FF3.6+ */
+            // background: -webkit-gradient(linear, left top, right top, color-stop(95%,#e3e3e3), color-stop(100%,#ccc)); /* Chrome,Safari4+ */
+            // background: -webkit-linear-gradient(left,  #e3e3e3 95%,#ccc 100%); /* Chrome10+,Safari5.1+ */
+            // background: -o-linear-gradient(left,  #e3e3e3 95%,#ccc 100%); /* Opera 11.10+ */
+            // background: -ms-linear-gradient(left,  #e3e3e3 95%,#ccc 100%); /* IE10+ */
+            // background: linear-gradient(to right,  #e3e3e3 95%,#ccc 100%); /* W3C */
+            // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3e3e3', endColorstr='#ccc',GradientType=1 ); /* IE6-8 */
+
+            &:first-child{
+                .border-radius(@baseBorderRadius 0 0 0);
+            }
+            &:last-child{
+                .border-radius(0 0 0 @baseBorderRadius);
+            }
+
+
+
+
+
+            a, a:hover{
+                display: block;
+                border: 0;
+                font-weight: bold;
+                text-decoration: none;
+                &:hover i.icon-semi{.opacity(50);}
+            }
+        }
+    }
+}
+
+// fix padding if a Back button is shown in subnav
+span + ul.nav{padding-top: 0;}
+.subnav-bg-top > span {margin-top:-@gridGutterWidth}
+
+
+
+
+// Horizontal Tabs in a SOMEA box Header
+// ****************************************
+
+.somea-box header .nav-tabs{
+	border-color: @formBorder;
+	& > .active > a, & > .active > a:hover{
+		border-color: @formBorder @formBorder transparent;
+		background: white;
+	}
+	& > li{
+		& .active a:hover{
+			background-image: none;
+			background-color: @white;
+		}
+		& > a{
+			border-color: @formBorder @formBorder transparent;
+			#gradient > .vertical(darken(@white,7%), darken(@grayLighter,8%));
+			color: @gray;
+			&:hover{
+				#gradient > .vertical(darken(@white,7%), darken(@grayLighter,12%));
+				border-color: @formBorder @formBorder transparent;
+			}
+		}
+	}
+}
+
+
+
+
+// Tabs in SOMEA-box body container
+// ****************************************
+.somea-box header + div{
+	.tab-content{
+		border-color: transparent; // previous value: transparent @formBorder @formBorder (I just don´t know what for...)
+		border-width: 1px;
+		border-style: solid;
+		padding: 20px;
+		.border-radius(0 0 4px 4px);
+	}
+	.nav {
+		list-style: none outside none;
+		margin-bottom: -1px;
+		margin-left: 0;
+	}
+	.nav-tabs {
+		border-color: @formBorder;
+		 & > li > a {
+			border-color: @formBorder;
+			background: @grayLightest;
+			color: @grayLight;
+			&:hover{border-color: @formBorder;}
+		}
+		& > .active > a, & > .active > a:hover {
+			border-color: @formBorder @formBorder transparent;
+			background: @white;
+		}
+	}
+}
+
+
+// Tab mechanism withouth visible Tab elements
+.tab-invisible{
+	border: 0 !important;
+	padding: 0 !important;
+	overflow: hidden;
+}
+
+
+
+

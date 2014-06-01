@@ -1,0 +1,1587 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Amadeus Social Media Suite</title>
+    <link rel="stylesheet/less" type="text/css" href="stylesheet/less/somea-variables.less"/>
+    <link rel="stylesheet/less" type="text/css" href="stylesheet/less/somea-bootstrap.less"/>
+    <link href="bootstrap-v3/font-awesome-4.0.1/css/font-awesome.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheet/bootstrap/css/bootstrap-image-gallery.min.css"/>
+    <link rel="stylesheet" type="text/css" href="stylesheet/css/dam-base.css"/>
+    <link rel="stylesheet" type="text/css" href="stylesheet/css/dam-pinterest.css"/>
+    <script src="js/vendor/less-1.3.1.min.js" type="text/javascript"></script>
+    <script src="js/vendor/jquery/jquery-1.9.1.min.js"></script>
+    <script src="js/vendor/select2-3.4.3/select2.js"></script>
+    <link href="js/vendor/select2-3.4.3/select2.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" async src="//assets.pinterest.com/js/pinit.js"></script>
+</head>
+<body>
+<header id="suite-header">
+    <div class="somea_alertbox">
+    </div>
+    <div class="container">
+        <div id="nav-top" class="row">
+            <div class="span12">
+                <ul id="secondary-nav" class="pull-right">
+                    <li>
+                        <a class="current-user" href="prototype-settings.html">
+                            Travel Agency <strong>Peter Mustermann</strong>
+
+                        </a>
+                    </li>
+                    <li><a href="prototype-switch-account.html">Switch account</a></li>
+                    <li><a href="prototype-settings.html">Settings</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="static-main-nav affix-top" data-spy="affix" data-offset-top="45">
+        <div class="container">
+            <div class="row">
+                <div class="span9 offset3">
+                    <ul id="primary-nav">
+                        <li><a href="#">Dashboard</a></li>
+                        <li><a href="#">Messages<i class="icon-envelope-orange icon-right"></i></a></li>
+                        <li><a href="#">Notifications<i class="icon-envelope-orange icon-right"></i></a></li>
+                        <li><a href="#">Analytics</a></li>
+                        <li><a href="#">AppShop</a></li>
+                        <li><a href="#">My Apps</a></li>
+                        <li class="active"><a href="#">Media</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="content-wrapper">
+<div class="container content-container">
+<div class="row-fluid">
+<div class="span3">
+    <div class="subnav-bg-top affix-bottom">
+        <ul class="nav nav-tabs nav-stacked">
+            <li><a href="./dam-photo.html">Photos</a></li>
+            <li><a href="./dam-video.html">Videos</a></li>
+            <li><a href="./dam-collection.html">Collections</a></li>
+            <li><a href="./dam-pinterest.html" class="active">Pinterest</a></li>
+            <li><a href="./dam-all-media.html">All Media </a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="span9">
+<!--*****************************Photo container header*****************************-->
+<div class="somea-box">
+<header>
+    <h1>
+        Pinterest
+    </h1>
+
+    <p>ASMS Pinterst integration tool allow you to pin all kinds of <strong>booking offers</strong>. At same
+        time, we also <strong>intelligent analysis</strong> for all your pins/offer pages</p>
+</header>
+<div class="box-content">
+<!--*********************************choose ibes or medias***************************************-->
+<div class="row-fluid">
+    <div class="well add-newpin-container span3">
+        <p>
+            <i class="fa fa-leaf icon-big"></i>
+        <h5>Travel Tainment Internet Booking Engine</h5>
+        <hr>
+        <span>you can pin any offers of <strong>travel packages</strong> to</span>
+        </p>
+        <a class="btn" data-toggle="modal" href="#pin-tt-offer">
+            <i class="fa fa-thumb-tack icon-semi icon-left"></i>TT IBE
+        </a>
+    </div>
+    <div class="well add-newpin-container span3">
+        <p>
+            <i class="fa fa-plane icon-big"></i>
+        <h5>Flight Internet Booking Engine</h5>
+        <hr>
+        <span>you can pin any offers of <strong>Flight Ticket (German Market)</strong></span>
+        </p>
+        <a class="btn" data-toggle="modal" href="#">
+            <i class="fa fa-thumb-tack icon-semi icon-left"></i>Flight IBE
+        </a>
+    </div>
+    <div class="well add-newpin-container span3">
+        <p>
+            <i class="fa fa-globe icon-big"></i>
+        <h5> E-Power Internet Booking Engine</h5>
+        <hr>
+        <span>you can pin any offers of <strong>Flight Ticket (Global Market)</strong></span>
+        </p>
+        <a class="btn" data-toggle="modal" href="#">
+            <i class="fa fa-thumb-tack icon-semi icon-left"></i>e-Power IBE
+        </a>
+    </div>
+    <div class="well add-newpin-container span3">
+        <p>
+            <i class="fa fa-picture-o icon-big"></i>
+        <h5>Photos (Media Pages)</h5>
+        <hr>
+        <span>you can pin any photos in <strong>Amadeus Social Media Suite</strong></span>
+        </p>
+        <a class="btn" data-toggle="modal" href="#pin-media-page">
+            <i class="fa fa-thumb-tack icon-semi icon-left"></i>Photos
+        </a>
+    </div>
+</div>
+<hr>
+<!--*********************************already pined pins***************************************-->
+<div class="row-fluid ">
+    <div class="span12 manage-pins somea-form">
+        <div class="row-fluid">
+            <div class="span1">
+                <h4>All Pins</h4>
+            </div>
+
+            <div class="span6">
+                <input type="text" placeholder="search your pins">
+            </div>
+            <div class="span2 ">
+                <div class="btn-group">
+                    <button class="btn"><i class="fa fa-search icon-left"></i></button>
+                    <button class="btn" id="refresh-pins"><i class="fa fa-refresh icon-left"></i> Refresh</button>
+                </div>
+            </div>
+            <div class="span3 pull-right">
+                <a data-toggle="modal" class="btn btn-primary" href="#analytics-pins-modal" role="button"><i
+                        class="fa fa-bar-chart-o icon-left"></i> Analytics Report</a>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span2">
+                <h4>Filter Pins</h4>
+            </div>
+            <div class="span5">
+                <label>
+                    <select class="select2" name="some_name" id="some_name" size="6">
+                        <option value="option1"><i class="fa fa-sort-alpha-asc"></i>Sort by time (asc)</option>
+                        <option value="option2"><i class="fa fa-sort-alpha-desc"></i>Sort by time (desc)</option>
+                        <option value="option3">Most Recent</option>
+                        <option value="option4">Most Re-Pined</option>
+                        <option value="option5">Most Visited Pins</option>
+                        <option value="option6">Most Visited Web Pages(Offer Pages)</option>
+                    </select>
+                </label>
+            </div>
+            <div class="span5">
+                <label>
+                    <select class="select2" name="some_name" id="some_name" size="6">
+                        <option value="option1"><i class="fa fa-sort-alpha-asc"></i>All Type</option>
+                        <option value="option2"><i class="fa fa-sort-alpha-desc"></i>Only Offer Pins</option>
+                        <option value="option3">Only Photo Pins</option>
+                    </select>
+                </label>
+            </div>
+        </div>
+
+    </div>
+</div>
+<hr>
+<div class="my-pin-borad">
+<div class="pinterest-container">
+<div class="single-pin">
+    <div class="single-pin-inner">
+        <div class="pin-header">
+            <a class="ibe-name" data-toggle="tooltip" title="click to redirect to offer page"><strong><i
+                    class="fa fa-leaf icon-left icon-semi"></i>TT IBE </strong></a>
+            <a href="#edit-offer-page-modal" data-toggle="modal">
+                <small><i class="fa fa-edit icon-center icon-semi"></i>edit offer</small>
+            </a>
+        </div>
+        <a><img src="./img/dam/example-img9.jpg" alt=""/></a>
+
+        <div class="single-pin-info">
+                <span class="pin-analytics">
+                   <a href="http://www.pinterest.com/pin/373869206537625607/"><strong><i
+                           class="fa fa-pinterest icon-left icon-pinterest-red" data-toggle="tooltip"
+                           title="visited your pins"></i>102 |</strong></a>
+                    <strong><i class="fa fa-thumb-tack icon-center icon-semi" data-toggle="tooltip"
+                               title="repined your pins"></i>99 |</strong>
+                   <strong><i class="fa fa-heart icon-center icon-semi" data-toggle="tooltip"
+                              title="liked your pins"></i>89 </strong>
+                </span>
+            <hr>
+            <p class="pinterest-details">
+                <strong><i class="fa fa-columns icon-left icon-semi"></i>Northern American Offers</strong>
+            <hr>
+            Nice trip to North American for its amazing nature, etc Yellow Stone
+            National Park. 8 Days with AAA Travel
+            Agency, just cost $900
+            </p>
+            <hr>
+        </div>
+        <div class="pin-footer">
+            <a class="btn" data-toggle="modal" href="#share-pins-modal"><i
+                    class="fa fa-share-square icon-left icon-semi"></i> Share </a>
+            <a class="btn" data-toggle="modal" href="#analytics-pin-modal"><i
+                    class="fa fa-bar-chart-o icon-left icon-semi"></i> Analytics </a>
+        </div>
+    </div>
+</div>
+<div class="single-pin">
+    <div class="single-pin-inner">
+        <div class="pin-header">
+            <a class="ibe-name"><strong><i class="fa fa-picture-o icon-left icon-semi"></i>Photo</strong></a>
+            <a>
+                <small><i class="fa fa-edit icon-center icon-semi"></i>edit offer</small>
+            </a>
+        </div>
+        <img src="./img/dam/example-img8.jpg" alt=""/>
+
+        <div class="single-pin-info">
+            <span class="pin-analytics">
+                   <strong><i class="fa fa-pinterest icon-left icon-pinterest-red"></i>13 |</strong>
+                    <strong><i class="fa fa-thumb-tack icon-center icon-semi"></i>24 |</strong>
+                   <strong><i class="fa fa-heart icon-center icon-semi"></i>5 </strong>
+            </span>
+            <hr>
+            <p class="pinterest-details">
+                <strong><i class="fa fa-columns icon-left icon-semi"></i>Northern American Offers</strong>
+            <hr>
+            Go to find out bigger Spring in North American, experience extrodinary
+            beauty. Now fly from Germany with 5 start hotels for 2 people, only 2000$
+            for 10 days. Offer ends Feb. 13 2014
+            </p>
+            <hr>
+        </div>
+        <div class="pin-footer">
+            <a class="btn"><i class="fa fa-share-square icon-left icon-semi"></i> Share </a>
+            <a class="btn"><i class="fa fa-bar-chart-o icon-left icon-semi"></i> Analytics </a>
+        </div>
+    </div>
+</div>
+<div class="single-pin">
+    <div class="single-pin-inner">
+        <div class="pin-header">
+            <a class="ibe-name"><strong> <i class="fa fa-plane icon-left icon-semi"></i>Flight IBE</strong></a>
+
+            <a>
+                <small><i class="fa fa-edit icon-center icon-semi"></i>edit offer</small>
+            </a>
+        </div>
+        <img src="./img/dam/example-img7.jpg" alt=""/>
+
+        <div class="single-pin-info">
+            <span class="pin-analytics">
+               <strong><i class="fa fa-pinterest icon-left icon-pinterest-red"></i>343 |</strong>
+               <strong><i class="fa fa-thumb-tack icon-center icon-semi"></i>23 |</strong>
+               <strong><i class="fa fa-heart icon-center icon-semi"></i>175 </strong>
+            </span>
+            <hr>
+            <p class="pinterest-details">
+                <strong><i class="fa fa-columns icon-left icon-semi"></i>Northern American Offers</strong>
+            <hr>
+            Go with your children to forest and play with foxes, nice time to have
+            famility trip to National Park in American, departure from Germany start
+            from 1800$. Camping house and Nature history guide.
+            </p>
+            <hr>
+        </div>
+        <div class="pin-footer">
+            <a class="btn"><i class="fa fa-share-square icon-left icon-semi"></i> Share </a>
+            <a class="btn"><i class="fa fa-bar-chart-o icon-left icon-semi"></i> Analytics </a>
+        </div>
+    </div>
+</div>
+<div class="single-pin">
+    <div class="single-pin-inner">
+        <img src="./img/dam/example-img18.jpg" alt=""/>
+
+        <div class="single-pin-info">
+            <span class="pin-analytics">
+                   <strong><i class="fa fa-pinterest icon-left icon-pinterest-red"></i>3 |</strong>
+                   <strong><i class="fa fa-thumb-tack icon-center icon-semi"></i>9 |</strong>
+                   <strong><i class="fa fa-heart icon-center icon-semi"></i>8 </strong>
+            </span>
+            <hr>
+            <p class="pinterest-details">
+                <strong><i class="fa fa-columns icon-left icon-semi"></i>Northern American Offers</strong>
+            <hr>
+            Beautiful North America, What a cute squirrel
+            </p>
+        </div>
+        <div class="pin-footer">
+            <a class="btn"><i class="fa fa-share-square icon-left icon-semi"></i> Share </a>
+            <a class="btn"><i class="fa fa-bar-chart-o icon-left icon-semi"></i> Analytics </a>
+        </div>
+    </div>
+</div>
+<div class="single-pin">
+    <div class="single-pin-inner">
+        <div class="pin-header">
+            <a class="ibe-name">
+                <strong><i class="fa fa-globe icon-left icon-semi"></i>E-Power</strong></a>
+            <a>
+                <small><i class="fa fa-edit icon-center icon-semi"></i>edit offer</small>
+            </a>
+        </div>
+        <img src="./img/dam/example-img5.jpg" alt=""/>
+
+        <div class="single-pin-info">
+             <span class="pin-analytics">
+               <strong><i class="fa fa-pinterest icon-left icon-pinterest-red"></i>2451 |</strong>
+               <strong><i class="fa fa-thumb-tack icon-center icon-semi"></i>399 |</strong>
+               <strong><i class="fa fa-heart icon-center icon-semi"></i>839 </strong>
+            </span>
+            <hr>
+            <p class="pinterest-details">
+                <strong><i class="fa fa-columns icon-left icon-semi"></i>Northern American Offers</strong>
+            <hr>
+            Jazz music fun? Follow Nora Jones and travel around US, 5 cities in US, 7
+            days trip. including Concert Ticket up from $2500?person.
+            </p>
+        </div>
+        <div class="pin-footer">
+            <a class="btn"><i class="fa fa-share-square icon-left icon-semi"></i> Share </a>
+            <a class="btn"><i class="fa fa-bar-chart-o icon-left icon-semi"></i> Analytics </a>
+        </div>
+    </div>
+</div>
+<div class="single-pin">
+    <div class="single-pin-inner">
+        <div class="pin-header">
+            <a class="ibe-name"><strong><i class="fa fa-globe icon-left icon-semi"></i>E-Power</strong></a>
+            <a>
+                <small><i class="fa fa-edit icon-center icon-semi"></i>edit offer</small>
+            </a>
+        </div>
+        <img src="./img/dam/example-img4.jpg" alt=""/>
+
+        <div class="single-pin-info">
+            <span class="pin-analytics">
+               <strong><i class="fa fa-pinterest icon-left icon-pinterest-red"></i>3 |</strong>
+               <strong><i class="fa fa-thumb-tack icon-center icon-semi"></i>0 |</strong>
+               <strong><i class="fa fa-heart icon-center icon-semi"></i>8 </strong>
+            </span>
+            <hr>
+            <p class="pinterest-details">
+                <strong><i class="fa fa-columns icon-left icon-semi"></i>Northern American Offers</strong>
+            <hr>
+            Rain forest adventure trip. Professional guide. 6 people group. German and
+            English spoken. call 555 555 666 for more info.
+            </p>
+        </div>
+        <div class="pin-footer">
+            <a class="btn"><i class="fa fa-share-square icon-left icon-semi"></i> Share </a>
+            <a class="btn"><i class="fa fa-bar-chart-o icon-left icon-semi"></i> Analytics </a>
+        </div>
+    </div>
+</div>
+<div class="single-pin">
+    <div class="single-pin-inner">
+        <div class="pin-header">
+            <a class="ibe-name"><strong><i class="fa fa-picture-o icon-left icon-semi"></i>Photo</strong></a>
+            <a>
+                <small><i class="fa fa-edit icon-center icon-semi"></i>edit offer</small>
+            </a>
+        </div>
+        <img src="./img/dam/example-img3.jpg" alt=""/>
+
+        <div class="single-pin-info">
+            <span class="pin-analytics">
+               <strong><i class="fa fa-pinterest icon-left icon-pinterest-red"></i>44 |</strong>
+               <strong><i class="fa fa-thumb-tack icon-center icon-semi"></i>12 |</strong>
+               <strong><i class="fa fa-heart icon-center icon-semi"></i>21 </strong>
+            </span>
+            <hr>
+            <p class="pinterest-details">
+                <strong><i class="fa fa-columns icon-left icon-semi"></i>Northern American Offers</strong>
+            <hr>
+            See side trip on the east coat of US, 10 days luxury trip, 5 start hotels,
+            until 31st March, only $888/person
+            </p>
+            <hr>
+        </div>
+        <div class="pin-footer">
+            <a class="btn"><i class="fa fa-share-square icon-left icon-semi"></i> Share </a>
+            <a class="btn"><i class="fa fa-bar-chart-o icon-left icon-semi"></i> Analytics </a>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="suite-footer">
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <div id="amadeus-logo" class="pull-right"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="single-pin hide" id="new-pin">
+    <div class="single-pin-inner">
+        <div class="pin-header">
+            <a class="ibe-name"><strong><i class="fa fa-leaf icon-left icon-semi"></i>TT IBE </strong></a>
+            <a>
+                <small><i class="fa fa-edit icon-center icon-semi"></i>edit offer</small>
+            </a>
+        </div>
+        <img src="./img/pinterest/lausanne.jpg" alt=""/>
+
+        <div class="single-pin-info">
+                <span class="pin-analytics">
+                   <strong><i class="fa fa-pinterest icon-left icon-pinterest-red"></i>0 |</strong>
+                    <strong><i class="fa fa-thumb-tack icon-center icon-semi"></i>0 |</strong>
+                   <strong><i class="fa fa-heart icon-center icon-semi"></i>0 </strong>
+                </span>
+            <hr>
+            <p class="pinterest-details">
+                <strong><i class="fa fa-columns icon-left icon-semi"></i>Northern American Offers</strong>
+            <hr>
+            Relaxing  Trip to Laussane, all incluesive for 2 adult + five start hotel for 10 days, only $900 with Travel Agency AAA
+            </p>
+            <hr>
+        </div>
+        <div class="pin-footer">
+            <a class="btn"><i class="fa fa-share-square icon-left icon-semi"></i> Share </a>
+            <a class="btn"><i class="fa fa-bar-chart-o icon-left icon-semi"></i> Analytics </a>
+        </div>
+    </div>
+</div>
+<!--*****************************************Modal*****************************************-->
+<!-- ********************all pins analytics******************** -->
+<div class="somea-box modal modal-medium fade" id="analytics-pins-modal" tabindex="-1" role="dialog"
+     aria-hidden="true">
+    <header>
+        <h1>
+            <i class="fa fa-bar-chart-o icon-left"></i> Analytics of all pins
+        </h1>
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#analytics-pins">Pinterest</a></li>
+            <li><a data-toggle="tab" href="#analytics-offer-pages">Offer Pages</a></li>
+        </ul>
+    </header>
+    <div class="box-content">
+        <div class="tab-content">
+            <div id="analytics-pins" class="tab-pane fade active in analytics-pins-data">
+
+                <span class="label label-warning"><i class="fa fa-exclamation-triangle icon-left"></i> <strong>Friday
+                    Night, Saturday Night</strong>  are recommended to send out pins</span>
+                <span class="label label-warning"><i
+                        class="fa fa-exclamation-triangle icon-left"></i> You've got<strong> 20% less</strong> visitors than last month</span>
+                <span class="label label-success"><i class="fa fa-thumbs-up icon-left"></i> Pins with label <strong>
+                    <i class="fa fa-tag icon-left"></i>On Promotion , <i class="fa fa-tag icon-left"></i>Family Trip
+                </strong> are most visited</span>
+                <span class="label label-success"><i class="fa fa-thumbs-up icon-left"></i> Pins with label  <strong>
+                    <i class="fa fa-tag icon-left"></i>On Promotion , <i class="fa fa-tag icon-left"></i>Romantic Trips</strong> are most repined</span>
+                <span class="label label-success"><i class="fa fa-thumbs-up icon-left"></i> Pins with label <strong>
+                    <i class="fa fa-tag icon-left"></i>Best Sell , <i class="fa fa-tag icon-left"></i>Romantic
+                    Trips</strong> are most liked</span>
+                <hr>
+                <img src="./img/pinterest/fake-graph-pins.gif">
+            </div>
+
+            <div id="analytics-offer-pages" class="tab-pane fade analytics-pins-data">
+                <span class="label label-warning"><i
+                        class="fa fa-exclamation-triangle icon-left"></i> You've got<strong> 2% more</strong> visitors than last month</span>
+                <span class="label label-warning"><i
+                        class="fa fa-exclamation-triangle icon-left"></i> You've got<strong> 12% more</strong> bookings than last month</span>
+                <span class="label label-success"><i
+                        class="fa fa-thumbs-up icon-left"></i> Offer Pages with label <strong> <i
+                        class="fa fa-tag icon-left"></i>On Promotion , <i class="fa fa-tag icon-left"></i>Family Trip
+                </strong> are most visited</span>
+                <span class="label label-success"><i class="fa fa-thumbs-up icon-left"></i> Pins with label  <strong> <i
+                        class="fa fa-tag icon-left"></i>On Promotion , <i class="fa fa-tag icon-left"></i>Family
+                    Trips</strong> are most booked</span>
+                <hr>
+                <img src="./img/pinterest/fake-graph-pins2.gif">
+            </div>
+        </div>
+    </div>
+    <footer>
+        <button class="btn pull-left icon-semi"><i class="fa fa-gear icon-left"></i> Set Recievers</button>
+        <button class="btn pull-left icon-semi"><i class="fa fa-download icon-left"></i> Download</button>
+        <button class="btn">Cancel</button>
+        <button class="btn btn-primary">Send Report</button>
+    </footer>
+</div>
+<!-- ********************single pin analytics******************** -->
+<div class="somea-box modal fade" id="analytics-pin-modal" tabindex="-1" role="dialog"
+     aria-hidden="true">
+    <header>
+        <h1>
+            <i class="fa fa-bar-chart-o icon-left"></i> Analytics of single
+        </h1>
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#analytics-pin">Pinterest</a></li>
+            <li><a data-toggle="tab" href="#analytics-offer-page">Offer Pages</a></li>
+        </ul>
+    </header>
+    <div class="box-content">
+        <div class="tab-content">
+            <div id="analytics-pin" class="tab-pane fade active in analytics-pins-data">
+
+                <span class="label label-warning"><i class="fa fa-exclamation-triangle icon-left"></i> <strong>Friday
+                    Night, Saturday Night</strong>  are recommended to send out pins</span>
+                <span class="label label-warning"><i
+                        class="fa fa-exclamation-triangle icon-left"></i> You've got<strong> 1% less</strong> visitors than last month</span>
+                <img src="./img/pinterest/fake-graph-single-pin1.gif">
+            </div>
+            <div id="analytics-offer-page" class="tab-pane fade analytics-pins-data">
+                <span class="label label-warning"><i
+                        class="fa fa-exclamation-triangle icon-left"></i> You've got<strong> 20% more</strong> visitors than last month</span>
+                <hr>
+                <img src="./img/pinterest/fake-graph-single-pin2.gif">
+            </div>
+        </div>
+    </div>
+    <footer>
+        <button class="btn">Cancel</button>
+        <button class="btn btn-primar "><i class="fa fa-download icon-left icon-semi"></i> Download</button>
+    </footer>
+</div>
+<!-- ********************TT IBE offer******************** -->
+<div class="somea-box modal modal-medium fade" id="pin-tt-offer" tabindex="-1" role="dialog"
+     aria-hidden="true">
+<header>
+    <h1>
+        <i class="fa fa-leaf icon-left"></i> Pin a TT IBE offer
+    </h1>
+</header>
+<div class="box-content">
+<div class="row-fluid ">
+    <div class="span8 label label-info step-nav">
+        <span><a class="active " id="step1-nav"> Step 1: Search </a> </span> <i
+            class="fa fa-arrow-right icon-center"></i> <span><a class="" id="step2-nav"> Step
+        2: Pin Offer</a></span>
+    </div>
+</div>
+<hr>
+<div id="step1-ttibe">
+    <div class="row-fluid">
+        <div class="span3">
+            <label>
+                Departure City:
+                <select class="select2">
+                    <option>New York</option>
+                    <option>Los Angles</option>
+                    <option>Seatlle</option>
+                </select>
+            </label>
+        </div>
+        <div class="span3">
+            <label>
+                Arrival City:
+                <select class="select2">
+                    <option>Europe</option>
+                    <option>Asia</option>
+                    <option>North America</option>
+                </select>
+            </label>
+        </div>
+        <label class="datetimepicker span3">
+            Departure:<br>
+            <input data-format="dd/MM/yyyy " type="text" class="datepicker-with-button">
+												<span class="btn add-on">
+													<i data-time-icon="fa fa-time" data-date-icon="fa fa-calendar">
+                                                    </i>
+												</span>
+        </label>
+        <label class="datetimepicker span3">
+            Arrival:<br>
+            <input data-format="dd/MM/yyyy " type="text" class="datepicker-with-button">
+												<span class="btn add-on">
+													<i data-time-icon="fa fa-time" data-date-icon="fa fa-calendar">
+                                                    </i>
+												</span>
+        </label>
+
+    </div>
+
+    <div class="row-fluid">
+        <div class="span3">
+            <label>
+                Adult Number:
+                <select class="select2">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                </select>
+            </label>
+        </div>
+        <div class="span3">
+            <label>
+                Children Number:
+                <select class="select2">
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                </select>
+            </label>
+        </div>
+        <div class="span3">
+            <label>
+                Duration:
+                <select class="select2">
+                    <option>3 Days</option>
+                    <option>4 Days</option>
+                    <option>5 Days</option>
+                    <option>6 Days</option>
+                    <option>7 Days</option>
+                    <option>8 Days</option>
+                    <option>9 Days</option>
+                    <option>10 Days</option>
+                    <option>over 10 Days</option>
+                </select>
+            </label>
+        </div>
+        <div class="span3">
+            <label>
+                Budget:
+                <select class="select2">
+                    <option> < $500</option>
+                    <option> $500 ~ $1000</option>
+                    <option> $1500 ~ $2000<</option>
+                    <option> > $2000</option>
+                </select>
+            </label>
+        </div>
+    </div>
+
+    <div class="row-fluid">
+        <label class="other-searching-settings">
+            Other Searching Settings:<br>
+            <input type="checkbox" id="checker-promotion"> <label for="checker-promotion">On Promotion</label>
+            <input type="checkbox" id="checker-bestsell"> <label for="checker-bestsell">Best Sell </label>
+            <input type="checkbox" id="checker-family"> <label for="checker-family">Family Trips </label>
+            <input type="checkbox" id="checker-romantic"> <label for="checker-romantic">Romantic Trips </label>
+        </label>
+    </div>
+</div>
+<div class="hide" id="step2-ttibe">
+    <div class="row-fluid">
+        <div class="span6 offer-container">
+            <div class="offer-img-container">
+                <img src="./img/pinterest/lausanne.jpg" class="offer-img">
+                <a class="img-quality-label"><i class="fa fa-smile-o"></i> Good Image</a>
+
+                <div class="mask good-quality">
+                    <h5><strong> ? WHY <i class="fa fa-smile-o"></i> </strong></h5>
+
+                    <p><br> For Pinerest, a photo ration of 2:3 (width: height) with a minimun width of 270px is
+                        recommended</p>
+                    <a href="http://mashable.com/2012/03/26/optimize-images-pinterest/" class="info">Read More</a>
+                </div>
+            </div>
+            <div class="offer-info">
+                <h5><strong>Relaxing Trip to Laussane</strong></h5>
+
+                <p>
+                    <span class="label"><i class="fa fa-trophy icon-white icon-left"></i>Best Sell</span>
+                    <span class="label"><i class="fa fa-heart icon-white icon-left"></i>Romantic</span>
+                </p>
+
+                <p>Lausanne, $ 1200/person<br> All inclusive, Two Adults <br> Available: Jan 2014 to April 2014
+                    <br>Booking: 143 times <br> Page Views: 12349 </p>
+            </div>
+            <div class="offer-info-footer">
+                <!-- command to public page to https://dev.amaext.com/cyang/:  rsync -av --progress /home/camellia/1repository/Amadeus.Somea.Design/public-click-dummy/ cyang@dev:/var/www-ssl/cyang/--->
+                <a class="visit-media-page-link" href="https://dev.amaext.com/cyang/pinterest-demo-ibe-offer-page.html"><i
+                        class="fa fa-link icon-left"></i>Visit this offer page</a>
+                <a href="//www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fdev.amaext.com%2Fcyang%2Fpinterest-demo-ibe-offer-page.html&media=https%3A%2F%2Fdev.amaext.com%2Fcyang%2Fimg%2Fpinterest%2Flausanne.jpg&description=Relaxing%20%20Trip%20to%20Laussane%2C%20all%20incluesive%20for%202%20adult%20%2B%20five%20start%20hotel%20for%2010%20days%2C%20only%20%24900%20with%20Travel%20Agency%20AAA"
+                   data-pin-do="buttonPin" data-pin-config="none"><img
+                        src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png"/></a>
+            </div>
+        </div>
+        <div class="span6 offer-container">
+            <div class="offer-img-container">
+                <img src="./img/pinterest/paris.jpg" class="offer-img">
+                <a class="img-quality-label"><i class="fa fa-smile-o"></i> Good Image</a>
+
+                <div class="mask good-quality">
+                    <h5><strong> ? WHY <i class="fa fa-smile-o"></i> </strong></h5>
+
+                    <p><br> For Pinerest, a photo ration of 2:3 (width: height) with a minimun widthof 270px is
+                        recommended</p>
+                    <a href="http://mashable.com/2012/03/26/optimize-images-pinterest/" class="info">Read More</a>
+                </div>
+                <div class="mask good-quality">
+                    <h5><strong> ? WHY <i class="fa fa-smile-o"></i> </strong></h5>
+
+                    <p><br> For Pinerest, a photo ration of 2:3 (width: height) with a minimun widthof 270px is
+                        recommended</p>
+                    <a href="http://mashable.com/2012/03/26/optimize-images-pinterest/" class="info">Read More</a>
+                </div>
+            </div>
+            <div class="offer-info">
+                <h5><strong>Romantic Trip to Paris</strong></h5>
+
+                <p>
+                    <span class="label"><i class="fa fa-trophy icon-white icon-left"></i>Best Sell</span>
+                    <span class="label"><i class="fa fa-heart icon-white icon-left"></i>Romantic</span>
+                </p>
+
+                <p>Lausanne, $ 1600/person<br> All inclusive, Two Adults <br> Available: Jan 2014 to April 2014
+                    <br>Booking: 3 times <br> Page Views: 149 </p>
+            </div>
+            <div class="offer-info-footer">
+                <a class="visit-media-page-link"><i class="fa fa-link icon-left"></i>Visit this offer page</a>
+                <a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fdesign.lo%2Fibe-offer-page-pinterest-demo.html&media=http%3A%2F%2Fdesign.lo%2Fimg%2Fpinterest%2Fparis.jpg&description=Romantic%20Trip%20to%20Paris"
+                   data-pin-do="buttonPin" data-pin-config="none"><img
+                        src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png"/></a>
+            </div>
+        </div>
+
+    </div>
+    <div class="row-fluid">
+        <div class="span6 offer-container">
+            <div class="offer-img-container">
+                <img src="./img/pinterest/germany.jpg" class="offer-img">
+                <a class="img-quality-label ok-quality"><i class="fa fa-meh-o"></i> OK Image</a>
+
+                <div class="mask ok-quality">
+                    <h5><strong> ? WHY <i class="fa fa-meh-o"></i> </strong></h5>
+
+                    <p><br> For Pinerest, a photo ration of 2:3 (width: height) , your image with is 300px, a little bit
+                        too small</p>
+                    <a href="http://mashable.com/2012/03/26/optimize-images-pinterest/" class="info">Read More</a>
+                </div>
+            </div>
+            <div class="offer-info">
+                <h5><strong>Family Trip to Germany</strong></h5>
+
+                <p>
+                    <span class="label"><i class="fa fa-trophy icon-white icon-left"></i>Best Sell</span>
+                    <span class="label"><i class="fa fa-users icon-white icon-left"></i>Family</span>
+                </p>
+
+                <p>Germany, $ 3200/person<br> All inclusive, Two Adults <br> Available: Jan 2014 to April 2014
+                    <br>Booking: 0 times <br> Page Views: 19 </p>
+            </div>
+            <div class="offer-info-footer">
+                <a class="visit-media-page-link"><i class="fa fa-link icon-left"></i>Visit this offer page</a>
+                <a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fdesign.lo%2Fibe-offer-page-pinterest-demo.html&media=http%3A%2F%2Fdesign.lo%2Fimg%2Fpinterest%2Fgermany.jpg&description=Family%20Trip%20to%20Germany"
+                   data-pin-do="buttonPin" data-pin-config="none"><img
+                        src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png"/></a>
+            </div>
+        </div>
+        <div class="span6 offer-container">
+            <div class="offer-img-container">
+                <img src="./img/pinterest/norway.jpg" class="offer-img">
+                <a class="img-quality-label"><i class="fa fa-smile-o"></i> Good Image</a>
+
+                <div class="mask good-quality">
+                    <h5><strong> ? WHY <i class="fa fa-smile-o"></i> </strong></h5>
+
+                    <p><br> For Pinerest, a photo ration of 2:3 (width: height) with a minimun widthof 270px is
+                        recommended</p>
+                    <a href="http://mashable.com/2012/03/26/optimize-images-pinterest/" class="info">Read More</a>
+                </div>
+            </div>
+            <div class="offer-info">
+                <h5><strong>Adventure Trip to Norway</strong></h5>
+
+                <p>
+                    <span class="label"><i class="fa fa-trophy icon-white icon-left"></i>Best Sell</span>
+                    <span class="label"><i class="fa fa-heart icon-white icon-left"></i>Romantic</span>
+                </p>
+
+                <p>Lausanne, $ 4200/person<br> All inclusive, Two Adults <br> Available: Jan 2014 to April 2014
+                    <br>Booking: 1 times <br> Page Views: 1234 </p>
+            </div>
+            <div class="offer-info-footer">
+                <a class="visit-media-page-link"><i class="fa fa-link icon-left"></i>Visit this offer page</a>
+                <a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fdesign.lo%2Fibe-offer-page-pinterest-demo.html&media=http%3A%2F%2Fdesign.lo%2Fimg%2Fpinterest%2Fnorway.jpg&description=Adventure%20Trip%20to%20Norway"
+                   data-pin-do="buttonPin" data-pin-config="none"><img
+                        src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png"/></a>
+            </div>
+        </div>
+        <div class="span6 offer-container">
+            <div class="offer-img-container">
+                <img src="./img/pinterest/mallorca.jpg" class="offer-img">
+                <a class="img-quality-label bad-quality"><i class="fa fa-frown-o"></i> Bad Image</a>
+
+                <div class="mask bad-quality">
+                    <h5><strong> ? WHY <i class="fa fa-frown-o"></i> </strong></h5>
+
+                    <p><br> For Pinerest, a photo ration of 2:3 (width: height), your image ration is 5:1.4 which is not
+                        optimzed for pinterest</p>
+                    <a href="http://mashable.com/2012/03/26/optimize-images-pinterest/" class="info">Read More</a>
+                </div>
+            </div>
+            <div class="offer-info">
+                <h5><strong>Family Trip to Mallorca </strong></h5>
+
+                <p>
+                    <span class="label"><i class="fa fa-trophy icon-white icon-left"></i>Best Sell</span>
+                    <span class="label"><i class="fa fa-users icon-white icon-left"></i>Family</span>
+                </p>
+
+                <p>Mallorca, $ 800/person<br> All inclusive, Two Adults <br> Available: Jan 2014 to April 2014
+                    <br>Booking: 0 times <br> Page Views: unknown </p>
+            </div>
+            <div class="offer-info-footer">
+                <a class="visit-media-page-link"><i class="fa fa-link icon-left"></i>Visit this offer page</a>
+                <a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fdesign.lo%2Fibe-offer-page-pinterest-demo.html&media=http%3A%2F%2Fdesign.lo%2Fimg%2Fpinterest%2Fmallorca.jpg&description=Family%20Trip%20to%20Mallorca"
+                   data-pin-do="buttonPin" data-pin-config="none"><img
+                        src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png"/></a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<footer>
+    <button aria-hidden="true" data-dismiss="modal" class="btn">Cancel</button>
+    <button class="btn btn-primary" id="search-tt-ibe">Search</button>
+</footer>
+</div>
+<!-- ********************Pin Media Page******************** -->
+<div class="somea-box modal modal-medium fade" id="pin-media-page" tabindex="-1" role="dialog"
+     aria-hidden="true">
+    <header>
+        <h1>
+            <i class="fa fa-leaf icon-left"></i> Pin a Media Page
+        </h1>
+
+    </header>
+    <div class="box-content">
+        <div class="row-fluid">
+            <div class="span6 offer-container">
+                <div class="offer-img-container">
+                    <img src="./img/pinterest/lausanne.jpg" class="offer-img">
+                    <a class="img-quality-label"><i class="fa fa-smile-o"></i> Good Image</a>
+                </div>
+                <div class="offer-info">
+                    <h5><strong>Relaxing Trip to Laussane</strong></h5>
+
+                    <p class="tags">
+                    <span class="label">
+                        <i class="fa fa-tags vertical-space-sm"></i>Prom Spring
+                    </span>
+                    <span class="label">
+                        <i class="fa fa-tags vertical-space-sm"></i>Special offer
+                    </span>
+                    </p>
+
+                    <p class="description"> description of media page here </p>
+                </div>
+                <div class="offer-info-footer">
+                    <a class="btn" href="https://dev.amaext.com/cyang/pinterest-demo-ibe-offer-page.html"><i
+                            class="fa fa-link icon-left"></i>Visit this offer page</a>
+                    <a href="//www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fdev.amaext.com%2Fcyang%2Fpinterest-demo-ibe-offer-page.html&media=https%3A%2F%2Fdev.amaext.com%2Fcyang%2Fimg%2Fpinterest%2Flausanne.jpg&description=Booking%20a%20family%20trip%20to%20laussane"
+                       data-pin-do="buttonPin" data-pin-config="none"><img
+                            src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png"/></a>
+                </div>
+            </div>
+            <div class="span6 offer-container">
+                <div class="offer-img-container">
+                    <img src="./img/pinterest/paris.jpg" class="offer-img">
+                    <a class="img-quality-label"><i class="fa fa-smile-o"></i> Good Image</a>
+                </div>
+                <div class="offer-info">
+                    <h5><strong>Romantic Trip to Paris</strong></h5>
+
+                    <p class="tags">
+                    <span class="label">
+                        <i class="fa fa-tags vertical-space-sm"></i>Prom Spring
+                    </span>
+                    <span class="label">
+                        <i class="fa fa-tags vertical-space-sm"></i>Special offer
+                    </span>
+                    </p>
+
+                    <p class="description"> description of media page here </p>
+                </div>
+                <div class="offer-info-footer">
+                    <a class="btn" href="https://dev.amaext.com/cyang/pinterest-demo-ibe-offer-page.html"><i
+                            class="fa fa-link icon-left"></i>Visit this offer page</a>
+                    <a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fdesign.lo%2Fibe-offer-page-pinterest-demo.html&media=http%3A%2F%2Fdesign.lo%2Fimg%2Fpinterest%2Fparis.jpg&description=Romantic%20Trip%20to%20Paris"
+                       data-pin-do="buttonPin" data-pin-config="none"><img
+                            src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png"/></a>
+                </div>
+            </div>
+
+            <div class="span6 offer-container">
+                <div class="offer-img-container">
+                    <img src="./img/pinterest/germany.jpg" class="offer-img">
+                    <a class="img-quality-label ok-quality"><i class="fa fa-meh-o"></i> OK Image</a>
+                </div>
+                <div class="offer-info">
+                    <h5><strong>Family Trip to Germany</strong></h5>
+
+                    <p class="tags">
+                    <span class="label">
+                        <i class="fa fa-tags vertical-space-sm"></i>Prom Spring
+                    </span>
+                    <span class="label">
+                        <i class="fa fa-tags vertical-space-sm"></i>Special offer
+                    </span>
+                    </p>
+
+                    <p class="description"> description of media page here </p>
+                </div>
+                <div class="offer-info-footer">
+                    <a class="btn"><i class="fa fa-link icon-left"></i>Visit this offer page</a>
+                    <a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fdesign.lo%2Fibe-offer-page-pinterest-demo.html&media=http%3A%2F%2Fdesign.lo%2Fimg%2Fpinterest%2Fgermany.jpg&description=Family%20Trip%20to%20Germany"
+                       data-pin-do="buttonPin" data-pin-config="none"><img
+                            src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png"/></a>
+                </div>
+            </div>
+            <div class="span6 offer-container">
+                <div class="offer-img-container">
+                    <img src="./img/pinterest/norway.jpg" class="offer-img">
+                    <a class="img-quality-label"><i class="fa fa-smile-o"></i> Good Image</a>
+                </div>
+                <div class="offer-info">
+                    <h5><strong>Adventure Trip to Norway</strong></h5>
+
+                    <p class="tags">
+                    <span class="label ">
+                        <i class="fa fa-tags vertical-space-sm"></i>Prom Spring
+                    </span>
+                    <span class="label">
+                        <i class="fa fa-tags vertical-space-sm"></i>Special offer
+                    </span>
+                    </p>
+
+                    <p class="description"> description of media page here </p>
+                </div>
+                <div class="offer-info-footer">
+                    <a class="btn"><i class="fa fa-link icon-left"></i>Visit this offer page</a>
+                    <a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fdesign.lo%2Fibe-offer-page-pinterest-demo.html&media=http%3A%2F%2Fdesign.lo%2Fimg%2Fpinterest%2Fnorway.jpg&description=Adventure%20Trip%20to%20Norway"
+                       data-pin-do="buttonPin" data-pin-config="none"><img
+                            src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png"/></a>
+                </div>
+            </div>
+            <div class="span6 offer-container">
+                <div class="offer-img-container">
+                    <img src="./img/pinterest/mallorca.jpg" class="offer-img">
+                    <a class="img-quality-label bad-quality"><i class="fa fa-frown-o"></i> Bad Image</a>
+                </div>
+                <div class="offer-info">
+                    <h5><strong>Family Trip to Mallorca </strong></h5>
+
+                    <p class="tags">
+                    <span class="label">
+                        <i class="fa fa-tags vertical-space-sm"></i>Prom Spring
+                    </span>
+
+                    </p>
+
+                    <p class="description"> description of media page here </p>
+                </div>
+                <div class="offer-info-footer">
+                    <a class="btn"><i class="fa fa-link icon-left"></i>Visit this offer page</a>
+                    <a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fdesign.lo%2Fibe-offer-page-pinterest-demo.html&media=http%3A%2F%2Fdesign.lo%2Fimg%2Fpinterest%2Fmallorca.jpg&description=Family%20Trip%20to%20Mallorca"
+                       data-pin-do="buttonPin" data-pin-config="none"><img
+                            src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png"/></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <button aria-hidden="true" data-dismiss="modal" class="btn">Cancel</button>
+        <button class="btn btn-primary" id="search-tt-ibe">Search</button>
+    </footer>
+</div>
+
+<!-- ********************Edit Form******************** -->
+<div class="somea-box modal modal-medium modal-scrollable fade" id="edit-offer-page-modal" tabindex="-1" role="dialog">
+<header>
+    <h1>Edit Offer Page</h1>
+    <ul class="nav nav-tabs" id="edit-photo-tabs">
+        <li class="active" id="detail-info-tab"><a data-toggle="tab" href="#edit-detail">Detail Info</a></li>
+        <li id="edit-photo-tab"><a data-toggle="tab" href="#edit-photo">Offer Photo</a></li>
+        <li id="media-page-tab"><a data-toggle="tab" href="#edit-meta-data">Meta data</a></li>
+    </ul>
+</header>
+<div class="modal-body box-content">
+<div class="tab-content" id="edit-photo-tabs">
+<div id="edit-detail" class="tab-pane fade active in">
+    <div class="row-fluid">
+        <div class="span12">
+            <label>
+                Offer Title:
+                <input type="text" value="Yellow Stone National Park">
+            </label>
+        </div>
+
+        <div class="row-fluid">
+            <div class="span12" id="media-pages-list">
+                <label>
+                    Description:
+                    <textarea rows="2" class="full"></textarea>
+                </label>
+            </div>
+        </div>
+        <hr>
+        <div class="row-fluid">
+            <div class="span3">
+                <label>
+                    Departure City:
+                    <select class="select2">
+                        <option>New York</option>
+                        <option>Los Angles</option>
+                        <option>Seatlle</option>
+                    </select>
+                </label>
+            </div>
+            <div class="span3">
+                <label>
+                    Arrival City:
+                    <select class="select2">
+                        <option>Europe</option>
+                        <option>Asia</option>
+                        <option>North America</option>
+                    </select>
+                </label>
+            </div>
+            <label class="datetimepicker span3">
+                Departure:<br>
+                <input data-format="dd/MM/yyyy " type="text" class="datepicker-with-button">
+												<span class="btn add-on">
+													<i data-time-icon="fa fa-time" data-date-icon="fa fa-calendar">
+                                                    </i>
+												</span>
+            </label>
+            <label class="datetimepicker span3">
+                Arrival:<br>
+                <input data-format="dd/MM/yyyy " type="text" class="datepicker-with-button">
+												<span class="btn add-on">
+													<i data-time-icon="fa fa-time" data-date-icon="fa fa-calendar">
+                                                    </i>
+												</span>
+            </label>
+
+        </div>
+
+        <div class="row-fluid">
+            <div class="span3">
+                <label>
+                    Adult Number:
+                    <select class="select2">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                    </select>
+                </label>
+            </div>
+            <div class="span3">
+                <label>
+                    Children Number:
+                    <select class="select2">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                    </select>
+                </label>
+            </div>
+            <div class="span3">
+                <label>
+                    Duration:
+                    <input type="text" value="10 Days">
+                </label>
+            </div>
+            <div class="span3">
+                <label>
+                    Budget:
+                    <input type="text" value=" $ 900">
+                </label>
+            </div>
+        </div>
+
+        <div class="row-fluid">
+            <div class="other-searching-settings">
+                Other Searching Settings:<br>
+                <label for="checker-promotion"> <input type="checkbox" id="checker-promotion" checked> On
+                    Promotion </label>
+                <label for="checker-bestsell"> <input type="checkbox" id="checker-bestsell" checked> Best
+                    Sell </label>
+                <label for="checker-family"> <input type="checkbox" id="checker-family"> Family Trips
+                </label>
+                <label for="checker-romantic"> <input type="checkbox" id="checker-romantic"> Romantic Trips
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="edit-photo" class="tab-pane fade">
+    <img class="edit-photo" src="./img/dam/example-img9.jpg"/>
+
+    <div class="row-fluid">
+        <div class="span11 offset1 edit-photo-controller">
+            <a class="btn"><i class="fa fa-crop"></i> Crop</a>
+            <a class="btn"><i class="fa fa-rotate-left"></i> Turn left</a>
+            <a class="btn"><i class="fa fa-rotate-right"></i> Turn Right</a>
+            <a class="btn"><i class="fa fa-mail-reply"></i> Flip Left</a>
+            <a class="btn"><i class="fa fa-mail-forward"></i> Flip Right</a>
+            <a class="btn btn-primary"><i class="fa fa-picture-o"></i> Change Photo</a>
+        </div>
+    </div>
+</div>
+<div id="edit-meta-data" class="tab-pane fade">
+    <div class="row-fluid independ-field">
+        <div class="span12">
+            <label>
+                <Strong>Pinterest/Facebook Meta Data </strong> <a href="https://developers.pinterest.com/rich_pins/"><i
+                    class="fa fa-question-circle"></i> click to learn about meta data</a>
+            </label>
+            <hr>
+        </div>
+        <div class="row-fluid">
+            <div class="span3">
+                <label>
+                    <Strong>page type : (og:type)</strong>
+                    <input type="text" value="place">
+                </label>
+            </div>
+            <div class="span3">
+                <label>
+                    <Strong>offer title : (og:title)</strong>
+                    <input type="text" value="yellow stone park">
+                </label>
+                </label>
+            </div>
+            <div class="span3">
+                <label>
+                    <Strong>Image link : (og: image )</strong>
+                    <input type="text" value="/somea.cc/4jd03">
+                </label>
+            </div>
+            <div class="span3">
+                <label>
+                    <Strong>Rating : (og:rate)</strong>
+                    <input type="text" value="5">
+                </label>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span12">
+                <label>
+                    <strong> offer description: (og:description)</strong>
+                    <textarea rows="2" class="full"> Nice trip to North American for its amazing nature, etc Yellow
+                        Stone National Park. 8 Days with AAA Travel Agency, just cost $900 </textarea>
+                </label>
+            </div>
+
+        </div>
+        <div class="row-fluid">
+            <div class="span6">
+                <label>
+                    <Strong>Latitude : (*:location:latitude)</strong>
+                    <input type="text" value="14,58425858">
+                </label>
+            </div>
+            <div class="span6">
+                <label>
+                    <Strong>Longtitude : (*:location:longtitude)</strong>
+                    <input type="text" value="74,145576">
+                </label>
+            </div>
+
+        </div>
+        <div class="row-fluid">
+            <div class="span3">
+                <label>
+                    <Strong>Address : (*:street_address)</strong>
+                    <input type="text" value="Yellowstone National Park">
+                </label>
+            </div>
+            <div class="span3">
+                <label>
+                    <Strong>Locality :<br> (*:locality)</strong>
+                    <input type="text" value="USA">
+                </label>
+            </div>
+            <div class="span3">
+                <label>
+                    <Strong>Region :<br> (*:region )</strong>
+                    <input type="text" value="Verreinigte">
+                </label>
+            </div>
+            <div class="span3">
+                <label>
+                    <Strong>Post Code :<br> postal_code</strong>
+                    <input type="text" value="WY 82190">
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<footer>
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+    <button class="btn btn-primary">Save</button>
+</footer>
+</div>
+
+<!-- ********************Send new messages Form******************** -->
+<div aria-hidden="false" aria-labelledby="createNewMessage" role="dialog" tabindex="-1" class="somea-box modal fade"
+     id="share-pins-modal">
+<header>
+    <h1 id="createNewMessage">Customize your message</h1>
+
+    <p>
+        Modify your message to fit channel restrictions and use channel specific features.
+        <br>
+        All messages will be grouped in one conversation
+    </p>
+    <ul class="nav nav-tabs" id="newMessageadvanced">
+        <li class="active">
+            <a data-placement="bottom" data-html="true" class="fb-menu" data-toggle="tab" href="#item1"
+               data-original-title="" title="">
+						<span class="badge-group">
+							<span class="badge badge-success">2</span><span class="badge badge-info">4</span>
+						</span>
+                Facebook
+            </a>
+        </li>
+        <li>
+            <a data-toggle="tab" href="#item2">
+						<span class="badge-group">
+							<span class="badge badge-important">1</span><span class="badge badge-info">1</span>
+						</span>
+                Twitter
+            </a>
+        </li>
+        <li><a data-toggle="tab" href="#item3"><i class="icon-plus icon-semi"></i> YouTube</a></li>
+    </ul>
+</header>
+<div id="myTabContent" class="tab-content">
+
+    <!-- Facebook -->
+    <div class="tab-pane fade active in" id="item1">
+        <br>
+
+        <div class="row-fluid">
+            <div class="span12 more">
+                <div contenteditable="true" class="editable">
+                    Inspire your trip by our nice Pinterest photos, click the link to see more
+                </div>
+                <button class="btn"><i class="fa fa-plus icon-semi"></i> Link</button>
+                <div class="btn-group">
+                    <button class="btn"><i class="fa fa-plus icon-semi"></i> Image/File</button>
+
+                    <button data-target="#post-mode" data-toggle="collapse" class="btn">
+                        <i class="fa fa-picture-o icon-semi"></i>
+                        <i class="fa fa-horizontal-size icon-semi"></i>
+                        <i class="fa fa-facebook-square icon-semi"></i>
+                    </button>
+                </div>
+
+                        <span class="span3 pull-right">
+                            <button class="btn pull-right" data-toggle="collapse" data-target="#add-tags"><i
+                                    class="fa fa-tags icon-semi"></i></button>
+                        </span>
+            </div>
+        </div>
+        <hr>
+
+
+        <div class="collapse" id="post-mode">
+            <div class="row-fluid">
+                <label class="span6">
+                    <input type="radio" name="post-destination">
+                            <span>
+                                <i class="icon-image icon-semi"></i>
+                                <i class="icon-horizontal-size icon-semi"></i>
+                                <i class="icon-book icon-semi"></i>
+                                <br>
+                                <b class="checked">Create Media Page</b>
+                                <br>
+                                Store images in the Social Media Suite and automatically create a Media Page linked to your post, sustain image rights and keep them managable in one place.
+                            </span>
+                </label>
+                <label class="span6">
+                    <input type="radio" checked="" name="post-destination">
+                            <span>
+                                <i class="icon-image icon-semi"></i>
+                                <i class="icon-horizontal-size icon-semi"></i>
+                                <i class="icon-facebook icon-semi"></i>
+                                <br>
+
+                                <b class="checked">Post image directly to Facebook</b>
+                                <br>
+                                Store images in the Social Media Suite and also post them to Facebook in full size but exposing image rights.
+                            </span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Twitter -->
+    <div class="tab-pane fade in" id="item2">
+        <br>
+        <fieldset class="row-fluid">
+            <div class="span12">
+                <div contenteditable="true" class="editable">
+                    Inspire your trip by our nice Pinterest photos, click the link to see more
+                    <div id="counter"><span>75</span></div>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset class="row-fluid more">
+            <button class="btn"><i class="icon-plus icon-semi"></i> Link</button>
+
+					<span class="span3 pull-right">
+    					<button class="btn pull-right" data-toggle="collapse" data-target="#add-tags"><i
+                                class="icon-tag icon-semi"></i></button>
+    				</span>
+        </fieldset>
+        <hr>
+        <fieldset>
+            <div id="file-row" class="row-fluid separated">
+                <div class="span8">
+                    <input type="text" value="http://pl.tripadvisor.com/Tourism-g187071-Als">
+                </div>
+                <div style="margin-top:6px;" class="span4 pull-right">
+                    <button id="remove-file" class="btn">Cancel</button>
+                    <button id="shorten-url" class="btn btn-primary">Shorten Link</button>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+
+    <fieldset class="row-fluid">
+        <div class="collapse" id="add-tags">
+            <div class="row-fluid">
+                <hr class="span12">
+            </div>
+            <div class="row-fluid">
+                <label class="span6">Add tags to your message
+                    <input type="text" placeholder="Offer, Special,…" autocomplete="off" data-provide="typeahead"
+                           class="typeahead-tags">
+                </label>
+
+                <div class="span6 tag-container">
+                    <a href="#"><span class="label label-info label-tag"><i
+                            class="icon-left icon-white icon-semi icon-tag"></i>Offer</span></a>
+                    <a href="#"><span class="label label-info label-tag"><i
+                            class="icon-left icon-white icon-semi icon-tag"></i>Offending</span></a>
+                    <a href="#"><span class="label label-info label-tag"><i
+                            class="icon-left icon-white icon-semi icon-tag"></i>Critizism</span></a>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+
+
+    <!-- Youtube -->
+    <div class="tab-pane fade in" id="item3">
+        <fieldset class="row-fluid">
+            <div class="span6">
+                <label class="checkbox">
+                    <input type="checkbox"> SomeaTV
+                </label>
+            </div>
+        </fieldset>
+
+        <hr>
+
+        <fieldset class="row-fluid hide">
+            <label class="span12">
+                <span>Compose message:</span>
+                <textarea>Bacon ipsum dolor sit amet corned beef rump bresaola, swine salami short ribs ribeye pancetta
+                    venison tri-tip frankfurter pastrami spare ribs pig. Swine t-bone rump tenderloin ham tail turkey
+                    boudin. Venison pig frankfurter, pancetta jowl fatback doner pork belly.</textarea>
+            </label>
+        </fieldset>
+
+        <fieldset class="row-fluid more hide">
+            <button class="btn"><i class="icon-plus icon-semi"></i> Link</button>
+            <button class="btn"><i class="icon-plus icon-semi"></i> File</button>
+            <button class="btn"><i class="icon-plus icon-semi icon-photo-camera"></i></button>
+        </fieldset>
+    </div>
+</div>
+<footer>
+    <div style="display: none" id="sendlater_popover_content_wrapper">
+        <div class="row-fluid">
+            <h4>Send later </h4>
+            <hr>
+        </div>
+        <div class="row-fluid">
+            <table id="datepicker" class="table-condensed">
+                <thead>
+                <tr>
+                    <th class="prev"><a><i class="icon-negative icon-big-arrow-left icon-someaBlue"></i></a></th>
+                    <th colspan="5" class="switch">February 2012</th>
+                    <th class="next"><a><i class="icon-negative icon-big-arrow-right icon-someaBlue"></i></a></th>
+                </tr>
+                <tr>
+                    <th class="dow">Su</th>
+                    <th class="dow">Mo</th>
+                    <th class="dow">Tu</th>
+                    <th class="dow">We</th>
+                    <th class="dow">Th</th>
+                    <th class="dow">Fr</th>
+                    <th class="dow">Sa</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="day old">29</td>
+                    <td class="day old">30</td>
+                    <td class="day old">31</td>
+                    <td class="day">1</td>
+                    <td class="day">2</td>
+                    <td class="day">3</td>
+                    <td class="day">4</td>
+                </tr>
+                <tr>
+                    <td class="day active">5</td>
+                    <td class="day">6</td>
+                    <td class="day">7</td>
+                    <td class="day">8</td>
+                    <td class="day">9</td>
+                    <td class="day">10</td>
+                    <td class="day">11</td>
+                </tr>
+                <tr>
+                    <td class="day">12</td>
+                    <td class="day">13</td>
+                    <td class="day">14</td>
+                    <td class="day">15</td>
+                    <td class="day">16</td>
+                    <td class="day">17</td>
+                    <td class="day">18</td>
+                </tr>
+                <tr>
+                    <td class="day">19</td>
+                    <td class="day">20</td>
+                    <td class="day">21</td>
+                    <td class="day">22</td>
+                    <td class="day">23</td>
+                    <td class="day">24</td>
+                    <td class="day">25</td>
+                </tr>
+                <tr>
+                    <td class="day">26</td>
+                    <td class="day">27</td>
+                    <td class="day">28</td>
+                    <td class="day">29</td>
+                    <td class="day new">1</td>
+                    <td class="day new">2</td>
+                    <td class="day new">3</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <hr>
+        <div class="row-fluid">
+            <label for="field-time" class="span4">
+                Set a time:
+            </label>
+            <label class="span8">
+                <input type="text" placeholder="12:30" id="field-time">
+            </label>
+        </div>
+    </div>
+
+
+    <button data-dismiss="modal" class="btn">Cancel</button>
+    <button data-dismiss="modal" class="btn">Save as drafts</button>
+
+    <div class="btn-group">
+        <button data-placement="top" data-html="true" class="btn btn-primary send-later" data-original-title=""
+                title=""><i class="fa fa-clock-o icon-white"></i></button>
+        <button class="btn btn-primary">Send all</button>
+    </div>
+</footer>
+</div>
+
+
+<script src="js/vendor/bootstrap-v2/bootstrap-affix.js"></script>
+<script src="js/vendor/bootstrap-v2/bootstrap-collapse.js"></script>
+<script src="js/vendor/bootstrap-v2/bootstrap-tab.js"></script>
+<script src="js/vendor/bootstrap-v2/bootstrap-button.js"></script>
+<script src="js/vendor/bootstrap-v2/bootstrap-dropdown.js"></script>
+<script src="js/vendor/bootstrap-v2/bootstrap-tooltip.js"></script>
+<script src="js/vendor/bootstrap-v2/bootstrap-popover.js"></script>
+<script src="js/vendor/bootstrap-v2/bootstrap-modal.js"></script>
+<script src="js/vendor/bootstrap-v2/bootstrap-transition.js"></script>
+<script src="js/vendor/bootstrap-v2/bootstrap-typeahead.js"></script>
+<script src="js/vendor/masonry.pkgd.min.js" type="text/javascript"></script>
+<script src="js/vendor/bootstrap-v2/bootstrap-datetimepicker.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var container = document.querySelector('.pinterest-container');
+        var msnry = new Masonry(container, {
+            isInitLayout: true,
+            columnWidth: 214,
+            gutter: 0,
+            itemSelector: '.single-pin'
+        });
+        $('#refresh-pins').click(function () {
+            $('#new-pin').removeClass('hide');
+            var newPin = document.querySelector('#new-pin');
+            container.insertBefore(newPin, container.firstChild);
+            msnry.prepended(newPin);
+        })
+
+    });
+</script>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        //javascript for date picker
+        datepickerInit: {
+            $('.datetimepicker').datetimepicker({
+                language: 'pt-BR'
+            });
+        }
+
+        pinModal: {
+            $('#search-tt-ibe').click(function () {
+                $('#step1-ttibe').addClass('hide');
+                $('#step1-nav').removeClass('active');
+                $('#step2-ttibe').removeClass('hide');
+                $('#step2-nav').addClass('active');
+                $(this).text('Back').attr('id', 'back-tt-ibe');
+            });
+        }
+
+        $('#favor-img').click(function () {
+            //wrong selector
+            $(this).parent().siblings('.single-media-frame').children('.fa .fa-heart').show();
+        });
+        $('a#lock-media').click(function () {
+            $(this).children('.fa fa-check-square-o').toggleClass('icon-isActive');
+            $(this).parents('.single-media-container').toggleClass('locked-photo');
+        });
+
+        $(".select2").select2();
+    });
+</script>
+
+</body>
+</html>

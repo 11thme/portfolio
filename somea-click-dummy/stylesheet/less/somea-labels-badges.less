@@ -1,0 +1,244 @@
+// Somea Overrides labels-badges.less
+// ****************************************
+
+.label,
+.badge {
+  font-weight: normal;
+  line-height: (@baseLineHeight - 3px); // +3px padding = baseLineHeight
+  vertical-align: middle;
+  letter-spacing: .03em;
+  background-color: @grayDark;
+  padding: 3px 5px 1px;
+  min-height: 16px; // fix labels/badges with no icon in them
+  a {
+    color: #fff;
+  }
+
+  // Warnings (orange)
+  &-warning {
+    background-color: @someaOrange;
+  }
+  &-warning[href] {
+    background-color: darken(@someaOrange, 10%);
+  }
+  &-bordered {
+    background-color: white;
+    border: 1px solid @grayLighter;
+    color: @grayLight !important; // overwrite
+    text-shadow: none; // Reset text shadow here
+    a {
+      color: @grayLight !important;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &-social-icon {
+    padding-left: 3px !important;
+    padding-right: 3px !important;
+  }
+
+  // Success (green)
+  &-success {
+    background-color: @someaGreen;
+  }
+  &-success[href] {
+    background-color: darken(@someaGreen, 10%);
+  }
+
+  // Important (red)
+  &-important {
+    background-color: @someaRedDark;
+  }
+  &-important[href] {
+    background-color: darken(@someaRedDark, 10%);
+  }
+
+  // Transparent (no color, for aligning with other labels)
+  &-transparent {
+    background-color: transparent;
+    text-shadow: none;
+    color: @gray;
+    & > a {
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+
+  // Label
+  &-tag {
+    background-color: @grayLight;
+    text-transform: uppercase;
+    margin: 0 @baseLineHeight/3 @baseLineHeight/3 0;
+    &:hover {
+      background-color: @gray;
+    }
+  }
+
+  // Info (gray)
+  &-info {
+    background-color: @grayLight;
+  }
+  &-info[href] {
+    background-color: darken(@grayLight, 10%);
+  }
+
+  // Circle (round badge for e.g. single digits like in step 1...2...3)
+  &-circle {
+    vertical-align: top;
+    .border-radius(@borderRadiusRound);
+    min-width: @baseLineHeight/2;
+    min-height: auto !important;
+    margin-right: @baseLineHeight/4;
+    text-align: center;
+    padding: 2px 4px;
+    line-height: 13px;
+  }
+}
+
+.label + b {
+  margin-left: 4px;
+}
+
+.somea-message-sources .label-bordered {
+  border: 1px solid darken(@grayLighter, 5%); // Within a message summary, label border must be darker because of visual fix
+}
+
+// Rounded logos
+.icon-round {
+  color: white !important;
+  position: relative;
+  top: -1px;
+  vertical-align: baseline;
+  text-align: center;
+  padding: 2px;
+  margin-right: 3px;
+  .border-radius(@borderRadiusRound);
+  span {
+    padding-left: 1px; // Label without icon on the left, visual fix
+  }
+  i span {
+    display: none;
+    padding-left: 20px;
+    font-style: normal;
+    padding: 0 4px 0 17px;
+    color: white;
+  }
+}
+
+.icon-round:hover i span, .scheduled i span {
+  display: inline;
+}
+
+.icon-round [class^="icon-"],
+icon-round [class*=" icon-"] {
+  vertical-align: top;
+}
+
+// Badge Group (e.g. 3 of 5 channels connected)
+.badge-group {
+  & > .badge {
+    position: relative;
+    .border-radius(0);
+    padding: 1px 5px 0;
+    border-style: solid;
+    border-width: 1px;
+    &-success {
+      border-color: darken(@someaGreen, 10%);
+    }
+    &-important {
+      border-color: darken(@someaRedDark, 10%);
+    }
+    &-info {
+      border-color: darken(@grayLight, 10%);
+    }
+  }
+  & > .badge {
+    &:first-child {
+      margin-left: 0;
+      .border-top-left-radius(9px);
+      .border-bottom-left-radius(9px);
+      padding-right: 3px;
+    }
+    &:last-child {
+      .border-top-right-radius(9px);
+      .border-bottom-right-radius(9px);
+      padding-left: 3px;
+    }
+  }
+}
+
+.btn > .badge-group:first-child {
+  margin-left: -5px; // Remove margin if first element in a button is a badge-group
+}
+
+// Grouping labels for table-like display
+.label-group {
+  position: relative;
+  display: inline-block;
+  font-size: 0; // remove as part 1 of font-size inline-block hack
+  vertical-align: middle; // match .btn alignment given font-size hack above
+  white-space: nowrap; // prevent buttons from wrapping when in tight spaces (e.g., the table on the tests page)
+  .label-group:hover {
+    .border-radius(@borderRadiusSmall);
+    .label {
+      border-color: darken(@grayLight, 0%)
+    }
+  }
+  & > .label {
+    position: relative;
+    .border-radius(0);
+    &:first-child {
+      margin-left: 0;
+      .border-radius(@borderRadiusSmall 0 0 @borderRadiusSmall);
+    }
+    &:last-child {
+      .border-radius(0 @borderRadiusSmall @borderRadiusSmall 0);
+    }
+    & + .label {
+      margin-left: -1px;
+    }
+  }
+  & + .label-group, a > .label-group {
+    // Space out series of label groups
+    margin-right: 10px;
+  }
+}
+
+// Exception for Dialog module: Button hover for User Feedback status
+.somea-message {
+  header {
+    i.fa-user {
+      opacity: 0.3;
+      filter: alpah(opacity=0.3);
+    }
+  }
+  .label-group {
+    .label-group:hover,
+    .label-group:active,
+    .label-group.active {
+      .icon-semi {
+        .opacity(50);
+      }
+    }
+    &.active .label, &.active:hover .label {
+      border: 1px solid lighten(@grayLight, 10%);
+      box-shadow: 1px 1px 1px #aaa inset;
+      .icon-semi {
+        .opacity(50);
+      }
+    }
+  }
+
+}
+
+// Tags
+.tag-container {
+  font-size: 0; // prevent white-space
+}
+
+fieldset .tag-container {
+  margin-top: @baseLineHeight*1.35;
+}
+

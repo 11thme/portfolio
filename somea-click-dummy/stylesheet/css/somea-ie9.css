@@ -1,0 +1,16 @@
+/* Style for IE9  */
+/*Correction of the fallowing problems: */
+/* -tabs not shown properly & tabs were positioned to high */
+
+
+.somea-box header .nav {
+   margin-top: 0px; /* fix tabs*/
+   top: 18px;
+   position: relative;
+}
+          
+.somea-box header .nav-tabs > .active > a, .somea-box header .nav-tabs > .active > a:hover {
+   filter: none;
+}
+                 
+

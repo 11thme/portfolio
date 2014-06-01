@@ -1,0 +1,335 @@
+// SOMEA Dialog
+// ****************************************
+
+
+.somea-message{
+	header{
+		.border-radius(@borderRadiusLarge @borderRadiusLarge 0 0);
+		background-color: lighten(@grayLighter,7%);
+		border-bottom: 1px solid @MessageHeaderBorder;
+		.border-radius(@borderRadiusLarge @borderRadiusLarge 0 0);
+		padding: @fluidGridGutterWidth;
+		// Arrow on bottom of a message header (Original message)
+		.arrow,
+		.arrow:after {
+			position: absolute;
+			display: block;
+			width: 0;
+			height: 0;
+			border-color: transparent;
+			border-style: solid;
+		}
+		.arrow {
+			border-width: @MessageHeaderArrowOuterWidth;
+			margin: 14.5px 0 0 60px;
+			border-bottom-width: 0;
+			border-top-color: #999; // IE8 fallback
+			border-top-color: @MessageHeaderArrowOuterColor;
+			&:after {
+				border-width: @MessageHeaderArrowWidth;
+				content: "";
+				bottom: 1px;
+				margin-left: -@MessageHeaderArrowWidth;
+				border-bottom-width: 0;
+				border-top-color: @MessageHeaderArrowColor;
+			}
+		}
+		h5 {
+			margin-bottom: 0; // Reset for collapsable Original message header
+		}
+
+
+        // Message attachments
+        // ****************************************
+		.media{
+		    margin-bottom: @baseLineHeight;
+		    &-link{
+		            background-color: #fafafa;
+                background-color: rgba(255, 255, 255, .7);
+                border: 1px solid @grayLighter;
+                padding: @baseLineHeight/2;
+                line-height: @baseLineHeight*.85;
+                a{
+                    margin-right: @baseLineHeight/2;
+                    img{
+                        max-width: 100px;
+                    }
+                }
+            }
+
+            &-thumb{
+              max-width: 100px;
+              float: left;
+            }
+
+            &-body{
+              width: 310px;
+              float: right;
+            }
+
+            &-single-image{
+                a img{
+                    width: 100%;
+                    border: 1px solid @grayLighter;
+                }
+
+            }
+
+            h6{
+                font-weight: bold;
+                margin: 0; // Reset
+                line-height: @baseLineHeight*.85; // Reset
+            }
+		}
+	}
+
+	& header + div{
+		padding: @fluidGridGutterWidth;
+		.tab-content {
+			padding: 0; // Reset
+		}
+	}
+	.collapse{ // overwrite for original message
+		.transition(0.01s);
+	}
+
+ 	.somea-message-sources{
+ 		margin-top: @gridGutterWidth * .5;
+		.vertical-divider{
+			border-right: 1px dotted lighten(@grayLight,15%);
+			margin: 0 @baseLineHeight/2 0 @baseLineHeight/3;
+			padding: 7px 0;
+		}
+ 	}
+
+// 	.somea-message-sources{
+// 		margin: -15px -14.5px;
+// 		padding: 14.5px;
+// 		background-color: lighten(@grayLighter,9%);
+// 		&:last-child{
+// 			.border-radius(0 0 @borderRadiusLarge @borderRadiusLarge); // Show rounded corners everywhere if the box contains only a header and channels
+// 		}
+// 	}
+	.comment-list{
+		margin: 0 -@fluidGridGutterWidth; // full width for comment list
+	}
+	.message-divider{
+		hr{
+			margin: 14px -14px;
+		}
+		.arrow,
+		.arrow:after {
+			position: absolute;
+			display: block;
+			width: 0;
+			height: 0;
+			border-color: transparent;
+			border-style: solid;
+		}
+		.arrow {
+			border-width: @MessageDividerArrowOuterWidth;
+		}
+		.arrow:after {
+			border-width: @MessageDividerArrowWidth;
+			content: "";
+		}
+
+		.arrow {
+			margin: -16px 0 0 60px;
+			border-bottom-width: 0;
+			border-top-color: #999; // IE8 fallback
+			border-top-color: @MessageDividerArrowOuterColor;
+			&:after {
+				bottom: 1px;
+				margin-left: -@MessageDividerArrowWidth;
+				border-bottom-width: 0;
+				border-top-color: @MessageDividerArrowColor;
+			}
+		}
+	}
+
+	.message-history{
+		& .accordion-inner > div{
+			padding: @fluidGridGutterWidth*.7 @fluidGridGutterWidth;
+		}
+		h3{
+			line-height: @baseLineHeight; // Reset for conversation header
+		}
+		ul{
+			border-top: 1px dotted @grayLighter;
+			li{
+				border-bottom: 1px solid @grayLighter;
+				padding: @fluidGridGutterWidth*.7 @fluidGridGutterWidth;
+				&:last-child{
+					border-bottom: none
+				}
+				li{
+					padding: 0;  // Reset for Gear menu
+					border: 0;  // Reset for Gear menu
+				}
+				.editable{
+					margin-top: @fluidGridGutterWidth;
+				}
+			}
+			li.likes {
+				border-bottom: 1px dashed @grayLighter;
+				padding: 5px;
+				min-height: 0;
+			}
+		}
+	}
+
+
+	.border-radius(@borderRadiusLarge);
+	&.active {	// Activated message
+		border-color: @someaDarkBlue;
+		border-style: solid;
+		border-width: 0 0 0 3px;
+		margin-left: -3px;
+	}
+	.avatar{
+		.border-radius(2px);
+		.box-shadow(0 0 1px #ccc); // show slim border around partly white avatars
+		margin-top: @baseLineHeight/4;
+		margin-left: 1px; // prevent box-shadow to be cut off
+	}
+
+
+	// Conversation
+	ul.nav {
+		margin-top: 15px;
+		margin-bottom: 0;
+		li:first-child{
+			margin-left: 10%
+		}
+		&.nav-tabs{
+		 	& > li > a {
+		 		padding: 4px 9px 3px;
+			}
+		}
+		.tab-content{
+			padding: 15px 0;
+		}
+	}
+
+	// Gear menu & Flag for every post and comment
+	.message-actions{
+		.btn-group{
+			margin-right: 2px; // % not possible here because of fluid grid
+		}
+		button.active{
+			box-shadow: none;
+			span {
+				background-image: url(../prototype-sample-images/icon-marker-active.png);
+			}
+		}
+	}
+
+
+
+
+	// ****************************************
+	// Start: Workaround: Trying to leave the icon of a marked message visible
+	// even if user hasn´t rolled over the somea-message
+	// TODO: Please solve with JS... this is a monster
+
+	.message-actions button.active,
+	.message-history ul li .message-actions button.active{
+		border-color: transparent;
+		background:none;
+	}
+
+	.somea-message .message-actions a.btn-primary,
+	.somea-message .message-actions .btn-group,
+	.somea-message .message-actions button.btn,
+	.message-history ul li .message-actions .btn-group,
+	.message-history ul li .message-actions button,
+	#switch-message-history .accordion-inner .btn-group,
+	.somea-message .btn-group,
+	.somea-message header .btn-group
+	{opacity:0;}
+
+	.somea-message.active .message-actions .btn-group,
+	.somea-message.active .message-actions button,
+	.somea-message:hover .message-actions .btn-group,
+	.somea-message:hover button,
+	.somea-message .message-actions button.active,
+	li:hover .message-actions .btn-group,
+	.message-history ul li:hover .message-actions .btn-group,
+	.message-history ul li:hover button,
+	.message-history ul li.active .message-actions .btn-group,
+	.message-history ul li.active button,
+	.message-history ul .message-actions button.active,
+
+	#switch-message-history:hover .btn-group,
+	#switch-message-history:hover .button
+
+	{opacity:1 !important;}
+
+	.somea-message:hover button.active,
+	.message-history ul li:hover .message-actions button.active{
+		border-color: rgba(0, 0, 0, 0.1);
+		background-color: transparent;
+	}
+
+
+	// Bootstrap Mixins don´t support gradients with color stops by v2.2.2
+	/****************************************/
+	background: @white; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIyOCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZjNmM2Y0IiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==");
+	background: -moz-linear-gradient(top,  @white 60%, @grayLightest 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(60%,@white), color-stop(100%,@grayLightest)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  @white 60%,@grayLightest 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  @white 60%,@grayLightest 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  @white 60%,@grayLightest 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  @white 60%,@grayLightest 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=@white, endColorstr=@grayLightest,GradientType=0 ); /* IE6-8 */
+}
+
+
+// Dialog: Message Refresh Indicator
+.new-messages{
+	background: @someaBlue url(../img/bg-noise.png) !important;
+	margin-bottom: @gridGutterWidth;
+	.border-radius(@borderRadiusLarge);
+	a{
+		color: white !important;
+		&:link, &:active, &:hover{
+			display: block;
+			padding: 10px !important;
+			text-align: center;
+		}
+	}
+}
+
+
+// Notification Center
+/****************************************/
+
+.notification-list{
+    overflow: hidden;
+    li{
+        padding-left: 0px; // Reset somea-list li padding here
+        margin-left: -10px; // Fix grey border top
+        h5{
+            margin: 0;
+            line-height: inherit;
+        }
+        &.severity1{ // Notification type: Error (red)
+            border-left: 20px solid @redDark;
+        }
+
+        &.severity2{ // Notification type: Warning (orange)
+            border-left: 20px solid transparent;
+        }
+
+        &.severity3{ // Notification type: Feedback (green)
+            border-left: 20px solid transparent;
+        }
+        .messageBody{
+            color: @grayLight;
+        }
+    }
+}
+

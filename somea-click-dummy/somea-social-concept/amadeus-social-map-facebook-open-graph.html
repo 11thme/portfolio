@@ -1,0 +1,196 @@
+<html>
+	<head>
+		<title>Open Graph Getting Started App - og.likes</title>
+		<style type="text/css">
+			div { padding: 10px; }
+		</style>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<div id="fb-root"></div>
+		<script type="text/javascript">
+			// You probably don't want to use globals, but this is just example code
+			var fbAppId = '562215097173854';
+			var objectToLike = 'http://techcrunch.com/2013/02/06/facebook-launches-developers-live-video-channel-to-keep-its-developer-ecosystem-up-to-date/';
+
+			// This check is just here to make sure you set your app ID. You don't
+			// need to use it in production.
+			if (fbAppId === 'replace me') {
+				alert('Please set the fbAppId in the sample.');
+			}
+
+			// This is boilerplate code that is used to initialize the Facebook
+			// JS SDK.  You would normally set your App ID in this code.
+
+			// Additional JS functions here
+			window.fbAsyncInit = function() {
+				FB.init({
+					appId: fbAppId, // App ID
+					status: true, // check login status
+					cookie: true, // enable cookies to allow the server to access the session
+					xfbml: true            // parse page for xfbml or html5 social plugins like login button below
+				});
+
+				// Put additional init code here
+			};
+
+			// Load the SDK Asynchronously
+			(function(d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) {
+					return;
+				}
+				js = d.createElement(s);
+				js.id = id;
+				js.src = "//connect.facebook.net/en_US/all.js";
+				fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+
+			/*
+			 * This function makes a call to the og.likes API.  The object argument is
+			 * the object you like.  Other types of APIs may take other arguments.
+			 * (i.e. the book.reads API takes a book= argument.)
+			 *
+			 * Because it's a sample, it also sets the privacy parameter so that it will
+			 * create a story that only you can see.  Remove the privacy parameter and
+			 * the story will be visible to whatever the default privacy was when you
+			 * added the app.
+			 *
+			 * Also note that you can view any story with the id, as demonstrated with
+			 * the code below.
+			 *
+			 * APIs used in postLike():
+			 * Call the Graph API from JS:
+			 *   https://developers.facebook.com/docs/reference/javascript/FB.api
+			 * The Open Graph og.likes API:
+			 *   https://developers.facebook.com/docs/reference/opengraph/action-type/og.likes
+			 * Privacy argument:
+			 *   https://developers.facebook.com/docs/reference/api/privacy-parameter
+			 */
+
+			function postLike() {
+				FB.api(
+						'https://graph.facebook.com/me/og.likes',
+						'post',
+						{object: objectToLike,
+							privacy: {'value': 'SELF'}},
+				function(response) {
+					if (!response) {
+						alert('Error occurred.');
+					} else if (response.error) {
+						document.getElementById('result').innerHTML = 'Error: ' + response.error.message;
+					} else {
+						document.getElementById('result').innerHTML =
+								'<a href=\"https://www.facebook.com/me/activity/' + response.id + '\">' +
+								'Story created.  ID is ' + response.id + '</a>';
+					}
+				}
+				);
+			}
+			var objectToRide = 'https://www.google.de/maps/preview#!data=!4m23!3m22!1m5!3m2!3d51.5008929!4d-0.1198309!4sCounty+Hall%2C+Westminster+Bridge+Rd%2C+London+SE1%2C+UK!6e2!1m5!1sLondon+Bridge%2C+King+William+St%2C+City+of+London%2C+Greater+London+EC4R+9%2C+United+Kingdom!2s0x4876035159bb13c5%3A0xa61e28267c3563ac!3m2!3d51.509001!4d-0.087129!2e1!3m8!1m3!1d11834!2d-0.1160973!3d51.5098014!3m2!1i1280!2i915!4f13.1&fid=0';
+			function rideBike() {
+				FB.api(
+						'https://graph.facebook.com/me/fitness.bikes?',
+						'post',
+						{object: objectToRide,
+							privacy: {'value': 'SELF'},
+							course: 'http://samples.ogp.me/136756249803614',
+							message: 'I like London, I like biking, Plus, thanks to Amadeus Social Map, I got 5 pounds disoucnt~'
+						},
+				function(response) {
+					if (!response) {
+						alert('Error occurred.');
+					} else if (response.error) {
+						document.getElementById('result').innerHTML = 'Error: ' + response.error.message;
+					} else {
+						document.getElementById('result').innerHTML =
+								'<a href=\"https://www.facebook.com/me/activity/' + response.id + '\">' +
+								'Story created.  ID is ' + response.id + '</a>';
+					}
+				}
+				);
+			}
+			var objectToGetDiscount = '563578337039702';
+			function getDiscount() {
+				FB.api(
+						'https://graph.facebook.com/me/amadeus-social-map:get?',
+						'post',
+						{object: objectToGetDiscount,
+							privacy: {'value': 'SELF'},
+							discount: 'http://samples.ogp.me/562227097172654',
+							message: 'Amadeus Luxury Hotel is one of the best I have ever stay! Breakfast is AWESOME!!! Plus I have a discount from my Travel Map : Check out here: abc.co'
+						},
+				function(response) {
+					if (!response) {
+						alert('Error occurred.');
+					} else if (response.error) {
+						document.getElementById('result').innerHTML = 'Error: ' + response.error.message;
+					} else {
+						document.getElementById('result').innerHTML =
+								'<a href=\"https://www.facebook.com/me/activity/' + response.id + '\">' +
+								'Story created.  ID is ' + response.id + '</a>';
+					}
+				}
+				);
+			}
+			var objectToCheckin = '563578337039702';
+			function Checkin() {
+				FB.api(
+						'https://graph.facebook.com/me/amadeus-social-map:check_in?',
+						'post',
+						{object: objectToGetDiscount,
+							privacy: {'value': 'SELF'},
+							amadeus_hotel_: 'http://samples.ogp.me/562239280504769',
+							message: 'Amadeus Luxury Hotel is one of the best I have ever stay! Breakfast is AWESOME!!! Plus I have a discount from my Travel Map : Check out here: abc.co'
+						},
+				function(response) {
+					if (!response) {
+						alert('Error occurred.');
+					} else if (response.error) {
+						document.getElementById('result').innerHTML = 'Error: ' + response.error.message;
+					} else {
+						document.getElementById('result').innerHTML =
+								'<a href=\"https://www.facebook.com/me/activity/' + response.id + '\">' +
+								'Story created.  ID is ' + response.id + '</a>';
+					}
+				}
+				);
+			}
+		</script>
+
+		<!--
+		  Login Button - https://developers.facebook.com/docs/reference/plugins/login
+
+		  This example needs the 'publish_actions' permission in order to publish an
+		  action.  The scope parameter below is what prompts the user for that permission.
+		-->
+
+		<div
+			class="fb-login-button"
+			data-show-faces="true"
+			data-width="200"
+			data-max-rows="1"
+			data-scope="publish_actions">
+		</div>
+
+		<div>
+			This example creates a story on Facebook using the <a href="https://developers.facebook.com/docs/reference/ogaction/og.likes"><code>og.likes</code></a> API.  That story will just say that you like an <a href="http://techcrunch.com/2013/02/06/facebook-launches-developers-live-video-channel-to-keep-its-developer-ecosystem-up-to-date/">article on TechCrunch</a>.  The story should only be visible to you.
+		</div>
+
+		<div>
+			<input type="button" value="Create a story with an og.likes action" onclick="postLike();">
+		</div>
+
+		<div>
+			<input type="button" value="Ride a Bike" onclick="rideBike();">
+		</div>
+		<div>
+			<input type="button" value="Get Discount" onclick="getDiscount();">
+		</div>
+		<div>
+			<input type="button" value="Checkin" onclick="Checkin();">
+		</div>
+		<div id="result"></div>
+
+	</body>
+</html>

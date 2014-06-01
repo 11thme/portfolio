@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js ie ie6 lt-ie10 lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js ie ie7 lt-ie10 lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js ie ie8 lt-ie10 lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9]>
+<html class="no-js ie ie9 lt-ie10" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <title>Amadeus Social Media Suite</title>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/x-icon"
+          href="https://suitetest.amaext.de/_Resources/Static/Packages/Amadeus.Somea.Suite/favicon.ico"/>
+    <link href="./stylesheet/less/somea-bootstrap.less" rel="stylesheet/less" type="text/css"/>
+    <link href="./stylesheet/less/somea-variables.less" rel="stylesheet/less" type="text/css"/>
+    <link href="./stylesheet/less/user-admin.less" rel="stylesheet/less" type="text/css"/>
+    <link href="./bootstrap-v3/font-awesome-4.0.1/css/font-awesome.css" rel="stylesheet" media="screen"/>
+    <script src="js/vendor/less-1.3.1.min.js" type="text/javascript"></script>
+    <script src="js/vendor/jquery/jquery-1.9.1.min.js"></script>
+    <script src="js/vendor/select2-3.4.3/select2.min.js"></script>
+    <script src="js/user-admin.js"></script>
+</head>
+<body>
+<header id="suite-header">
+    <div class="somea_alertbox">
+    </div>
+    <div class="container">
+        <div id="nav-top" class="row">
+            <div class="span12">
+                <ul id="secondary-nav" class="pull-right">
+                    <li>
+                        <a class="current-user" href="prototype-settings.html">
+                            Travel Agency <strong>Peter Mustermann</strong>
+                            <span class="avatar" style="background-image: url(./img/avator-ben-jimmy.png);"></span>
+                        </a>
+                    </li>
+                    <li><a href="#">Switch account</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="static-main-nav affix-top" data-spy="affix" data-offset-top="45">
+        <div class="container">
+            <div class="row">
+                <div class="span9 offset3">
+                    <ul id="primary-nav">
+                        <li><a href="#">Dashboard</a></li>
+                        <li><a href="#">Messages<i class="icon-envelope-orange icon-right"></i></a></li>
+                        <li><a href="#">Notifications<i class="icon-envelope-orange icon-right"></i></a></li>
+                        <li><a href="#">Analytics</a></li>
+                        <li><a href="#">App Admin</a></li>
+                        <li class="active"><a href="#">User Admin</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="content-wrapper">
+    <div class="container content-container">
+
+        <div class="row-fluid">
+            <!--******************************side bar nav*********************************-->
+            <div class="span3">
+                <div class="subnav-bg-top  affix-bottom">
+                    <ul class="nav nav-tabs nav-stacked">
+                        <li><a href="./dam-photo.html" class="active">Manage Users</a></li>
+                        <li><a href="./dam-video.html">Monitor Users</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <!--******************************main photo container*********************************-->
+            <div class="span9">
+                <div class="somea-box">
+                    <header>
+                        <div class="row-fluid">
+                            <div class="span8">
+                                <h1>
+                                    <i class="fa fa-home"></i> System Admin
+                                </h1>
+                            </div>
+                        </div>
+                    </header>
+
+                </div>
+                <div class="row-fluid">
+                    <div class="span6 somea-box functional-wrapper">
+                        <div class="box-content">
+                            <h2>Market</h2>
+
+                            <p>
+                                Total number of markets: 4
+                                <br>
+                                <span data-title="2 new markets are created since last month" data-target="tooltip">
+                                    ( 1 new
+                                        <i class="fa fa-arrow-up icon-center icon-green"></i>
+                                     0 <i class="fa fa-arrow-down icon-right icon-red"></i>   )
+                                </span>
+                            </p>
+
+                            <div class="search-wrapper">
+                                <input type="text" placeholder="search name of a market">
+                                <a class="btn"><i class="fa fa-search"></i></a>
+                            </div>
+                            <p><a href="#">view all</a></p>
+                        </div>
+                        <button class="btn btn-primary"><i class="fa fa-plus icon-left"></i> New Market</button>
+                    </div>
+                    <div class="span6 somea-box functional-wrapper">
+                        <div class="box-content">
+                            <h2>Group</h2>
+
+                            <p>
+                                Total number of groups: 20
+                                <br>
+                                <span data-title="2 new markets are created since last month" data-target="tooltip">
+                                    ( 12 new
+                                        <i class="fa fa-arrow-up icon-center icon-green"></i>
+                                     0 <i class="fa fa-arrow-down icon-right icon-red"></i>   )
+                                </span>
+                            </p>
+
+                            <div class="search-wrapper">
+                                <input type="text" placeholder="search name of a group">
+                                <a class="btn"><i class="fa fa-search"></i></a>
+                            </div>
+                            <p><a href="#" class="view-all">view all</a></p>
+                        </div>
+                        <button class="btn btn-primary"><i class="fa fa-plus icon-left"></i> New Group</button>
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <div class="span6 somea-box functional-wrapper">
+                        <div class="box-content">
+                            <h2>Company</h2>
+
+                            <p>
+                                Total number of companies: 822
+                                <br>
+                                <span data-title="2 new markets are created since last month" data-target="tooltip">
+                                    ( 102 new
+                                        <i class="fa fa-arrow-up icon-center icon-green"></i>
+                                     3 <i class="fa fa-arrow-down icon-right icon-red"></i>   )
+                                </span>
+                            </p>
+
+                            <div class="search-wrapper">
+                                <input type="text" placeholder="search name of a company">
+                                <a class="btn"><i class="fa fa-search"></i></a>
+                            </div>
+                            <p><a href="#" class="view-all">view all</a></p>
+                        </div>
+                        <button class="btn btn-primary"><i class="fa fa-plus icon-left"></i> New Company</button>
+                    </div>
+                    <div class="span6 somea-box functional-wrapper">
+                        <div class="box-content">
+                            <h2>User</h2>
+
+                            <p>
+                                Total number of users: 820
+                                <br>
+                                <span data-title="2 new markets are created since last month" data-target="tooltip">
+                                    ( 102 new
+                                        <i class="fa fa-arrow-up icon-center icon-green"></i>
+                                     2 <i class="fa fa-arrow-down icon-right icon-red"></i>   )
+                                </span>
+                            </p>
+
+                            <div class="search-wrapper">
+                                <input type="text" placeholder="search name of a user">
+                                <a class="btn"><i class="fa fa-search"></i></a>
+                            </div>
+                            <p><a href="#" class="view-all">view all</a></p>
+                        </div>
+                        <button class="btn btn-primary"><i class="fa fa-plus icon-left"></i> New User</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<!-- **************************************** -->
+<script src="js/vendor/bootstrap-v2/bootstrap-affix.js"></script>
+<script src="js/vendor/bootstrap-v2/bootstrap-collapse.js"></script>
+<script src="js/vendor/bootstrap-v2/bootstrap-tab.js"></script>
+<script src="js/vendor/bootstrap-v2/bootstrap-button.js"></script>
+<script src="js/vendor/bootstrap-v2/bootstrap-dropdown.js"></script>
+<script src="js/vendor/bootstrap-v2/bootstrap-tooltip.js"></script>
+<script src="js/vendor/bootstrap-v2/bootstrap-popover.js"></script>
+<script src="js/vendor/bootstrap-v2/bootstrap-modal.js"></script>
+<script src="js/vendor/bootstrap-v2/bootstrap-transition.js"></script>
+<script src="js/vendor/bootstrap-v2/bootstrap-typeahead.js"></script>
+
+<script type="text/javascript">
+
+</script>
+
+</body>
+</html>

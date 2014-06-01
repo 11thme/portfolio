@@ -1,0 +1,6 @@
+.row-fluid [class*="span"] {
+  -moz-box-sizing: border-box;
+  display: block;
+  float: left;
+  min-height: 0;
+}

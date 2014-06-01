@@ -1,0 +1,1 @@
+Icons taken from http://icondock.com/free/vector-social-media-iconsFree for commercial use. Link to Icondock is optional.

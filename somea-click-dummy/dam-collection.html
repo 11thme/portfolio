@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Amadeus Social Media Suite</title>
+    <link rel="shortcut icon" type="image/x-icon"
+          href="https://suitetest.amaext.de/_Resources/Static/Packages/Amadeus.Somea.Suite/favicon.ico"/>
+    <link rel="stylesheet/less" type="text/css" href="stylesheet/less/somea-variables.less"/>
+    <link rel="stylesheet/less" type="text/css" href="stylesheet/less/somea-bootstrap.less"/>
+    <link href="bootstrap-v3/font-awesome-4.0.1/css/font-awesome.css" rel="stylesheet" media="screen">
+    <link href="bootstrap-v3/css/bootstrap-glyphicons.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheet/bootstrap/css/bootstrap-image-gallery.min.css"/>
+    <link rel="stylesheet" type="text/css" href="stylesheet/css/dam-base.css"/>
+    <script src="js/vendor/less-1.3.1.min.js" type="text/javascript"></script>
+    <script src="js/vendor/jquery/jquery-1.9.1.min.js"></script>
+
+</head>
+<body>
+<header id="suite-header">
+    <div class="somea_alertbox">
+    </div>
+    <div class="container">
+        <div id="nav-top" class="row">
+            <div class="span12">
+                <ul id="secondary-nav" class="pull-right">
+                    <li>
+                        <a class="current-user" href="prototype-settings.html">
+                            Travel Agency <strong>Peter Mustermann</strong>
+                            <span class="avatar" style="background-image: url(../img/avatar-ben-jimmy.jpg);"></span>
+                        </a>
+                    </li>
+                    <li><a href="#">Switch account</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="static-main-nav affix-top" data-spy="affix" data-offset-top="45">
+        <div class="container">
+            <div class="row">
+                <div class="span9 offset3">
+                    <ul id="primary-nav">
+                        <li><a href="#">Dashboard</a></li>
+                        <li><a href="#">Messages<i class="icon-envelope-orange icon-right"></i></a></li>
+                        <li><a href="#">Notifications<i class="icon-envelope-orange icon-right"></i></a></li>
+                        <li><a href="#">Analytics</a></li>
+                        <li><a href="#">AppShop</a></li>
+                        <li><a href="#">My Apps</a></li>
+                        <li class="active"><a href="#">Media</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div id="scroll-transition" class="affix-bottom" data-spy="affix" data-offset-top="45"></div>
+
+<div class="content-wrapper">
+<div class="container content-container">
+<div class="row-fluid">
+<!--******************************side bar nav*********************************-->
+<div class="span3">
+    <div class="subnav-bg-top  affix-bottom">
+        <ul class="nav nav-tabs nav-stacked">
+            <li><a href="./dam-photo.html">Photos</a></li>
+            <li><a href="./dam-video.html">Videos</a></li>
+            <li><a href="./dam-collection.html" class="active">Collections</a></li>
+            <li><a href="./dam-all-media.html">All Media </a></li>
+        </ul>
+    </div>
+</div>
+<!--******************************main photo container*********************************-->
+<div class="span9">
+<div class="somea-box">
+    <header>
+        <div class="row-fluid">
+            <div class="span8">
+                <h1>
+                    Collections
+                </h1>
+            </div>
+            <div class="span4 pull-right">
+                <a role="button" class="btn btn-primary" href="#create-new-collection-modal" data-toggle="modal">Create
+                    New</a>
+            </div>
+        </div>
+    </header>
+</div>
+<!-- ****************************New Collection ************************************-->
+<div class="somea-box" id="new-collection" hidden>
+    <div class="box-content">
+        <div class="row-fluid">
+            <div class="span12 well condensed">
+                <h3>Best of Japan
+                    <small>-- created on 10-10- 2013, contains 0 photos (0 MB)</small>
+                </h3>
+                <p data-toggle="tooltip" class="photo-description" data-original-title=""><strong>Description: </strong>Bla
+                    bla bla</p>
+
+                <p data-toggle="tooltip" class="photo-description" data-original-title=""><strong>Media page: </strong>
+                    no media page yet</p>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span10 offset1 well">
+                <h4><i class="icon-exclamation-sign icon-semi"></i> Please use "Add Photos" button to add photos, enjoy
+                    :)</h4>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <button class="btn">Delete</button>
+        <a role="button" href="#edit-collection-modal" data-toggle="modal" class="btn">Edit</a>
+        <a role="button" href="#add-photos-dam-modal" data-toggle="modal" class="btn btn-primary">Add Photos</a>
+    </footer>
+</div>
+<!-- ****************************Collection1 ************************************-->
+<div class="somea-box">
+<div class="box-content">
+<div class="row-fluid">
+    <div class="span12 well condensed">
+        <h3>Best of Germany
+            <small>-- created on 10-08- 2013, contains 14 photos (23MB)</small>
+        </h3>
+        <p data-toggle="tooltip" class="photo-description" data-original-title=""><strong>Description: </strong>Germany
+            ist: die englische Bezeichnung für Deutschland. Germany (Mondkrater)</p>
+
+        <p data-toggle="tooltip" class="photo-description" data-original-title=""><strong>Media page: </strong><a
+                href="./new-media-page-collection.html">https://agency-bla/img0erer1.jpg</a><a><i
+                class="fa fa-copy vertical-space-sm vertical-space-sm"></i>copy link</a></p>
+    </div>
+</div>
+<div class="row-fluid">
+<div class="span12 dam-float-item collection-container default" id="gallery" data-target="#modal-gallery"
+     data-toggle="modal-gallery">
+<div class="somea-box single-media-container">
+    <div class="single-media-menu" hidden>
+        <p>
+            <a data-gallery="gallery" href="./img/dam/example-img31.jpg" title="german 1"><i
+                    title="full size / edit photo" data-placement="top" data-toggle="tooltip"
+                    class="fa fa-expand"></i></a>
+            <a><i title="make as cover" data-placement="top" data-toggle="tooltip"
+                  class="fa fa-home vertical-space-sm icon-isActive"></i></a>
+            <a id="remove-media-collection"><i class="fa fa-trash-o vertical-space-sm"
+                                               title="remove from collection" data-placement="top"
+                                               data-toggle="tooltip"></i></a>
+        </p>
+
+        <p class="title">Title:King King Lake Lake Lake Lake King King 222222</p>
+    </div>
+    <div class="single-media-frame">
+        <a title="Full attitude">
+            <img src="./img/dam/example-img31.jpg" alt=""/>
+        </a>
+    </div>
+</div>
+<div class="somea-box single-media-container">
+    <div class="single-media-menu" hidden>
+        <p>
+            <a data-gallery="gallery" href="./img/dam/example-img32.jpg" title="german 2"><i
+                    title="full size / edit photo" data-placement="top" data-toggle="tooltip"
+                    class="fa fa-expand"></i></a>
+            <a><i title="make as cover" data-placement="top" data-toggle="tooltip"
+                  class="fa fa-home vertical-space-sm"></i></a>
+            <a id="remove-media-collection"><i class="fa fa-trash-o vertical-space-sm"
+                                               title="remove from collection" data-placement="top"
+                                               data-toggle="tooltip"></i></a>
+        </p>
+
+        <p class="title">Title: Lake King</p>
+    </div>
+    <div class="single-media-frame">
+        <img src="./img/dam/example-img32.jpg" alt=""/>
+    </div>
+</div>
+<div class="somea-box single-media-container">
+    <div class="single-media-menu" hidden>
+        <p>
+            <a data-gallery="gallery" href="./img/dam/example-img33.jpg" title="best of germany 3"><i
+                    title="full size / edit photo" data-placement="top" data-toggle="tooltip"
+                    class="fa fa-expand"></i></a>
+            <a><i title="make as cover" data-placement="top" data-toggle="tooltip"
+                  class="fa fa-home vertical-space-sm"></i></a>
+            <a id="remove-media-collection"><i class="fa fa-trash-o vertical-space-sm"
+                                               title="remove from collection" data-placement="top"
+                                               data-toggle="tooltip"></i></a>
+        </p>
+
+        <p class="title">Title: Lake King</p>
+    </div>
+    <div class="single-media-frame">
+        <img src="./img/dam/example-img33.jpg" alt=""/>
+    </div>
+</div>
+<div class="somea-box single-media-container">
+    <div class="single-media-menu" hidden>
+        <p>
+            <a data-gallery="gallery" href="./img/dam/example-img34.jpg"><i title="full size / edit photo"
+                                                                            data-placement="top"
+                                                                            data-toggle="tooltip"
+                                                                            class="fa fa-expand"></i></a>
+            <a><i title="make as cover" data-placement="top" data-toggle="tooltip"
+                  class="fa fa-home vertical-space-sm"></i></a>
+            <a id="remove-media-collection"><i class="fa fa-trash-o vertical-space-sm"
+                                               title="remove from collection" data-placement="top"
+                                               data-toggle="tooltip"></i></a>
+        </p>
+
+        <p class="title">Title: Lake King</p>
+    </div>
+    <div class="single-media-frame">
+        <img src="./img/dam/example-img34.jpg" alt=""/>
+    </div>
+</div>
+<div class="somea-box single-media-container">
+    <div class="single-media-menu" hidden>
+        <p>
+            <a data-gallery="gallery" href="./img/dam/example-img35.jpg"><i title="full size / edit photo"
+                                                                            data-placement="top"
+                                                                            data-toggle="tooltip"
+                                                                            class="fa fa-expand"></i></a>
+            <a><i title="make as cover" data-placement="top" data-toggle="tooltip"
+                  class="fa fa-home vertical-space-sm"></i></a>
+            <a id="remove-media-collection"><i class="fa fa-trash-o vertical-space-sm"
+                                               title="remove from collection" data-placement="top"
+                                               data-toggle="tooltip"></i></a>
+        </p>
+
+        <p class="title">Title: Lake King</p>
+    </div>
+    <div class="single-media-frame">
+        <img src="./img/dam/example-img35.jpg" alt=""/>
+    </div>
+</div>
+
+<div class="somea-box single-media-container">
+    <div class="single-media-menu" hidden>
+        <p>
+            <a data-gallery="gallery" href="./img/dam/example-img36.jpg"><i title="full size / edit photo"
+                                                                            data-placement="top"
+                                                                            data-toggle="tooltip"
+                                                                            class="fa fa-expand"></i></a>
+            <a><i title="make as cover" data-placement="top" data-toggle="tooltip"
+                  class="fa fa-home vertical-space-sm"></i></a>
+            <a id="remove-media-collection"><i class="fa fa-trash-o vertical-space-sm"
+                                               title="remove from collection" data-placement="top"
+                                               data-toggle="tooltip"></i></a>
+        </p>
+
+        <p class="title">Title: Lake King</p>
+    </div>
+    <div class="single-media-frame">
+        <img src="./img/dam/example-img36.jpg" alt=""/>
+    </div>
+</div>
+<div class="somea-box single-media-container">
+    <div class="single-media-menu" hidden>
+        <p>
+            <a data-gallery="gallery" href="./img/dam/example-img37.jpg"><i title="full size / edit photo"
+                                                                            data-placement="top"
+                                                                            data-toggle="tooltip"
+                                                                            class="fa fa-expand"></i></a>
+            <a><i title="make as cover" data-placement="top" data-toggle="tooltip"
+                  class="fa fa-home vertical-space-sm"></i></a>
+            <a id="remove-media-collection"><i class="fa fa-trash-o vertical-space-sm"
+                                               title="remove from collection" data-placement="top"
+                                               data-toggle="tooltip"></i></a>
+        </p>
+
+        <p class="title">Title: Lake King</p>
+    </div>
+    <div class="single-media-frame">
+        <img src="./img/dam/example-img37.jpg" alt=""/>
+    </div>
+</div>
+<div class="somea-box single-media-container">
+    <div class="single-media-menu" hidden>
+        <p>
+            <a data-gallery="gallery" href="./img/dam/example-img15.jpg"><i title="full size / edit photo"
+                                                                            data-placement="top"
+                                                                            data-toggle="tooltip"
+                                                                            class="fa fa-expand"></i></a>
+            <a><i title="make as cover" data-placement="top" data-toggle="tooltip"
+                  class="fa fa-home vertical-space-sm"></i></a>
+            <a id="remove-media-collection"><i class="fa fa-trash-o vertical-space-sm"
+                                               title="remove from collection" data-placement="top"
+                                               data-toggle="tooltip"></i></a>
+        </p>
+
+        <p class="title">Title: Lake King</p>
+    </div>
+    <div class="single-media-frame">
+        <img src="./img/dam/example-img15.jpg" alt=""/>
+    </div>
+</div>
+<div class="somea-box single-media-container">
+    <div class="single-media-menu" hidden>
+        <p>
+            <a data-gallery="gallery" href="./img/dam/example-img16.jpg"><i title="full size / edit photo"
+                                                                            data-placement="top"
+                                                                            data-toggle="tooltip"
+                                                                            class="fa fa-expand"></i></a>
+            <a><i title="make as cover" data-placement="top" data-toggle="tooltip"
+                  class="fa fa-home vertical-space-sm"></i></a>
+            <a id="remove-media-collection"><i class="fa fa-trash-o vertical-space-sm"
+                                               title="remove from collection" data-placement="top"
+                                               data-toggle="tooltip"></i></a>
+        </p>
+
+        <p class="title">Title: Lake King</p>
+    </div>
+    <div class="single-media-frame">
+        <img src="./img/dam/example-img16.jpg" alt=""/>
+    </div>
+</div>
+<div class="somea-box single-media-container">
+    <div class="single-media-menu" hidden>
+        <p>
+            <a data-gallery="gallery" href="./img/dam/example-img17.jpg"><i title="full size / edit photo"
+                                                                            data-placement="top"
+                                                                            data-toggle="tooltip"
+                                                                            class="fa fa-expand"></i></a>
+            <a><i title="make as cover" data-placement="top" data-toggle="tooltip"
+                  class="fa fa-home vertical-space-sm"></i></a>
+            <a id="remove-media-collection"><i class="fa fa-trash-o vertical-space-sm"
+                                               title="remove from collection" data-placement="top"
+                                               data-toggle="tooltip"></i></a>
+        </p>
+
+        <p class="title">Title: Lake King</p>
+    </div>
+    <div class="single-media-frame">
+        <img src="./img/dam/example-img17.jpg" alt=""/>
+    </div>
+</div>
+<div class="somea-box single-media-container">
+    <div class="single-media-menu" hidden>
+        <p>
+            <a data-gallery="gallery" href="./img/dam/example-img18.jpg"><i title="full size / edit photo"
+                                                                            data-placement="top"
+                                                                            data-toggle="tooltip"
+                                                                            class="fa fa-expand"></i></a>
+            <a><i title="make as cover" data-placement="top" data-toggle="tooltip"
+                  class="fa fa-home vertical-space-sm"></i></a>
+            <a id="remove-media-collection"><i class="fa fa-trash-o vertical-space-sm"
+                                               title="remove from collection" data-placement="top"
+                                               data-toggle="tooltip"></i></a>
+        </p>
+
+        <p class="title">Title: Lake King</p>
+    </div>
+    <div class="single-media-frame">
+        <img src="./img/dam/example-img18.jpg" alt=""/>
+    </div>
+</div>
+<div class="somea-box single-media-container">
+    <div class="single-media-menu" hidden>
+        <p>
+            <a data-gallery="gallery" href="./img/dam/example-img10.jpg"><i title="full size / edit photo"
+                                                                            data-placement="top"
+                                                                            data-toggle="tooltip"
+                                                                            class="fa fa-expand"></i></a>
+            <a><i title="make as cover" data-placement="top" data-toggle="tooltip"
+                  class="fa fa-home vertical-space-sm"></i></a>
+            <a id="remove-media-collection"><i class="fa fa-trash-o vertical-space-sm"
+                                               title="remove from collection" data-placement="top"
+                                               data-toggle="tooltip"></i></a>
+        </p>
+
+        <p class="title">Title: Lake King</p>
+    </div>
+    <div class="single-media-frame">
+        <img src="./img/dam/example-img10.jpg" alt=""/>
+    </div>
+</div>
+<div class="collapse fade" id="extra-photos">
+    <div class="somea-box single-media-container">
+        <div class="single-media-menu" hidden>
+            <p>
+                <a data-gallery="gallery" href="./img/dam/example-img19.jpg"><i title="full size / edit photo"
+                                                                                data-placement="top"
+                                                                                data-toggle="tooltip"
+                                                                                class="fa fa-expand"></i></a>
+                <a><i title="make as cover" data-placement="top" data-toggle="tooltip"
+                      class="fa fa-home vertical-space-sm"></i></a>
+                <a id="remove-media-collection"><i class="fa fa-trash-o vertical-space-sm"
+                                                   title="remove from collection" data-placement="top"
+                                                   data-toggle="tooltip"></i></a>
+            </p>
+
+            <p class="title">Title: Lake King</p>
+        </div>
+        <div class="single-media-frame">
+            <img src="./img/dam/example-img19.jpg" alt=""/>
+        </div>
+    </div>
+    <div class="somea-box single-media-container">
+        <div class="single-media-menu" hidden>
+            <p>
+                <a data-gallery="gallery" href="./img/dam/example-img20.jpg"><i title="full size / edit photo"
+                                                                                data-placement="top"
+                                                                                data-toggle="tooltip"
+                                                                                class="fa fa-expand"></i></a>
+                <a><i title="make as cover" data-placement="top" data-toggle="tooltip"
+                      class="fa fa-home vertical-space-sm"></i></a>
+                <a id="remove-media-collection"><i class="fa fa-trash-o vertical-space-sm"
+                                                   title="remove from collection" data-placement="top"
+                                                   data-toggle="tooltip"></i></a>
+            </p>
+
+            <p class="title">Title: Lake King</p>
+        </div>
+        <div class="single-media-frame">
+            <img src="./img/dam/example-img20.jpg" alt=""/>
+        </div>
+    </div>
+</div>
+</div>
+<div class="row-fluid">
+    <div class="span4">
+        <hr>
+    </div>
+    <div class="span4 divider-text" id="show-all-photo"><a href="#extra-photos" data-toggle="collapse"> show all
+        photos</a></div>
+    <div class="span4 divider-text hide" id="hide-extra-photo"><a href="#extra-photos" data-toggle="collapse">hide
+        extra photos</a></div>
+    <div class="span4">
+        <hr>
+    </div>
+</div>
+</div>
+</div>
+<footer>
+    <button class="btn">Delete</button>
+    <a role="button" href="#edit-collection-modal" data-toggle="modal" class="btn">Edit</a>
+    <a role="button" href="#add-photos-dam-modal" data-toggle="modal" class="btn btn-primary">Add Photos</a>
+</footer>
+</div>
+<!-- ****************************Collection2************************************-->
+<div class="somea-box">
+    <div class="box-content">
+        <div class="row-fluid">
+            <div class="span12 well condensed">
+                <h3>Travel to Asia
+                    <small>-- created on 11-02- 2013, contains 6 photos (13MB)</small>
+                </h3>
+                <p data-toggle="tooltip" class="photo-description" data-original-title=""><strong>Description: </strong>
+                    There is no description yet.
+                    <a class="btn" data-toggle="modal" href="#edit-photo-modal" id="add-description"> Add Now </a>
+                </p>
+
+                <p data-toggle="tooltip" class="photo-description" data-original-title=""><strong>Media
+                    page: </strong><a href="./new-media-page-collection.html">https://agency-bla/img0erer1.jpg</a><a><i
+                        class="fa fa-copy vertical-space-sm vertical-space-sm"></i>copy link</a></p>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span12 dam-float-item collection-container default" id="gallery" data-target="#modal-gallery"
+                 data-toggle="modal-gallery">
+                <div class="somea-box single-media-container">
+                    <div class="single-media-menu" hidden>
+                        <p>
+                            <a data-gallery="gallery" href="./img/dam/example-img10.jpg" title="german 1"><i
+                                    title="full size / edit photo" data-placement="top" data-toggle="tooltip"
+                                    class="fa fa-expand"></i></a>
+                            <a><i title="make as cover" data-placement="top" data-toggle="tooltip"
+                                  class="fa fa-home vertical-space-sm icon-isActive"></i></a>
+                            <a id="remove-media-collection"><i class="fa fa-trash-o vertical-space-sm"
+                                                               title="remove from collection" data-placement="top"
+                                                               data-toggle="tooltip"></i></a>
+                        </p>
+
+                        <p class="title">Title: Lake King</p>
+                    </div>
+                    <div class="single-media-frame">
+                        <a title="Full attitude">
+                            <img src="./img/dam/example-img10.jpg" alt=""/>
+                        </a>
+                    </div>
+                </div>
+                <div class="somea-box single-media-container">
+                    <div class="single-media-menu" hidden>
+                        <p>
+                            <a data-gallery="gallery" href="./img/dam/example-img11.jpg" title="german 2"><i
+                                    title="full size / edit photo" data-placement="top" data-toggle="tooltip"
+                                    class="fa fa-expand"></i></a>
+                            <a><i title="make as cover" data-placement="top" data-toggle="tooltip"
+                                  class="fa fa-home vertical-space-sm"></i></a>
+                            <a id="remove-media-collection"><i class="fa fa-trash-o vertical-space-sm"
+                                                               title="remove from collection" data-placement="top"
+                                                               data-toggle="tooltip"></i></a>
+                        </p>
+
+                        <p class="title">Title: Lake King</p>
+                    </div>
+                    <div class="single-media-frame">
+                        <img src="./img/dam/example-img11.jpg" alt=""/>
+                    </div>
+                </div>
+                <div class="somea-box single-media-container">
+                    <div class="single-media-menu" hidden>
+                        <p>
+                            <a data-gallery="gallery" href="./img/dam/example-img13.jpg" title="best of germany 3"><i
+                                    title="full size / edit photo" data-placement="top" data-toggle="tooltip"
+                                    class="fa fa-expand"></i></a>
+                            <a><i title="make as cover" data-placement="top" data-toggle="tooltip"
+                                  class="fa fa-home vertical-space-sm"></i></a>
+                            <a id="remove-media-collection"><i class="fa fa-trash-o vertical-space-sm"
+                                                               title="remove from collection" data-placement="top"
+                                                               data-toggle="tooltip"></i></a>
+                        </p>
+
+                        <p class="title">Title: Lake King</p>
+                    </div>
+                    <div class="single-media-frame">
+                        <img src="./img/dam/example-img13.jpg" alt=""/>
+                    </div>
+                </div>
+
+                <div class="somea-box single-media-container">
+                    <div class="single-media-menu" hidden>
+                        <p>
+                            <a data-gallery="gallery" href="./img/dam/example-img16.jpg"><i
+                                    title="full size / edit photo" data-placement="top" data-toggle="tooltip"
+                                    class="fa fa-expand"></i></a>
+                            <a><i title="make as cover" data-placement="top" data-toggle="tooltip"
+                                  class="fa fa-home vertical-space-sm"></i></a>
+                            <a id="remove-media-collection"><i class="fa fa-trash-o vertical-space-sm"
+                                                               title="remove from collection" data-placement="top"
+                                                               data-toggle="tooltip"></i></a>
+                        </p>
+
+                        <p class="title">Title: Lake King</p>
+                    </div>
+                    <div class="single-media-frame">
+                        <img src="./img/dam/example-img16.jpg" alt=""/>
+                    </div>
+                </div>
+                <div class="somea-box single-media-container">
+                    <div class="single-media-menu" hidden>
+                        <p>
+                            <a data-gallery="gallery" href="./img/dam/example-img17.jpg"><i
+                                    title="full size / edit photo" data-placement="top" data-toggle="tooltip"
+                                    class="fa fa-expand"></i></a>
+                            <a><i title="make as cover" data-placement="top" data-toggle="tooltip"
+                                  class="fa fa-home vertical-space-sm"></i></a>
+                            <a id="remove-media-collection"><i class="fa fa-trash-o vertical-space-sm"
+                                                               title="remove from collection" data-placement="top"
+                                                               data-toggle="tooltip"></i></a>
+                        </p>
+
+                        <p class="title">Title: Lake King</p>
+                    </div>
+                    <div class="single-media-frame">
+                        <img src="./img/dam/example-img17.jpg" alt=""/>
+                    </div>
+                </div>
+                <div class="somea-box single-media-container">
+                    <div class="single-media-menu" hidden>
+                        <p>
+                            <a data-gallery="gallery" href="./img/dam/example-img12.jpg"><i
+                                    title="full size / edit photo" data-placement="top" data-toggle="tooltip"
+                                    class="fa fa-expand"></i></a>
+                            <a><i title="make as cover" data-placement="top" data-toggle="tooltip"
+                                  class="fa fa-home vertical-space-sm"></i></a>
+                            <a id="remove-media-collection"><i class="fa fa-trash-o vertical-space-sm"
+                                                               title="remove from collection" data-placement="top"
+                                                               data-toggle="tooltip"></i></a>
+                        </p>
+
+                        <p class="title">Title: Lake King</p>
+                    </div>
+                    <div class="single-media-frame">
+                        <img src="./img/dam/example-img12.jpg" alt=""/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <button class="btn">Delete</button>
+        <a role="button" href="#edit-collection-modal" data-toggle="modal" class="btn">Edit</a>
+        <a role="button" href="#add-photos-dam-modal" data-toggle="modal" class="btn btn-primary">Add Photos</a>
+    </footer>
+</div>
+
+<!--*****************************Pagination*****************************-->
+<div class="pagination pagination-centered"></div>
+<!--*****************************end of Pagination*****************************-->
+</div>
+</div>
+
+</div>
+</div>
+<div id="suite-footer">
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <div id="amadeus-logo" class="pull-right"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<!--Modal expand photo-->
+<div id="modal-gallery" class=" modal modal-gallery with-controller-gallery hide fade" tabindex="-1">
+    <div class="modal-header">
+        <a class="close" data-dismiss="modal">&times;</a>
+
+        <h3 class="modal-title"></h3>
+    </div>
+    <div class="modal-body">
+        <div class="modal-image"></div>
+    </div>
+    <div class="modal-footer">
+        <a class="btn modal-download" target="_blank">
+            <i class="fa fa-download"></i>
+            <span>Download</span>
+        </a>
+        <a class="btn modal-play modal-slideshow" data-slideshow="2000">
+            <i class="fa fa-play"></i>
+            <span>Slideshow</span>
+        </a>
+    </div>
+</div>
+<!-- ********************add-new-photos-collection-modal ******************** -->
+<div class="modal modal-medium fade add-new-photos somea-box" id="add-photos-dam-modal">
+<header>Add photos from DAM</header>
+<div class="pull-center modal-darkBg">
+    <a class="btn btn-primary upload-modal" data-toggle="modal" data-target="#upload-photos-from-lo-modal"
+       id="btn-select-from-lo">Select photo from local</a>
+
+    <p><input type="checkbox" checked="">
+        <small>Yes, I grant rights to upload photos to Amadeus Somea Suite and I am sure all the photo I upload
+            here belongs to me
+        </small>
+    </p>
+</div>
+<div class="modal-body">
+<div class="row-fluid">
+    <div class="span5">
+        <hr>
+    </div>
+    <div class="span2 hr-Text">Photos in Media</div>
+    <div class="span5">
+        <hr>
+    </div>
+</div>
+
+<div id="add-photo-to-collection">
+<div class="dam-float-item">
+    <div class="somea-box single-media-container">
+        <div class="single-media-menu" hidden>
+            <table class="single-media-menu-frame">
+                <tr>
+                    <td><a id="lock-media"><i class="fa fa-check-square-o"></i></a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="single-media-frame">
+            <img src="./img/dam/example-img1.jpg" alt=""/>
+        </div>
+        <div class="single-media-info">
+            <i class="icon-check icon-isActive hide" id="selected-media"></i>
+
+            <p><strong>Title: Pink Birds </strong></p>
+        </div>
+    </div>
+</div>
+<div class="dam-float-item">
+    <div class="somea-box single-media-container">
+        <div class="single-media-menu" hidden>
+            <table class="single-media-menu-frame">
+                <tr>
+                    <td><a id="lock-media"><i class="fa fa-check-square-o"></i></a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="single-media-frame">
+            <img src="./img/dam/example-img4.jpg" alt=""/>
+        </div>
+        <div class="single-media-info">
+            <p><strong>Title: Frog</strong></p>
+
+            <p>
+                <span class="label label-tag-blue"><i class="fa fa-facebook-square"></i> Facebook</span>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="dam-float-item">
+    <div class="somea-box single-media-container">
+        <div class="single-media-menu" hidden>
+            <table class="single-media-menu-frame">
+                <tr>
+                    <td><a id="lock-media"><i class="fa fa-check-square-o"></i></a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="single-media-frame">
+            <img src="./img/dam/example-video1.jpg" alt=""/>
+        </div>
+        <div class="single-media-info">
+            <p><strong>Title: New Berlin Airport Airport</strong></p>
+
+            <p>
+                <span class="label label-important"><i class=" icon-youtube-sign "></i> Youtube</span>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="dam-float-item">
+    <div class="somea-box single-media-container">
+        <div class="single-media-menu" hidden>
+            <table class="single-media-menu-frame">
+                <tr>
+                    <td><a id="lock-media"><i class="fa fa-check-square-o"></i></a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="single-media-frame">
+            <img src="./img/dam/example-img2.jpg" alt=""/>
+        </div>
+        <div class="single-media-info">
+            <p><strong>Title: Collection Germany</strong></p>
+
+            <p>
+                            <span class="label label-warning"><i
+                                    class=" fa fa-folder-open "></i> Collection Germany</span>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="dam-float-item">
+    <div class="somea-box single-media-container">
+        <div class="single-media-menu" hidden>
+            <table class="single-media-menu-frame">
+                <tr>
+                    <td><a id="lock-media"><i class="fa fa-check-square-o"></i></a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="single-media-frame">
+            <img src="./img/dam/example-img3.jpg" alt=""/>
+        </div>
+        <div class="single-media-info">
+            <p><strong>Title: Field</strong></p>
+
+            <p>
+                <span class="label label-tag-blue"><i class="fa fa-facebook-square"></i> Facebook</span>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="dam-float-item">
+    <div class="somea-box single-media-container">
+        <div class="single-media-menu" hidden>
+            <table class="single-media-menu-frame">
+                <tr>
+                    <td><a id="lock-media"><i class="fa fa-check-square-o"></i></a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="single-media-frame">
+            <img src="./img/dam/example-img7.jpg" alt=""/>
+        </div>
+        <div class="single-media-info">
+            <p><strong>Title: Frog</strong></p>
+
+            <p>
+                <span class="label label-tag-blue"><i class="fa fa-facebook-square"></i> Facebook</span>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="dam-float-item">
+    <div class="somea-box single-media-container">
+        <div class="single-media-menu" hidden>
+            <table class="single-media-menu-frame">
+                <tr>
+                    <td><a id="lock-media"><i class="fa fa-check-square-o"></i></a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="single-media-frame">
+            <img src="./img/dam/example-img7.jpg" alt=""/>
+        </div>
+        <div class="single-media-info">
+            <p><strong>Title: Frog</strong></p>
+
+            <p>
+                <span class="label label-tag-blue"><i class="fa fa-facebook-square"></i> Facebook</span>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="dam-float-item">
+    <div class="somea-box single-media-container">
+        <div class="single-media-menu" hidden>
+            <table class="single-media-menu-frame">
+                <tr>
+                    <td><a id="lock-media"><i class="fa fa-check-square-o"></i></a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="single-media-frame">
+            <img src="./img/dam/example-img7.jpg" alt=""/>
+        </div>
+        <div class="single-media-info">
+            <p><strong>Title: Frog</strong></p>
+
+            <p>
+                <span class="label label-tag-blue"><i class="fa fa-facebook-square"></i> Facebook</span>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="dam-float-item">
+    <div class="somea-box single-media-container">
+        <div class="single-media-menu" hidden>
+            <table class="single-media-menu-frame">
+                <tr>
+                    <td><a id="lock-media"><i class="fa fa-check-square-o"></i></a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="single-media-frame">
+            <img src="./img/dam/example-img7.jpg" alt=""/>
+        </div>
+        <div class="single-media-info">
+            <p><strong>Title: Frog</strong></p>
+
+            <p>
+                <span class="label label-tag-blue"><i class="fa fa-facebook-square"></i> Facebook</span>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="dam-float-item">
+    <div class="somea-box single-media-container">
+        <div class="single-media-menu" hidden>
+            <table class="single-media-menu-frame">
+                <tr>
+                    <td><a id="lock-media"><i class="fa fa-check-square-o"></i></a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="single-media-frame">
+            <img src="./img/dam/example-img7.jpg" alt=""/>
+        </div>
+        <div class="single-media-info">
+            <p><strong>Title: Frog</strong></p>
+
+            <p>
+                <span class="label label-tag-blue"><i class="fa fa-facebook-square"></i> Facebook</span>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="dam-float-item">
+    <div class="somea-box single-media-container">
+        <div class="single-media-menu" hidden>
+            <table class="single-media-menu-frame">
+                <tr>
+                    <td><a id="lock-media"><i class="fa fa-check-square-o"></i></a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="single-media-frame">
+            <img src="./img/dam/example-img7.jpg" alt=""/>
+        </div>
+        <div class="single-media-info">
+            <p><strong>Title: Frog</strong></p>
+
+            <p>
+                <span class="label label-tag-blue"><i class="fa fa-facebook-square"></i> Facebook</span>
+            </p>
+        </div>
+    </div>
+</div>
+</div>
+
+</div>
+<!--*****************************Pagination for modal*****************************-->
+<div class="pagination pagination-centered"></div>
+<div class="modal-filter">
+    <ul>
+        <li class="">filter :</li>
+        <li class="active"><a id="show-all">all</a></li>
+        <li class=""><a id="show-photos">photos</a></li>
+        <li class=""><a id="show-collections">collections</a></li>
+        <li class=""><a id="show-pdf">pdf</a></li>
+        <li class=""><a id="show-videos">videos</a></li>
+    </ul>
+</div>
+<!--*****************************end of Pagination*****************************-->
+<footer>
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+    <button class="btn btn-primary">Add Selected</button>
+</footer>
+</div>
+
+<!-- ********************Edit Form******************** -->
+<div class="somea-box modal modal-medium fade" id="edit-collection-modal" tabindex="-1" role="dialog">
+    <header>
+        <h1>Edit Collection Information</h1>
+        <ul class="nav nav-tabs" id="edit-photo-tabs">
+            <li class="active" id="detail-info-tab"><a data-toggle="tab" href="#edit-detail">Detail Info</a></li>
+            <li id="media-page-tab"><a data-toggle="tab" href="#edit-media-page">Media Page</a></li>
+        </ul>
+    </header>
+    <div class="modal-body box-content">
+        <div class="tab-content" id="edit-photo-tabs">
+            <div id="edit-detail" class="tab-pane fade active in">
+                <div class="row-fluid">
+                    <div class="span12">
+                        <label>
+                            Title:
+                            <small><input type="checkbox" class="vertical-center" checked>use this as meta data for
+                                media page
+                            </small>
+                            <input type="text" value="Best of Germany">
+                        </label>
+                    </div>
+
+                    <div class="row-fluid">
+                        <div class="span12" id="media-pages-list">
+                            <label>
+                                Description:
+                                <small><input type="checkbox" class="vertical-center" checked>use this as meta data for
+                                    media page
+                                </small>
+                                <textarea rows="4" class="full">Frogs are a diverse and largely carnivorous group of
+                                    short-bodied, tailless amphibians composing the order Anura (Ancient Greek an-,
+                                    without + oura, tail). The oldest fossil "proto-frog" appeared in the early Triassic
+                                    of Madagascar</textarea>
+                            </label>
+                        </div>
+                    </div>
+                    <hr>
+                    <a href="#seo-helper" data-toggle="modal"><i class="fa fa-question-circle icon-semi"></i> How to
+                        write meta description to increase SEO</a>
+                    <br>
+                    <a id="meta-helper"><i class="fa fa-exclamation-circle icon-semi"></i> Add more meta data, please
+                        click here </a>
+                </div>
+
+            </div>
+            <div id="edit-media-page" class="tab-pane fade">
+
+                <div class="row-fluid independ-field">
+                    <div class="span12" id="media-pages-list">
+                        <label>
+                            <Strong>Media Page:</strong>
+                        </label>
+                        <table class="table-align-top table-hover full-width">
+                            <tr>
+                                <td>
+                                    <a href="./new-media-page.html">https://agency-bla/img0erer1.jpg</a>
+                                </td>
+                                <td class="align-right"><a><i class="fa fa-link vertical-space-sm icon-semi"></i> open
+                                    link</a></td>
+                                <td class="align-right"><a><i class="fa fa-copy vertical-space-sm icon-semi"></i>
+                                    copy</a></td>
+                                <td class="align-right"><a><i class="fa fa-trash-o icon-semi"></i> delete</a></td>
+                            </tr>
+                        </table>
+                        <br>
+                        <label><strong>Shared info:</strong> </label>
+
+                        <p>This media page has been shared 1 time via Facebook, 2 times via Twitter, visited 134
+                            times</p>
+
+                    </div>
+                </div>
+                <hr>
+                <div class="row-fluid independ-field">
+                    <div class="span12" id="media-pages-list">
+                        <label><strong>Meta Data for Media Page:</strong> </label>
+                                    <span><i class="fa fa-exclamation-circle icon-semi"></i>
+                                        <small>Meta-data is information about the website in the header portion of the
+                                            webpage. <a id="more-meta-help-btn"> more</a></small>
+                                    </span>
+
+                        <p class="extra-meta-help hide">
+                            This information is used by search engines to determine the relevance of the give page to
+                            the search request it is processing at any given time. This data is constantly collected by
+                            various means by all search engines such as Google, Yahoo, Ask and others. The following
+                            list is a partial list of things to consider when building and publishing a web site.
+                            GoDaddy hosting has a web site analysis tool to examine your site and report how each of
+                            these rules is violated. The report is shaky at best but it helps in identifying your
+                            website's weaknesses. </p>
+                    </div>
+                </div>
+
+
+                <div class="row-fluid independ-field">
+                    <div class="span6">
+                        <label>Meta Title:
+                            <input type="checkbox" class="vertical-center" checked id="meta-title-check">use photo title
+                        </label>
+                        <input class="hide" type="text" value="">
+                    </div>
+                    <div class="span6">
+                        <label>Meta Description <input type="checkbox" class="vertical-center" checked
+                                                       id="meta-dscpt-check">use photo description
+                        </label>
+                        <textarea rows="4" class="hide full"></textarea>
+                    </div>
+                </div>
+                <div class="row-fluid independ-field">
+                    <div class="span12">
+                        <label>Meta Keywords:
+                            <small>separate keywords with commas</small>
+                            <input type="text" value=""></label>
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <div class="span6">
+                        <label>Facebook Meta - Type
+                            <a data-toggle="tooltip"
+                               title="meta data for facebook is the keywords for facebook to know ...."
+                               data-placement="top"><i class="fa fa-exclamation-circle icon-semi"></i></a>
+                            <input type="text" value="">
+                        </label>
+                    </div>
+                    <div class="span6">
+                        <label>Facebook Meta - Open Graph
+                            <a data-toggle="tooltip"
+                               title="meta data for facebook is the keywords for facebook to know ...."
+                               data-placement="top"><i class="fa fa-exclamation-circle icon-semi"></i></a>
+                            <input type="text" value="">
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+        <button class="btn btn-primary">Save</button>
+    </footer>
+</div>
+<!-- ********************New Collection Form******************** -->
+<div class="somea-box modal modal-medium fade" id="create-new-collection-modal" tabindex="-1" role="dialog">
+    <header>
+        <h1>Add A New Collection</h1>
+    </header>
+    <div class="modal-body box-content">
+        <div class="row-fluid">
+            <div class="span12">
+                <label>
+                    Title:
+                    <input type="text" placeholder="Please write a name for your new collection">
+                </label>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span12">
+                <label>
+                    Description:
+                    <textarea rows="4" class="full"></textarea>
+                </label>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+        <button class="btn btn-primary" id="btn-create-new-collection">Create</button>
+    </footer>
+</div>
+
+
+<script src="js/vendor/bootstrap-v2/bootstrap-affix.js"></script>
+<script src="js/vendor/bootstrap-v2/bootstrap-collapse.js"></script>
+<script src="js/vendor/bootstrap-v2/bootstrap-tab.js"></script>
+<script src="js/vendor/bootstrap-v2/bootstrap-button.js"></script>
+<script src="js/vendor/bootstrap-v2/bootstrap-dropdown.js"></script>
+<script src="js/vendor/bootstrap-v2/bootstrap-tooltip.js"></script>
+<script src="js/vendor/bootstrap-v2/bootstrap-popover.js"></script>
+<script src="js/vendor/bootstrap-v2/bootstrap-modal.js"></script>
+<script src="js/vendor/bootstrap-v2/bootstrap-transition.js"></script>
+<script src="js/vendor/bootstrap-v2/bootstrap-typeahead.js"></script>
+<script src="js/vendor/bootstrap-v2/bootstrap-paginator.min.js"></script>
+<script src="js/vendor/jquery/jquery.masonry.min.js" type="text/javascript"></script>
+<script src="js/vendor/bootstrap-v2/bootstrap-image-gallery.load-image.js"></script>
+<script src="js/vendor/bootstrap-v2/bootstrap-image-gallery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#add-photo-to-collection').masonry({
+            columnWidth: 178,
+            itemSelector: '.dam-float-item'
+        });
+
+        //for pagination
+        var paginationOptions = {
+            size: "normal",
+            alignment: "center",
+            currentPage: 2,
+            numberOfPages: 15, //maximum 15, if totalPages smaller than 15, make this number same as totalPages
+            totalPages: 20,
+            bootstrapMajorVersion: 2
+        }
+
+        $('.pagination').bootstrapPaginator(paginationOptions);
+
+        //modal filter, change active class name
+        $('.modal-filter a').on('click', function () {
+            var activeOne = $(this).attr("id");
+            $('.modal-filter a').each(function () {
+                if ($(this).attr("id") != activeOne && $(this).parent('li').hasClass('active')) {
+                    $(this).parent('li').removeClass("active");
+                } else if ($(this).attr("id") === activeOne) {
+                    $(this).parent('li').addClass("active");
+                }
+            })
+        });
+
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".single-media-container").hover(
+                function () {
+                    $(this).children('.single-media-menu').show();
+                },
+                function () {
+                    $(this).children('.single-media-menu').hide();
+                }
+        );
+        $('a#lock-media').click(function () {
+            $(this).children('.fa fa-check-square-o').toggleClass('icon-isActive');
+            $(this).parents('.single-media-container').toggleClass('locked-photo');
+        });
+        $('.close').click(function () {
+            $(this).parents('.well').remove();
+        });
+        $('#show-all-photo').click(function () {
+            $('#show-all-photo').hide();
+            $('#hide-extra-photo').show();
+        });
+        $('#hide-extra-photo').click(function () {
+            $('#hide-extra-photo').hide();
+            $('#show-all-photo').show();
+        });
+        $('#btn-create-new-collection').click(function () {
+            $('#new-collection').show();
+            $('#create-new-collection-modal').modal('hide');
+        });
+    });
+</script>
+
+</body>
+</html>

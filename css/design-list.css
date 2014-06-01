@@ -1,6 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,900);
-
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
 body {
   position: absolute;
   top: 0;
@@ -31,8 +28,8 @@ a:hover {
 }
 .list-wrapper {
   max-width: 1200px;
-  display: block;
   margin: auto;
+  display: block;
   position: relative;
 }
 .section-introduction {
@@ -41,29 +38,29 @@ a:hover {
 .section-introduction::before,
 .section-introduction::after,
 .section-dam::before {
+  height: 90px;
   right: 0;
   left: 0;
   z-index: 10;
   display: block;
-  height: 90px;
   background-size: 50px 100%;
 }
 .section-introduction::after {
   top: -90px;
 }
 .list-introduction {
-  text-align: center;
   padding: 3em 1em 2em;
+  text-align: center;
 }
 .list-introduction h3 {
   padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
   font-family: "Lato", Arial, sans-serif;
   font-size: 3em;
   font-weight: 300;
-  margin-top: 0;
-  margin-bottom: 0;
 }
-.list-introduction p.subtitle {
+.list-introduction .subtitle {
   margin-top: 18px;
   font-family: "Lato", Arial, sans-serif;
   font-size: 1.2em;
@@ -73,45 +70,45 @@ a:hover {
   font-size: 1.1em;
 }
 .card {
-  position: relative;
-  padding: 6em;
-  font-weight: 300;
-  margin: auto;
   display: block;
   max-width: 1600px;
+  padding: 6em;
+  margin: auto;
+  position: relative;
+  font-weight: 300;
 }
 .card .carousel-indicators {
-  background-color: rgba(255, 255, 255, 0.85);
-  bottom: 0;
-  left: 0;
+  width: 100%;
   margin-left: 0;
   margin-bottom: 0;
   padding-bottom: 2em;
   padding-top: 3em;
   position: absolute;
-  text-align: center;
-  width: 100%;
+  bottom: 0;
+  left: 0;
   z-index: 15;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.85);
 }
 .card .carousel-indicators li {
-  border: 1px solid #3b85cb;
   margin-top: 2em;
+  border: 1px solid #3b85cb;
 }
 .card .carousel-indicators li.active {
   background-color: #3b85cb;
 }
 .card .carousel-caption {
-  background-color: rgba(0, 0, 0, 0);
-  color: #3c3d40;
-  text-shadow: none;
-  font-size: 1.4em;
   margin-bottom: 2em;
   padding-bottom: 0;
   z-index: 20;
+  text-shadow: none;
+  font-size: 1.4em;
+  background-color: rgba(0, 0, 0, 0);
+  color: #3c3d40;
 }
 .card .img-wrapper {
-  position: relative;
   padding: 0;
+  position: relative;
 }
 .card .img-wrapper img {
   width: 100%;
@@ -119,16 +116,16 @@ a:hover {
   margin: auto;
 }
 .card .card-info {
-  background: none repeat scroll 0 0 rgba(255, 255, 255, 0.85);
-  bottom: 20%;
   padding: 2em 4em;
+  bottom: 20%;
+  background: none repeat scroll 0 0 rgba(255, 255, 255, 0.85);
   font-size: 1.1em;
   color: #87847b;
 }
 .card .card-info h4 {
-  font-weight: 300;
-  font-size: 1.4em;
   padding-bottom: 8px;
+  font-size: 1.4em;
+  font-weight: 300;
   border-bottom: 4px solid #31b7b7;
   text-align: center;
 }
@@ -137,23 +134,23 @@ a:hover {
   text-align: justify;
 }
 .card .card-info .btn-read-more {
+  width: 10em;
+  margin: 2em auto;
   padding: 1em 2em;
+  display: block;
+  font-weight: 500;
+  text-align: center;
   background-color: #3b85cb;
   color: #ffffff;
-  text-align: center;
-  width: 10em;
-  display: block;
-  margin: 2em auto;
-  font-weight: 500;
 }
 .card .card-info .btn-read-more:hover {
   background-color: #3278bb;
 }
 .card .card-footer {
+  padding-left: 15px;
   position: absolute;
   bottom: 0;
   left: 0;
-  padding-left: 15px;
 }
 .drawing-warpper,
 .photo-wrapper,
@@ -164,14 +161,14 @@ a:hover {
 .drawing-mask,
 .photo-mask,
 .graphic-img-mask {
-  background-color: rgba(255, 255, 255, 0.85);
+  padding: 2em;
   position: absolute;
   width: 50%;
   left: 25%;
   top: 35%;
   color: #54524d;
-  padding: 2em;
   opacity: 0;
+  background-color: rgba(255, 255, 255, 0.85);
   -webkit-animation: fadeOut 1s ;
   -moz-animation: fadeOut 1s ;
   -o-animation: fadeOut 1s ;
@@ -213,18 +210,18 @@ a:hover {
   color: #fff;
 }
 .photograph-section .photo-wrapper h3 {
+  margin-bottom: 0;
   font-size: 1.6em;
   font-weight: 300;
-  margin-bottom: 0;
 }
 .photograph-section .photo-wrapper p {
   font-size: 1.1em;
 }
 .photograph-section .photo-wrapper img {
-  width: 98%;
   display: block;
-  position: relative;
+  width: 98%;
   margin: auto;
+  position: relative;
 }
 .photograph-section .photo-collection-description {
   margin-bottom: 2em;

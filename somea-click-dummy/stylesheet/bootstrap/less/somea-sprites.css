@@ -1,0 +1,150 @@
+.fa {
+  font-size: 1em;
+}
+.label .fa {
+  vertical-align: baseline;
+}
+.btn .fa {
+  font-size: 1.1em;
+  vertical-align: middle;
+}
+a .fa {
+  vertical-align: text-top;
+}
+/* White icons with optional class, or on hover/active states of certain elements */
+.icon-white {
+  color: white;
+}
+.icon-center {
+  margin-left: 8px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+.icon-semi {
+  opacity: 0.65;
+}
+.icon-group {
+  width: auto;
+}
+.icon-group:hover,
+.icon-group:active,
+.icon-group:focus {
+  text-decoration: none;
+}
+.icon-group > i[class^="fa-"] {
+  margin-right: 5px;
+}
+.icon-group > i[class^="fa-"]:last-child {
+  margin-right: 0;
+}
+[class^="fa-"]:checked .icon-semi,
+input:checked + span .icon-semi {
+  opacity: .7;
+}
+b.checked {
+  color: #555555;
+}
+.scheduled {
+  background-color: #999;
+}
+.scheduled i {
+  background-position: -9px -1114px;
+}
+.label.me {
+  background-color: #98c0e8;
+}
+.icon-outdent {
+  margin-left: -14px;
+}
+.fa-heart icon-isActive {
+  color: #F5211B;
+}
+.btn-flag-conversation.active .fa-flag,
+.btn-flag-message.active .fa-flag,
+.fa-flag.icon-isActive {
+  color: #ff9417;
+  opacity: 1.0;
+}
+.icon-green {
+  color: #a3ca0a;
+}
+.icon-red {
+  background-color: #F5211B;
+}
+.icon-redDark {
+  color: #d30000;
+}
+.icon-yellow {
+  color: #ffd20a;
+}
+.icon-orange {
+  color: #ff9417;
+}
+.icon-someaBlue {
+  color: #1a61a9;
+}
+.icon-grayLight {
+  color: #777777;
+}
+.icon-grayLighter {
+  color: #d9d9d9;
+}
+.green {
+  color: #a3ca0a;
+}
+.red {
+  color: #F5211B;
+}
+.redDark {
+  color: #d30000;
+}
+.yellow {
+  color: #ffd20a;
+}
+.orange {
+  color: #ff9417;
+}
+.gray {
+  color: #555555;
+}
+a:hover .icon-green {
+  color: #95bb00;
+}
+a:hover .icon-red {
+  color: #e64400;
+}
+a:hover .icon-redDark {
+  color: #ba0000;
+}
+a:hover .icon-yellow {
+  color: #ffbe0a;
+}
+a:hover .icon-orange {
+  color: #ff7917;
+}
+.icon-right {
+  margin-left: 6px;
+}
+.icon-left {
+  margin-right: 6px;
+}
+.icon-big {
+  height: 14px;
+  width: 16px;
+}
+.installing-animation {
+  background-image: url(../img/installing-animation.gif);
+  width: 16px;
+  height: 10px;
+  position: absolute;
+  margin: 5px 0 0 6px;
+}
+.icon-hotel {
+  background-image: url(../img/icon-hotel.png);
+}
+.icon-destination {
+  background-image: url(../img/icon-destination.png);
+}
+.icon-single {
+  background-position: 0 0;
+}

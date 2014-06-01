@@ -1,0 +1,30 @@
+// SOMEA Overwrite type.less
+// ****************************************
+
+// Some globals need have to reset here instead of type.less
+ul, ol {
+	margin: 0;
+	list-style-type: none;
+}
+
+em,i{font-style:normal}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 (@baseLineHeight / 2) 0;
+}
+
+// Horizontal layout (like forms)
+// dt width is changed from -20 to -10 for license manager window
+.dl-horizontal {
+  .clearfix(); // Ensure dl clears floats if empty dd elements present
+  dt {
+    float: left;
+    width: @horizontalComponentOffset - 10;
+    clear: left;
+    text-align: right;
+    .text-overflow();
+  }
+  dd {
+    margin-left: @horizontalComponentOffset;
+  }
+}

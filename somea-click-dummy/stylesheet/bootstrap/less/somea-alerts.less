@@ -1,0 +1,147 @@
+.alert {
+  .border-radius(3px);
+  background-color: red;
+  text-shadow: none;
+  h1, h2, h3, h4, h5, h6 {
+    color: white;
+  }
+  &-error {
+    color: white;
+    background-color: @redDark;
+    a {
+      color: white;
+      text-decoration: underline;
+    }
+  }
+  &-success {
+    background-color: @green;
+    color: darken(@green, 30%);
+    a {
+      color: darken(@green, 30%);
+      text-decoration: underline;
+    }
+  }
+  &-info {
+    background-color: @grayLight;
+  }
+}
+
+/* **************************************** */
+// Inline Notifications
+/* **************************************** */
+
+.inline-notification {
+  padding: @gridGutterWidth*.5 @gridGutterWidth;
+  border-width: 1px 0;
+  border-style: solid;
+  letter-spacing: .02em;
+  margin-top: -1px; // Overlay header border to make the whole thing not look so blurry
+  p {
+    // icon indention
+    position: relative;
+    .fa {
+      vertical-align: middle;
+    }
+  }
+
+  // Severity 1
+  &.inline-error {
+    background-color: @redDark;
+    color: rgba(255, 255, 255, .85);
+    .box-shadow(0 0 3px darken(@redDark, 15%) inset);
+    border-color: darken(@redDark, 12%);
+  }
+  // Severity 2
+  &.inline-warning {
+    background-color: @yellow;
+    color: darken(@redDark, 20);
+    .box-shadow(0 0 5px spin(@yellow, -6) inset);
+    border-color: spin(@yellow, -8);
+  }
+  // Severity 3
+  &.inline-feedback {
+    background-color: @green;
+    color: darken(@green, 25%);
+    border-color: darken(@green, 10%);
+    .box-shadow(0 0 3px darken(@green, 10%) inset);
+  }
+}
+
+// Based on jQuery Meow Plugin
+// http://zacstewart.github.io/2011/06/18/meow-a-growl-work-alike-for-jquery.html
+.meows {
+  position: fixed;
+  right: 0;
+  top: 0px;
+  z-index: @zindexModal;
+  .meow {
+    position: relative;
+    margin: 0 0px 0px 0;
+    p {
+      margin: 0; // Reset general styling
+    }
+    .inner {
+      width: 220px;
+      padding: 12px;
+      color: #fff;
+      text-shadow: 1px 1px 3px #000;
+      zoom: 1;
+      h1 {
+        padding: 0;
+        margin: 0;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 1;
+      }
+
+      .close {
+        color: #eee;
+        top: 15px;
+        right: 20px;
+        font-size: 18px;
+        opacity: 0.5;
+        position: absolute;
+      }
+
+    }
+    .inline-notification {
+      border: 0;
+      padding: 12px;
+      background: url('../img/ie/trans-bg.png');
+      background: fade(@grayDarker, 85%);
+
+      .border-radius(@borderRadiusLarge);
+      .box-shadow(2px 2px 10px fade(#000, 25%));
+
+      span.icon-round {
+        border: 3px solid rgba(255, 255, 255, .4) !important;
+      }
+      a {
+        margin: -12px; // Expand click area to make the whole banner clickable
+        padding: 12px; // Expand click area to make the whole banner clickable
+        font-size: 13px;
+        display: block; // Expand click area to make the whole banner clickable
+        text-decoration: none; // overwrite standard style for a
+        color: white; // overwrite standard style for a
+        &:hover i {
+          background-position: -9px -1546px; // .icon-circle-delete
+        }
+        span.icon-round {
+          top: 10px; // Fix for expansion of click area
+        }
+        &:hover span.icon-round {
+          border-color: fade(#000, 20) !important;
+        }
+        &.external-url {
+          margin: 0 12px 0 0;
+          padding: 0;
+          &:hover {
+            color: #fff;
+          }
+        }
+
+      }
+    }
+
+  }
+}

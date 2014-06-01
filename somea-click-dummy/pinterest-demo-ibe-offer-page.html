@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js ie ie6 lt-ie10 lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js ie ie7 lt-ie10 lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js ie ie8 lt-ie10 lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9]>
+<html class="no-js ie ie9 lt-ie10" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <title>Media-Page-Single-Photo-Example</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="./bootstrap-v3/css/bootstrap.css" rel="stylesheet" media="screen" type="text/css"/>
+    <link href="./bootstrap-v3/font-awesome-4.0.1/css/font-awesome.css" rel="stylesheet" media="screen"/>
+    <script src="js/vendor/jquery/jquery-1.9.1.min.js"></script>
+    <script src="./bootstrap-v3/js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/vendor/Respond-master/respond.min.js"></script>
+    <style type="text/css">
+        html {
+            overflow-x: hidden;
+        }
+
+        body {
+            background: #cdbfe3 no-repeat center center fixed; /* Old browsers */
+            /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+            background: -moz-radial-gradient(center, ellipse cover, #cdbfe3 0%, #bfaae2 16%, #bfaae2 17%, #563d7c 100%) no-repeat center center fixed; /* FF3.6+ */
+            background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #cdbfe3), color-stop(16%, #bfaae2), color-stop(17%, #bfaae2), color-stop(100%, #563d7c)) no-repeat center center fixed; /* Chrome,Safari4+ */
+            background: -webkit-radial-gradient(center, ellipse cover, #cdbfe3 0%, #bfaae2 16%, #bfaae2 17%, #563d7c 100%) no-repeat center center fixed; /* Chrome10+,Safari5.1+ */
+            background: -o-radial-gradient(center, ellipse cover, #cdbfe3 0%, #bfaae2 16%, #bfaae2 17%, #563d7c 100%) no-repeat center center fixed; /* Opera 12+ */
+            background: -ms-radial-gradient(center, ellipse cover, #cdbfe3 0%, #bfaae2 16%, #bfaae2 17%, #563d7c 100%) no-repeat center center fixed; /* IE10+ */
+            background: radial-gradient(ellipse at center, #cdbfe3 0%, #bfaae2 16%, #bfaae2 17%, #563d7c 100%) no-repeat center center fixed; /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cdbfe3', endColorstr='#563d7c', GradientType=1) no-repeat center center fixed; /* IE6-8 fallback on horizontal gradient */
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .main-section {
+            margin-top: 40px;
+            height: 100%;
+        }
+
+        .agency-social i[class^="fa-"] {
+            font-size: 2.2em;
+            padding: 2px;
+            cursor: pointer;
+        }
+
+        .agency-info {
+            background: none repeat scroll 0 0 rgb(255, 255, 255);
+            background: none repeat scroll 0 0 rgba(255, 255, 255, 0.2);
+            margin: 0 auto 5%;
+            width: 100%;
+            color: white;
+            padding: 20px 6px;
+            -moz-box-shadow: 0 3px 5px -6px #563D7C;
+            -webkit-box-shadow: 0 3px 5px -6px #563D7C;
+            box-shadow: 0 3px 5px -6px #563D7C;
+        }
+
+        .agency-info a {
+            color: #FFFFFF;
+            cursor: pointer;
+            font-style: italic;
+            text-decoration: none;
+        }
+
+        .dark-box-bg .agency-info {
+            background: none repeat scroll 0 0 rgb(200, 200, 200);
+            opacity: 0.55;
+            background: none repeat scroll 0 0 rgba(0, 0, 0, 0.55);
+        }
+
+        .agency-log {
+            display: block;
+            width: 20%;
+            height: 20%;
+            margin: 0 auto 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+        }
+
+        .agency-name {
+            font-size: 1.4em;
+            text-align: center;
+        }
+
+        .agency-description {
+            text-align: center;
+            padding: 6px 10px;
+            font-size: 1.2em;
+
+        }
+
+        .agency-additional-info {
+            padding-top: 5px;
+            background: none repeat scroll 0 0 rgba(226, 214, 216, 0.4);
+            margin: 0 auto 5%;
+        }
+
+        .qr-code-container {
+            padding: 20px;
+        }
+
+        p.condensed {
+            margin-bottom: 5px;
+        }
+
+        #passive-plugin-hint-extra .label,
+        #passive-plugin-hint .label {
+            font-size: 1.2em;
+            overflow: hidden;
+            white-space: normal;
+            display: block;
+        }
+
+        #passive-plugin-hint small {
+            font-size: 0.8em;
+            font-style: italic;
+        }
+
+        .imgs-container {
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+
+        .error-page-img {
+            margin-right: 0;
+            padding-right: 0;
+        }
+
+        .error-page-info {
+            background-color: #ffffff;
+            margin-left: 0;
+            /*take the color from theme editor:right top one*/
+            color: #563d7c;
+
+        }
+
+        .error-page-info .btn {
+            margin-top: 15px;
+            width: 100%;
+            float: left;
+            font-size: 1.1em;
+            color: #563d7c;
+            background-color: #ffffff;
+        }
+
+        .error-page-info .btn .fa {
+            margin: 0 8px;
+            font-size: 1.4em;
+            vertical-align: text-top;
+        }
+           .offer-detail{
+               margin-top: 20px;
+               padding: 20px;
+           }
+    </style>
+</head>
+<body>
+<div class="main-section row">
+    <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 col-offset-1">
+        <div class="agnecy-info-container row">
+            <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
+                <div class="agency-info">
+                    <img class="agency-log" src="./img/media-page/agency-logo.png" alt="agency-logo is not available">
+
+                    <p class="agency-name"><strong>Reiseburo Sonnechein</strong></p>
+
+                    <p class="agency-description">Welcome to Reiseburo Sonnechein, Germany's best site for travel
+                        deals.</p>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
+                <div class="agency-info agency-additional-info ">
+                    <p class="agency-open condensed"><strong>Opening hours: </strong>9am - 18pm (Mon-Fri) 9am - 15pm
+                        (Sams) </p>
+
+                    <p class="agency-tel condensed"><strong>Tel:</strong> 0186 999 999 <strong>Fax:</strong> 123 456 789
+                    </p>
+
+                    <p class="agency-email condensed"><strong>E-mail: </strong>travelagency@sunshine.com</p>
+
+                    <p class="agency-web-site condensed"><strong>Web: </strong><a href="www.travelagencysunshine.com">www.travelagencysunshine.com </a>
+                    </p>
+
+                    <p class="agency-impressum condensed"><strong>Impressum: </strong> <a id="impressum-button">click to
+                        open our legal notes </a></p>
+
+                    <p id="impressum-content" hidden>
+                        WICHTIGER HINWEIS: Reisebüro Sonnenschein ist KEIN reales Reisebüro!!!
+                        Aufgabe
+                        Derzeit beschäftigt sich das Reisebüro Sonnenschein intensiv mit der Social Media Welt und deren
+                        tollen Möglichkeiten.
+                        Das Reisebüro Sonnenschein ist eine Amadeus Germany Bad Homburg Test-Plattform. Hier werden neue
+                        technische Innovationen für Reisebüros entwickelt und getestet.
+                        Impressum von Amadeus Germany GmbH:
+                        http://www.amadeus.com/de/Impressum-DE.html
+                    </p>
+                    <hr>
+                    <p class="agency-social">
+                        <i class="fa fa-facebook-square" id="share-facebook-passive"></i>
+                        <i class="fa fa-twitter-square"></i>
+                        <i class="fa fa-google-plus-square"></i>
+                        <strong> Like this Page ? click to share</strong>
+                    </p>
+                    <!--this part is only for the passive mode social plugin-->
+                    <p id="passive-plugin-hint" hidden>
+                                <span class="label label-success">
+                                    <strong><i class="fa fa-smile-o"></i>Almost there, please click again to
+                                        share!</strong><br>
+                                    <small>why two clicks? your privacy are protected in this way <a
+                                            id="learn-more-passive"> learn more </a></small>
+                                </span>
+                    </p>
+                    <p id="passive-plugin-hint-extra" hidden>
+                                <span class="label label-success">
+                                    <i class="fa fa-lock"></i>
+                                    <small>In order to protect your privacy, we disabled all tracking on this web page,
+                                        <strong>so your first click on share button will active it and then second click
+                                            is to share</strong> Thank you
+                                    </small>
+                                </span>
+                    </p>
+
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
+                <div class="agency-info qr-code-container hide">
+                    <img class="qr-code" src="./img/media-page/qrcode.png" alt="qrcode">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 imgs-container">
+        <div class="row ">
+            <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
+                <a href="./img/pinterest/lausanne.jpg" title="Banana" data-gallery="">
+                    <img src="./img/pinterest/lausanne.jpg" alt="lausanneholiday">
+                </a>
+            </div>
+
+            <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
+                <a href="./img/pinterest/laussane2.jpg" title="Banana" data-gallery="">
+                    <img src="./img/pinterest/laussane2.jpg" alt="lausanneholiday">
+                </a>
+                <div class="error-page-info offer-detail">
+                    <p>
+                        <strong>Destination & Price: </strong>Lausanne, $ 1200/person <br>
+                        <strong>Available: </strong>Jan 2014 to April 2014 <br>
+                        <strong>Detail :</strong> <a>5 star hotel</a>, All inclusive, Two Adults, Car rental included <br>
+                    </p>
+                </div>
+                <div class="error-page-info">
+                    <a class="btn btn-lg"> <i class="fa fa-leaf"> Book it now </i> </a>
+                    <a class="btn btn-lg" href="www.sonnechein-travelagency.de">Search other holiday offers <i
+                            class="fa fa-arrow-circle-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Necessary for each media page: The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+
+    <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+        <div class="slides"></div>
+        <h3 class="title"></h3>
+        <a class="prev">‹</a>
+        <a class="next">›</a>
+        <a class="close">×</a>
+        <a class="play-pause"></a>
+        <ol class="indicator"></ol>
+    </div>
+</div>
+<script src="js/vendor/jquery/jquery.blueimp-gallery.js"></script>
+<script src="js/vendor/Masonry/masonry.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        //passive mode plugins
+        $('#share-facebook-passive').click(function () {
+            if (!$(this).hasClass('active')) {
+                $(this).addClass('active');
+                $('#passive-plugin-hint').slideToggle("slow");
+            }
+
+        });
+        $('#learn-more-passive').click(function () {
+            $('#passive-plugin-hint-extra').slideToggle("slow");
+
+        });
+        //open impressum
+        $('#impressum-button').click(function () {
+            $('#impressum-content').slideToggle("slow");
+
+        });
+
+
+    });
+</script>
+</body>
+
+</html>

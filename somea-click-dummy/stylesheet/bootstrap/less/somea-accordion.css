@@ -1,0 +1,13 @@
+.accordion-group,
+.accordion-inner {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+.accordion {
+  margin-bottom: 0;
+}
+.collapse {
+  width: 100%;
+  position: static;
+}

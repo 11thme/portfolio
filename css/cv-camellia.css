@@ -1,6 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,900);
-
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
 body {
   position: absolute;
   top: 0;
@@ -35,22 +32,22 @@ a:hover {
 .bio-wrapper p {
   text-align: center;
 }
-.bio-wrapper .bio-img {
+.bio-img {
   display: block;
   margin: 40px auto 20px;
   width: 80px;
   border-radius: 50%;
 }
-.bio-wrapper .bio-name {
+.bio-name {
   font-size: 1.2em;
   margin-bottom: 0;
 }
-.bio-wrapper .bio-portofolio {
+.bio-portofolio {
   margin: 0 4px;
   color: #a3a3a3;
   margin-bottom: 8px;
 }
-.bio-wrapper .bio-contact span {
+.bio-contact span {
   margin-right: 20px;
 }
 .work-experience-wrapper,

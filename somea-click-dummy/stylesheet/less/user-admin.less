@@ -1,0 +1,151 @@
+@import "somea-variables.less";
+
+.functional-wrapper {
+  padding: 38px 16px;
+  text-align: center;
+  position: relative;
+  height: 300px;
+  &.somea-box {
+    margin-bottom: 30px;
+  }
+  h2 {
+    margin-bottom: 2px;
+  }
+
+  .search-wrapper {
+    width: 90%;
+    margin: 38px auto 8px;
+    .btn {
+      display: inline-block;
+      line-height: 30px;
+      margin-left: 0;
+      margin-right: 0;
+      padding: 4px;
+      width: 10%;
+
+    }
+    input {
+      -moz-box-sizing: content-box;
+      display: inline-block;
+      height: 30px;
+      width: 75%;
+      margin: 0 -4px 0 0;
+      border-right: none;
+    }
+  }
+
+  .btn-primary {
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    width: 50%;
+    padding: 10px;
+    border: none;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+}
+
+.nav-search {
+  .span3 {
+    label {
+      padding: 8px;
+      background-color: @amadeusGrey4;
+      font-size: 1.2em;
+      position: relative;
+      a {
+        color: darken(@amadeusGrey1, 20%);
+      }
+
+      .search-btn {
+        text-align: right;
+        border-left: solid 1px @white;
+        position: absolute;
+        right: 0;
+        margin-top: -8px;
+        padding: 8px 6px 8px 10px;
+        background-image: linear-gradient(to bottom, @amadeusGrey4, @amadeusGrey3);
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+      }
+    }
+    &.active {
+      label {
+        background-color: @amadeusCherry;
+        .search-btn {
+
+          background-image: linear-gradient(to bottom, lighten(@amadeusCherry, 20%), @amadeusCherry);
+        }
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.admin-info-card {
+  position: relative;
+  padding: 18px 24px 10px;
+  .card-title {
+    border-bottom: 1px solid #DFDFDF;
+  }
+
+  .card-function {
+    font-size: 1.4em;
+    text-align: right;
+    vertical-align: middle;
+    line-height: 36px;
+  }
+
+  .card-content {
+    padding: 20px 0 10px;
+
+    .card-relationship {
+      font-size: 1.2em;
+      border-right: 1px solid #DFDFDF;
+      ul {
+        margin-bottom: 8px;
+        li {
+          margin-bottom: 3px;
+          margin-left: 10px;
+          line-height: 20px;
+        }
+      }
+      p{
+        font-size: 0.9em;
+        margin-bottom: 2px;
+      }
+      .fa{
+        font-size: 0.8em;
+        vertical-align: middle;
+      }
+    }
+    .card-detail {
+      padding-left: 8px;
+      ul {
+        margin-bottom: 6px;
+        li {
+          margin-bottom: 2px;
+        }
+      }
+      .detail-group {
+        margin-bottom: 6px;
+        p {
+          display: inline-block;
+          width: 48%;
+          margin-bottom: 2px;
+        }
+        h5 {
+          margin-bottom: 2px;
+        }
+      }
+    }
+
+  }
+  .fa-chevron-down{
+    bottom: 4%;
+    left: 50%;
+    position: absolute;
+  }
+}

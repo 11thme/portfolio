@@ -1,0 +1,377 @@
+body {
+    font-family: webfontbold, Helvetica, Arial, sans-serif;
+    color: #ffffff;
+}
+
+.facebook_wrapper {
+    background-color: white;
+    width: 811px;
+    padding: 0 20px 5px;
+    margin: 20px auto;
+}
+
+.game-header,
+.game-footer {
+    background: #1a61a9;
+    color: #ffffff;
+    padding: 15px;
+    text-align: center;
+}
+
+.game-header a {
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 32px;
+    margin: 20px 0;
+    line-height: 1.1;
+    display: block;
+    text-decoration: none;
+}
+
+.game-header p {
+    margin: 20px;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.game-header .user-avator {
+    width: 30px;
+    height: 30px;
+    -webkit-border-radius: 30px;
+    border-radius: 30px;
+    margin: 0 5px;
+}
+
+.game-header .user-info a {
+    font-weight: bold;
+    font-size: 1.1em;
+    display: inline;
+}
+
+.game-controller {
+    padding: 30px 10px;
+    text-align: center;
+    background-color: #3498db;
+}
+
+.status-bar .btn {
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+}
+
+.part-cell {
+    background-color: #9C9C9C;
+}
+
+.game-controller .btn {
+    border: 1px solid #cccccc;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.75);
+
+}
+
+.btn-outline {
+    color: #fff;
+    background-color: transparent;
+    border-color: #fff;
+    margin: 10px 10px;
+    padding: 8px 14px;
+    font-size: 14px;
+}
+
+.btn-primary.disabled {
+    background-color: #ccc;
+}
+
+.game-footer .btn-primary {
+    font-size: 21px;
+    margin: 20px 0;
+    padding: 18px 24px;
+    border-color: #fff;
+}
+
+.game-footer .btn:hover,
+.game-footer .btn:focus {
+    background-color: #fff;
+    color: #4eb9db;
+    text-decoration: none;
+}
+
+table img {
+    width: 191px;
+    height: 191px;
+}
+
+.modal {
+    overflow:hidden;
+}
+.modal-dialog{
+    margin-top:12%;
+}
+.modal h2,
+.modal .modal-body {
+    color: #000;
+}
+
+.hint {
+    display: block;
+}
+
+.hint a {
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.wrong-guess-alert {
+    position: absolute;
+    top: 50%;
+    padding: 20px;
+    background-color: rgb(40, 30, 40);
+    background-color: rgba(0, 0, 0, 0.65);
+    color: #fff;
+    width: 471px;
+    border-radius: 12px;
+    margin: 0 150px;
+    font-size: 1.6em;
+    font-weight: bold;
+    text-align: center;
+    /* IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    /* IE 5-7 */
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+
+.list {
+    color: #3a3c3c;
+    text-align: center;
+}
+
+.list .record-title {
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+.table-container {
+    margin: -15px -15px 20px -15px;
+    max-height: 580px;
+    min-height: 480px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.list .panel {
+    border: none;
+    margin-bottom: -35px;
+}
+
+.table thead > tr > th,
+.table tbody > tr > th,
+.table tfoot > tr > th,
+.table thead > tr > td,
+.table tbody > tr > td,
+.table tfoot > tr > td {
+    border-top: none;
+}
+
+.list .panel-heading {
+    background-color: #3498DB;
+    color: #fff;
+}
+
+.list .btn-close a {
+    color: #fff;
+    font-size: 2em;
+}
+
+.list .btn-close a:hover {
+    color: #1A61A9;
+}
+
+.first-award,
+.second-award,
+.third-award {
+    background-color: #FFFF9B;
+    color: #8A821B;
+    font-size: 1.4em;
+}
+
+.fa.fa-trophy {
+    margin: 0 4px;
+}
+
+.fadeOutDown {
+    -webkit-animation-name: fadeOutDown;
+    -webkit-animation-duration: 1s;
+    animation-name: fadeOutDown;
+    animation-duration: 1s;
+}
+
+.wobble {
+    /* IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
+    /* IE 5-7 */
+    filter: alpha(opacity=1);
+    opacity: 1;
+    -webkit-animation-name: wobble;
+    -webkit-animation-duration: 2s;
+    animation-name: wobble;
+    animation-duration: 2s;
+}
+
+@-webkit-keyframes fadeOutDown {
+    0% {
+        /* IE 8 */
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
+        /* IE 5-7 */
+        filter: alpha(opacity=1);
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    100% {
+        /* IE 8 */
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        /* IE 5-7 */
+        filter: alpha(opacity=0);
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+        transform: translateY(20px);
+    }
+}
+
+@keyframes fadeOutDown {
+    0% {
+        /* IE 8 */
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
+        /* IE 5-7 */
+        filter: alpha(opacity=1);
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    100% {
+        /* IE 8 */
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        /* IE 5-7 */
+        filter: alpha(opacity=0);
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+        -ms-transform: translateY(20px);
+        transform: translateY(20px);
+    }
+}
+
+@-webkit-keyframes wobble {
+    0% {
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+    }
+
+    15% {
+        -webkit-transform: translateX(-25%) rotate(-5deg);
+        transform: translateX(-25%) rotate(-5deg);
+    }
+
+    30% {
+        -webkit-transform: translateX(20%) rotate(3deg);
+        transform: translateX(20%) rotate(3deg);
+    }
+
+    45% {
+        -webkit-transform: translateX(-15%) rotate(-3deg);
+        transform: translateX(-15%) rotate(-3deg);
+    }
+
+    60% {
+        -webkit-transform: translateX(10%) rotate(2deg);
+        transform: translateX(10%) rotate(2deg);
+    }
+
+    75% {
+        -webkit-transform: translateX(-5%) rotate(-1deg);
+        transform: translateX(-5%) rotate(-1deg);
+    }
+
+    100% {
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+    }
+
+}
+
+@keyframes wobble {
+    0% {
+        /* IE 8 */
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        /* IE 5-7 */
+        filter: alpha(opacity=0);
+        opacity: 0;
+        -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        transform: translateX(0%);
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+    }
+
+    15% {
+        -webkit-transform: translateX(-25%) rotate(-5deg);
+        -ms-transform: translateX(-25%) rotate(-5deg);
+        transform: translateX(-25%) rotate(-5deg);
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+    }
+
+    30% {
+        -webkit-transform: translateX(20%) rotate(3deg);
+        -ms-transform: translateX(20%) rotate(3deg);
+        transform: translateX(20%) rotate(3deg);
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+    }
+
+    45% {
+        -webkit-transform: translateX(-15%) rotate(-3deg);
+        -ms-transform: translateX(-15%) rotate(-3deg);
+        transform: translateX(-15%) rotate(-3deg);
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+    }
+
+    60% {
+        -webkit-transform: translateX(10%) rotate(2deg);
+        -ms-transform: translateX(10%) rotate(2deg);
+        transform: translateX(10%) rotate(2deg);
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+    }
+
+    75% {
+        -webkit-transform: translateX(-5%) rotate(-1deg);
+        -ms-transform: translateX(-5%) rotate(-1deg);
+        transform: translateX(-5%) rotate(-1deg);
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+    }
+
+    100% {
+        /* IE 8 */
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
+        /* IE 5-7 */
+        filter: alpha(opacity=1);
+        opacity: 1;
+        -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        transform: translateX(0%);
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+    }
+}

@@ -1,0 +1,224 @@
+#map-canvas{
+	margin-top: 20px;
+	height: 500px;
+}
+#map-canvas img{
+	max-width: none;
+}
+#btn-more-options{
+	top: 0;
+}
+
+.imgIcon-demo{
+	background-size: 14px 14px;
+	background-repeat:no-repeat;
+	background-position: 0 0;
+	display: inline-block;
+	width: 14px;
+	height:14px;
+	opacity: 0.4;
+}
+.icon-gray{
+	color: rgb(193,193,193);
+	cursor: pointer;
+}
+.content-wrapper {
+	background: #E8EDF3 !important;
+	padding-top: 0 !important;
+}
+.container.content-container{
+	padding-top: 20px;
+	background-color: white;
+}
+.container.content-container .header-image{
+	margin-bottom: 20px;
+}
+.icon-car{
+	background-image: url(../mg/icon/glyphicons_028_cars.png);
+}
+.imgIcon-bus{
+	background-image: url(../../img/icon/glyphicons_031_bus.png);
+}
+.icon-share{
+	background-image: url(../../img/icon/glyphicons_308_share_alt.png);
+}
+.imgIcon-direction{
+	background-image: url(../../img/icon/glyphicons_233_direction.png);
+}
+.icon-pizza{
+	background-image: url(../../img/icon/glyphicons_277_pizza.png);
+}
+.icon-bike{
+	background-image: url(../../img/icon/glyphicons_306_bicycle.png);
+}
+.icon-coffee-cup{
+	background-image: url(../../img/icon/glyphicons_294_coffe_cup.png);
+}
+.icon-sun{
+	background-image: url(../../img/icon/glyphicons_231_sun.png);
+}
+.icon-umbrella{
+	background-image: url(../../img/icon/glyphicons_070_umbrella.png);
+}
+.imgIcon-crown{
+	background-image: url(../../img/icon/glyphicons_361_crown.png);
+}
+.avatar-ben{
+	height:40px;
+	width: 40px;
+	margin-right: 5px;
+}
+.pagination-large ul > li > a, .pagination-large ul > li > span {
+	padding: 11px 19px;
+	font-size: 20.5px;
+}
+.pagination ul{
+	-webkit-box-shadow:none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	border-bottom: none;
+}
+.disabled a{
+	border-bottom: none;
+}
+.btn-small {
+	padding: 3px 2px 1px;
+}
+
+.pull-centre{
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.passive{
+	opacity: 0.4;
+}
+.big-photo-list{
+	border: 1px solid #eeeeee;
+	padding: 3px;
+	height: 162px;
+}
+.header-image{
+	width:100%;
+}
+.content-img{
+	position:relative;
+}
+.offer-content {
+	color: #ffffff;
+	padding: 20px;
+	text-align: center;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+	background-color: rgba(0, 0, 0, 0.75);
+	z-index: 10;
+	position: relative;
+	width: 700px;
+}
+textarea.form-control{
+	display: block;
+	width: 90%;
+	overflow: hide;
+	margin: 20px auto;
+	padding: 8px 12px;
+	font-size: 14px;
+	line-height: 1.428571429;
+	color: #555555;
+	vertical-align: middle;
+	background-color: #ffffff;
+	border: 1px solid #cccccc;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+	transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+.equal-two-columns {
+	width: 100%;
+	margin: 10px 6px 20px;
+	display: inline-block;
+}
+.equal-two-columns label,
+.equal-two-columns li,
+.equal-two-columns td,
+.equal-two-columns th
+{
+	float: left;
+	width: 46%;
+	margin: 2px 0;
+}
+
+.margin-block-horizantal{
+	margin-top: 10px;
+	margin-bottom:10px;
+}
+.pagination.friends-list{
+	display: inline;
+}
+
+.margin-block-horizantal .pagination ul > li > a,
+.margin-block-horizantal .pagination ul > li > span {
+	float: left;
+	padding: 0 12px;
+	line-height: 18px;
+	text-decoration: none;
+	border-left-width: 0;
+}
+.row-fluid  select.select2{
+	border-radius: 2px;
+	padding: 2px 0px;
+	margin: 0;
+	display: inline;
+	width: auto;
+	box-shadow: 0 1px 2px #d9d9d9;
+	-webkit-box-shadow: 0 1px 2px #d9d9d9;
+	background-image: linear-gradient(to bottom, #fdfdfd, #d9d9d9);
+	border: 1px solid #bbbbbb;
+	border-bottom-color: #a2a2a2;
+}
+.somea-list{
+	cursor: pointer;
+}
+.book-mark{
+	text-align: center;
+}
+.booked-item{
+	color: green;
+}
+.row input[type=text].input-with-btn,
+.row-fluid input[type=text].input-with-btn,
+.row input[type=password].input-with-btn,
+.row-fluid input[type=password].input-with-btn,
+.row div.editable[contentEditable="true"].input-with-btn,
+.row-fluid div.editable[contentEditable="true"].input-with-btn,
+.row textarea.input-with-btn,
+.row-fluid textarea.input-with-btn {
+	width: 60%;
+	margin: 0 10px;
+}
+.well.well-blue{
+	background-color: #4eb9db;
+	color: #fff;
+}
+.list-inline{
+	display: inline-block;
+	position: absolute;
+}
+.modal-medium .modal-body{
+	max-height: 800px;
+}
+.modal.modal-medium.fade{
+	top: -1200px;
+}
+.edit-user{
+	display: inline-block;
+	margin-left: 10px;
+	position: relative;
+	width: 180px;
+}
+.friends-edit-item{
+	color: orange;
+}
+h1 small.sub-title{
+	color: white;
+	font-style: italic;
+}

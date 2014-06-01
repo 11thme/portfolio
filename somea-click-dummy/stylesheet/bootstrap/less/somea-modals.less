@@ -1,0 +1,150 @@
+
+.modal {
+  //fix the oversized modal problem
+  max-height: 88%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  .modal-body {
+    overflow-y: auto;
+  }
+}
+
+// Default modal is 560px and needs no modal-medium or modal-big
+
+.modal-medium {
+  width: 770px; // = span8
+  left: 41.5%;
+}
+
+.modal-big {
+  width: 1170px; // = span12
+  left: 26.5%;
+}
+
+.modal-darkBg {
+  background: lighten(@gray, 10%) url(../img/bg-noise.png);
+  border-width: 1px 0;
+  border-color: lighten(@grayDark, 10%);
+  border-style: solid;
+  color: @white;
+}
+
+.modal-ibes {
+  width: 890px; // special for iframe of IBES
+  left: 36.5%;
+}
+
+/*modal window sizing css*/
+
+@media (max-height: 1200px) {
+
+  .modal .modal-body {
+    max-height: 600px;
+  }
+
+  .modal .modal-body iframe {
+    height: 580px;
+  }
+}
+
+@media (max-height: 1100px) {
+
+  .modal .modal-body {
+    max-height: 550px;
+  }
+
+  .modal .modal-body iframe {
+    height: 520px;
+  }
+}
+
+@media (max-height: 1000px) {
+
+  .modal .modal-body {
+    max-height: 500px;
+  }
+
+  .modal .modal-body iframe {
+    height: 480px;
+  }
+}
+
+@media (max-height: 900px) {
+
+  .modal .modal-body {
+    max-height: 460px;
+  }
+
+  .modal .modal-body iframe {
+    height: 440px;
+  }
+}
+
+@media (max-height: 800px) {
+
+  .modal .modal-body {
+    max-height: 400px;
+  }
+
+  .modal.big-header-modal {
+    top: 5%;
+  }
+
+  .modal.big-header-modal .modal-body {
+    max-height: 360px;
+  }
+
+  .modal .modal-body iframe {
+    height: 360px;
+  }
+
+  .modal.big-header-modal .modal-body iframe {
+    height: 340px;
+  }
+}
+
+@media (max-height: 700px) {
+
+  .modal .modal-body {
+    max-height: 340px;
+  }
+
+  .modal.big-header-modal {
+    top: 5%;
+  }
+
+  .modal.big-header-modal .modal-body {
+    max-height: 300px;
+  }
+
+  .modal .modal-body iframe {
+    height: 340px;
+  }
+
+  .modal.big-header-modal .modal-body iframe {
+    height: 300px;
+  }
+}
+
+@media (max-height: 600px) {
+
+  .modal .modal-body {
+    max-height: 280px;
+  }
+
+  .modal.big-header-modal {
+    top: 5%;
+  }
+
+  .modal.big-header-modal .modal-body {
+    max-height: 220px;
+  }
+
+  .modal .modal-body iframe {
+    height: 280px;
+  }
+
+  .modal.big-header-modal .modal-body iframe {
+    height: 220px;
+  }
+}

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js ie ie6 lt-ie10 lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js ie ie7 lt-ie10 lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js ie ie8 lt-ie10 lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9]>
+<html class="no-js ie ie9 lt-ie10" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <title>Media-Page-Single-Photo-Example</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="./bootstrap-v3/css/bootstrap.css" rel="stylesheet" media="screen" type="text/css"/>
+    <link href="./stylesheet/css/blueimp-gallery.min.css" rel="stylesheet" type="text/css"/>
+    <link href="./stylesheet/bootstrap/css/bootstrap-image-gallery.min.css" rel="stylesheet" type="text/css"/>
+    <link href="./stylesheet/css/media-page.css" rel="stylesheet" type="text/css"/>
+    <link href="./bootstrap-v3/font-awesome-4.0.1/css/font-awesome.css" rel="stylesheet" media="screen"/>
+
+    <script src="js/vendor/jquery/jquery-1.9.1.min.js"></script>
+    <script src="./bootstrap-v3/js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/vendor/Respond-master/respond.min.js"></script>
+    <script type="text/javascript" src="./js/iscroll-lite.js"></script>
+</head>
+<body>
+<div class="main-section row">
+<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+    <div class="agnecy-info-container row">
+        <div class="col-lg-12 col-md-6 col-sm-6  col-xs-12">
+            <div class="agency-info">
+                <img class="agency-logo" src="./img/icon/google-logo.jpeg" alt="agency-logo is not available">
+
+                <p class="agency-name"><strong>Reiseburo Sonnechein</strong></p>
+
+                <p class="agency-description">Welcome to Reiseburo Sonnechein, Germany's best site for travel
+                    deals.</p>
+            </div>
+        </div>
+        <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
+            <div class="agency-info agency-additional-info ">
+                <p class="agency-open condensed"><strong>Opening hours: </strong>9am - 18pm (Mon-Fri) 9am - 15pm
+                    (Sams) </p>
+
+                <p class="agency-tel condensed"><strong>Tel:</strong> 0186 999 999 <strong>Fax:</strong> 123 456 789
+                </p>
+
+                <p class="agency-email condensed"><strong>E-mail: </strong>travelagency@sunshine.com</p>
+
+                <p class="agency-web-site condensed"><strong>Web: </strong><a href="www.travelagencysunshine.com">www.travelagencysunshine.com </a>
+                </p>
+
+                <p class="agency-impressum condensed"><strong>Impressum: </strong>
+                    <a data-toggle="modal" href="#impressum-modal">click to open our legal notes </a>
+                </p>
+
+                <hr>
+                <p class="agency-social">
+                    <a><i class="fa fa-facebook-square share-passive"></i></a>
+                    <a><i class="fa fa-twitter-square share-passive"></i></a>
+                    <a><i class="fa fa-google-plus-square share-passive"></i></a>
+                    <strong> Like this Page ? click to share</strong>
+                </p>
+                <!--this part is only for the passive mode social plugin-->
+                <p id="passive-plugin-hint" hidden>
+                                <span class="label label-success">
+                                    <strong><i class="fa fa-smile-o"></i>Almost there, please click again to
+                                        share!</strong><br>
+                                    <small>why two clicks? your privacy are protected in this way <a
+                                            id="learn-more-passive"> learn more </a></small>
+                                </span>
+                </p>
+                <p id="passive-plugin-hint-extra" hidden>
+                                <span class="label label-success">
+                                    <i class="fa fa-lock"></i>
+                                    <small>In order to protect your privacy, we disabled all tracking on this web page,
+                                        <strong>so your first click on share button will active it and then second click
+                                            is to share</strong> Thank you
+                                    </small>
+                                </span>
+                </p>
+
+            </div>
+        </div>
+        <div class="col-lg-12 col-md-6 col-sm-6  col-xs-12">
+            <div class="agency-info qr-code-container hide">
+                <img class="qr-code" src="./img/media-page/qrcode.png" alt="qrcode">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+    <div class="row">
+        <div class="col-lg-12 col-md-11 col-sm-12 col-xs-12">
+            <div class="collection-info">
+                <p class="collection-title"><strong>Collection Title</strong></p>
+
+                <p class="collection-description">
+                    <!--it is better that we can detect the URL from RTE of backend. and give a <a> tag :)-->
+                    See the offer here: <a href="http://www.google.com">www.sonnechein.com/abc1</a>
+                    The click event is sent to an element when the mouse pointer is over the element, and the mouse
+                    button is pressed and released. Any HTML element can
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="row imgs-container">
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 grid-sizer">
+            <a href="./img/media-page/ex1.jpg" title="Banana" data-gallery="">
+                <img src="./img/media-page/ex1.jpg" alt="Banana">
+            </a>
+
+            <div class="img-info">
+                <a class="openGallery"><p class="img-title"><strong>Image Title</strong><i
+                        class="fa fa-expand"></i></p></a>
+
+                <p class="img-description">
+                    <!--it is better that we can detect the URL from RTE of backend. and give a <a> tag :)-->
+                    See the offer here: <a href="http://www.google.com">www.sonnechein.com/abc1</a>
+                    The click event is sent to an element when the mouse pointer is over the element, and the mouse
+                    button is pressed and released. Any HTML element can
+                </p>
+            </div>
+        </div>
+
+
+        <div class="col-lg-4 col-md-6  col-sm-6 col-xs-12 grid-sizer">
+            <a href="./img/media-page/ex2.jpg" title="Banana" data-gallery="">
+                <img src="./img/media-page/ex2.jpg" alt="Banana">
+            </a>
+
+            <div class="img-info">
+                <a class="openGallery">
+                    <p class="img-title"><strong>Image Title</strong><i class="fa fa-expand"></i></p>
+                </a>
+
+                <p class="img-description">http://www.google.com The click event is sent to an element when the
+                    mouse pointer is over the element, and the mouse button is pressed and released. Any HTML
+                    element can
+                </p>
+            </div>
+        </div>
+
+
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 grid-sizer">
+            <a href="./img/media-page/ex3.jpg" title="Banana" data-gallery="">
+                <img src="./img/media-page/ex3.jpg" alt="Banana">
+            </a>
+
+            <div class="img-info">
+                <a class="openGallery"><p class="img-title"><strong>Image Title</strong><i
+                        class="fa fa-expand"></i></p></a>
+
+                <p class="img-description">The click event is sent to an element when the mouse pointer is over the
+                    element, and the mouse button is pressed and released. Any HTML element can</p>
+            </div>
+        </div>
+
+
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 grid-sizer">
+            <a href="./img/media-page/ex4.jpg" title="Banana" data-gallery="">
+                <img src="./img/media-page/ex4.jpg" alt="Banana">
+            </a>
+
+            <div class="img-info">
+                <a class="openGallery"><p class="img-title"><strong>Image Title</strong><i
+                        class="fa fa-expand"></i></p></a>
+
+                <p class="img-description">The click event is sent to an element when the mouse pointer is over the
+                    element, and the mouse button is pressed and released. Any HTML element can</p>
+            </div>
+        </div>
+
+
+        <div class="col-lg-4 col-md-6  col-sm-6 col-xs-12 grid-sizer">
+            <div class="pdf-icon-container"></div>
+            <img src="./img/icon/pdf-logo.jpeg" class="pdf-logo">
+            <a href="./img/media-page/ex5.jpg" title="Banana" data-gallery="">
+                <img src="./img/media-page/ex5.jpg" alt="Banana">
+            </a>
+
+            <div class="img-info">
+                <a class="openGallery">
+                    <p class="img-title"><strong>Image Title</strong><i class="fa fa-expand"></i></p>
+                </a>
+
+                <p class="img-description">The click event is sent to an element when the mouse pointer is over the
+                    element, and the mouse button is pressed and released. Any HTML element can</p>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6  col-sm-6  col-xs-12 grid-sizer youtube-container" id="video-gallery">
+            <div class="youtube-icon-container"></div>
+            <i class="fa fa-youtube-square"></i>
+            <a href="http://www.youtube.com/watch?v=NeVM3UGcNWw" title="Visit Italy" type="text/html"
+               data-youtube="NeVM3UGcNWw" data-poster="https://img.youtube.com/vi/NeVM3UGcNWw/0.jpg"
+               id="play-youtube-video">
+
+                <img src="https://img.youtube.com/vi/NeVM3UGcNWw/0.jpg" alt="Banana">
+
+                <div class="img-info">
+                    <p class="img-title"><strong> Video Title</strong><i
+                            class="fa fa-youtube-play"></i></p>
+
+                    <p class="img-description">The click event is sent to an element when the mouse pointer is over
+                        the
+                        element, and the mouse button is pressed and released. Any HTML element can</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+    <!-- Necessary for each media page: The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+
+    <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+        <div class="slides"></div>
+        <h3 class="title"></h3>
+        <a class="prev">‹</a>
+        <a class="next">›</a>
+        <a class="close">×</a>
+        <a class="play-pause"></a>
+        <ol class="indicator"></ol>
+    </div>
+</div>
+</div>
+<div class="modal fade" id="impressum-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Impressum</h4>
+            </div>
+            <div class="modal-body">
+                <p> WICHTIGER HINWEIS: Reisebüro Sonnenschein ist KEIN reales Reisebüro!!!
+                    Aufgabe
+                    Derzeit beschäftigt sich das Reisebüro Sonnenschein intensiv mit der Social Media Welt und deren
+                    tollen Möglichkeiten.
+                    Das Reisebüro Sonnenschein ist eine Amadeus Germany Bad Homburg Test-Plattform. Hier werden neue
+                    technische Innovationen für Reisebüros entwickelt und getestet.
+                    Impressum von Amadeus Germany GmbH:
+                    http://www.amadeus.com/de/Impressum-DE.html</p>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<script src="js/vendor/Masonry/masonry.min.js" type="text/javascript"></script>
+<script src="js/vendor/blueimp-gallery/blueimp-gallery.min.js"></script>
+<script src="js/vendor/bootstrap-v2/bootstrap-image-gallery.min.js"></script>
+<script src="js/vendor/jquery/jquery.blueimp-gallery.js"></script>
+<script src="js/vendor/blueimp-gallery/blueimp-gallery-indicator.js"></script>
+<script src="js/vendor/blueimp-gallery/blueimp-gallery-video.js"></script>
+<script src="js/vendor/blueimp-gallery/blueimp-gallery-youtube.js"></script>
+
+<script type="text/javascript">
+
+    //automatic ajust layout for different numbers of images in the page
+    $(document).ready(function () {
+        //automatic ajust layout for different numbers of images in the page
+        if ($('.grid-sizer').length === 1) {
+            $('.main-section').children().first().addClass('col-offset-2')
+            $('.imgs-container').removeClass('col-lg-9 col-md-12').addClass('col-lg-6 col-md-6');
+            $('.imgs-container').parent().removeClass('col-lg-9').addClass('col-lg-7')
+            $('.grid-sizer').removeClass('col-lg-4 col-md-6').addClass('col-lg-12 col-md-12');
+        } else if ($('.grid-sizer').length === 2) {
+            $('.grid-sizer').removeClass('col-lg-4').addClass('col-lg-6');
+        }
+        $('.imgs-container').masonry({
+            itemSelector: '.grid-sizer'
+        });
+    });
+
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        //initial the gallery
+        $('#blueimp-gallery').data('useBootstrapModal', false);
+        $('#blueimp-gallery').toggleClass('blueimp-gallery-controls', true);
+        //open gallery
+        $('.openGallery').click(function () {
+            $(this).parent().siblings().click();
+        });
+        //gallery setting for videos
+        $('#play-youtube-video').click(function (event) {
+                    event.preventDefault();
+                    event = event || window.event;
+
+                    blueimp.Gallery(
+                            [
+                                {
+                                    title: 'A YouYube video',
+                                    href: 'http://www.youtube.com/watch?v=NeVM3UGcNWw',
+                                    type: 'text/html',
+                                    youtube: 'NeVM3UGcNWw',
+                                    poster: 'https://img.youtube.com/vi/NeVM3UGcNWw/0.jpg'
+                                }
+                            ],
+                            {
+                                youTubeOptions: {
+                                    // The list object property (or data attribute) with the YouTube video id:
+                                    youTubeVideoIdProperty: 'youtube',
+                                    // Optional object with parameters passed to the YouTube video player:
+                                    // https://developers.google.com/youtube/player_parameters
+                                    youTubePlayerVars: {
+                                        wmode: 'transparent'
+                                    },
+                                    // Require a click on the native YouTube player for the initial playback:
+                                    youTubeClickToPlay: true
+                                },
+                                onslidecomplete: function (index, slide) {
+                                    // Callback function executed on slide content load.
+                                    $('.video-content > a').append('<i class="fa fa-youtube-play slides-show-icon"></i>');
+                                }
+                            },
+                            $('#blueimp-gallery').data()
+                    );
+                }
+        );
+
+        //passive mode plugins
+        $('.share-passive').click(function () {
+            if (!$(this).hasClass('active')) {
+                $(this).addClass('active');
+                $('#passive-plugin-hint').slideDown("slow");
+            }
+
+        });
+
+        $('#learn-more-passive').click(function () {
+            $('#passive-plugin-hint-extra').slideToggle("slow");
+
+        });
+        //open impressum
+        /*$('#impressum-button').click(function () {
+         $('#impressum-content').slideToggle("slow");
+
+         });*/
+
+    })
+    ;
+</script>
+</body>
+</html>

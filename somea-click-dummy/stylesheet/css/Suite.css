@@ -1,0 +1,57 @@
+.label-center{
+  text-align: center;
+}
+
+.label-center input[type="checkbox"]{
+  float: none;
+  margin: 5px 0 0 0;
+}
+
+.channel .label{
+  white-space: inherit;
+}
+
+.channel .small-span{
+  width: 15px;
+}
+
+#suite-header ul#secondary-nav li a.current-user{
+  padding-right: 10px !important;
+  padding-top: 10px;
+  width: 400px;
+}
+
+.current-user .travelagent-avatar{
+  padding-right: 1px;
+}
+
+.current-user .travelagent-avatar img{
+  width: 30px;
+  height: 30px;
+  width: 30px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 3px #07294c;
+  -moz-box-shadow: 0 0 3px #07294c;
+  box-shadow: 0 0 3px #07294c;
+  margin: 0;  
+}
+
+#primary-nav .badge{
+  position: relative;
+  top: -3px;
+  left: -7px;
+}
+
+
+#setup-wizard-intro p{
+  padding-top: 10px;
+  color: #fff;
+}
+
+/* temporary hide #scroll-transition to prevent early scrolling */
+
+#scroll-transition{
+  display: none;
+}
