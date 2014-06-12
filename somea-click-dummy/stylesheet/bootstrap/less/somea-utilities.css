@@ -1,9 +1,0 @@
-#suite-header .affix {
-  top: 0px;
-}
-#suite-header + div.affix {
-  top: 44px;
-}
-.span3 .affix {
-  top: 150px;
-}
